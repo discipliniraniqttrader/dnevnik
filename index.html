@@ -390,7 +390,8 @@ function viewNew(){
       <label class="f">Изход<input id="f_exit" inputmode="decimal" value="${esc(f.exit)}"></label>
       <label class="f">Или R директно<input id="f_r" inputmode="decimal" value="${esc(f.r)}"></label>
     </div>
-    <div class="group"><label class="f">Сетъп<select id="f_setup">${[...new Set([...c.setups,f.setup].filter(Boolean))].map(s=>`<option${s===f.setup?' selected':''}>${esc(s)}</option>`).join('')}</select></label></div>
+    <div class="group"><label class="f">Сетъп<select id="f_setup">${[...new Set([...c.setups,f.setup].filter(Boolean))].map(s=>`<option${s===f.setup?' selected':''}>${esc(s)}</option>`).join('')}</select></label>
+      <div class="row" style="margin-top:8px"><input id="newSetup" aria-label="Име на нов сетъп" placeholder="Нов сетъп" style="flex:1 1 160px;min-width:0;width:auto"><button type="button" class="btn" data-act="add-setup">Добави</button></div></div>
     <div class="group"><span class="t">Чек-лист преди входа</span><div class="ticks">${c.checklist.map(x=>`<button type="button" class="tick" data-check="${esc(x)}" aria-pressed="${f.checked.includes(x)}">${esc(x)}</button>`).join('')}</div></div>
     <div class="group"><span class="t">Грешки в тази сделка</span><div class="ticks">${Object.entries(MISTAKES).map(([k,l])=>`<button type="button" class="tick bad" data-mistake="${k}" aria-pressed="${f.mistakes.includes(k)}">${l}</button>`).join('')}</div></div>
     <div class="group"><span class="t">Как се чувстваше при входа</span><div class="ticks">${EMOTIONS.map(x=>`<button type="button" class="tick" data-emotion="${x}" aria-pressed="${f.emotion===x}">${x}</button>`).join('')}</div></div>
@@ -542,6 +543,7 @@ document.addEventListener('click',e=>{
   switch(d.act){
     case 'clear-demo':store={demo:false,trades:[],cfg:store.cfg};save();render();toast('Примерните данни са изчистени.');break;
     case 'save-trade':saveTrade();break;
+    case 'add-setup':addSetup();break;
     case 'cancel-edit':ui.form=null;ui.tab='list';render();break;
     case 'save-acc':store.cfg.acc={name:$('a_name').value.trim()||'Акаунт',size:num($('a_size').value)||0,target:num($('a_target').value)||1,dd:num($('a_dd').value)||1,type:$('a_type').value};save();render();toast('Акаунтът е запазен.');break;
     case 'save-rules':saveRules();break;
@@ -554,7 +556,16 @@ document.addEventListener('click',e=>{
     case 'wipe-no':render();break;
   }
 });
+document.addEventListener('keydown',e=>{if(e.target.id==='newSetup'&&e.key==='Enter'){e.preventDefault();addSetup()}});
 function toggle(arr,v){const i=arr.indexOf(v);if(i>=0)arr.splice(i,1);else arr.push(v)}
+function addSetup(){
+  const e=$('newSetup'),name=e.value.trim();
+  if(!name){toast('Напиши име на сетъпа.');e.focus();return}
+  const have=store.cfg.setups.find(s=>s.toLowerCase()===name.toLowerCase());
+  if(!have)store.cfg.setups.push(name);
+  readForm();ui.form.setup=have||name;save();viewNew();
+  toast(have?'Този сетъп вече го има и е избран.':'Сетъпът е добавен и избран.');
+}
 function saveTrade(){
   const f=readForm(),{r,pnl}=calcTrade(f);
   if(!f.date){toast('Избери дата.');return}
