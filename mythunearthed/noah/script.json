@@ -1,0 +1,34 @@
+{
+  "title": "Where Did Noah's Ark Land? 4 Answers",
+  "approved_by": "HELM",
+  "notes": "Beat 2 of QUILL's draft ('no verified Ark') moved to beat 14 so the hook is not killed; it is still said plainly once. Everything else as written.",
+  "beats": [
+    {"text": "Four mountains claim they hold Noah's Ark.", "shot": "PRESENTER", "action": "surprised", "callout": "FOUR CLAIMS", "source": "-"},
+    {"text": "Case one: Mount Ararat, Turkey, rising five thousand one hundred metres.", "shot": "MAP", "focus": [39.70, 44.30], "callout": "CASE 1", "source": "tradition"},
+    {"text": "It's the famous pick, near the borders with Armenia and Iran.", "shot": "MAP", "focus": [39.70, 44.30], "zoom": "out", "callout": "5,137 M", "source": "tradition"},
+    {"text": "Case two: near Doğubayazıt, a boat-shaped mound shows up in 1959 aerial photos.", "shot": "MAP", "focus": [39.44, 44.23], "callout": "CASE 2", "source": "1959 aerial survey"},
+    {"text": "Ron Wyatt promoted it, yet most geologists call it natural.", "shot": "EVENT", "scene": "boat-shaped mound on a hillside, a question mark", "callout": "NATURAL?", "source": "claim by Ron Wyatt; geology consensus"},
+    {"text": "But Genesis 8:4 says 'the mountains of Ararat'. Plural. Not one peak.", "shot": "TEXT", "scene": "the word MOUNTAINS splits into many peaks", "callout": "PLURAL!", "source": "Genesis 8:4"},
+    {"text": "Ararat is Urartu, an ancient kingdom ruled from Tushpa, near modern Van.", "shot": "MAP", "focus": [38.50, 43.34], "callout": "URARTU", "source": "archaeology / Assyrian records"},
+    {"text": "So 'Ararat' may mean a whole highland region.", "shot": "MAP", "focus": [39.0, 43.5], "zoom": "out", "callout": "A REGION", "source": "Genesis 8:4; Urartu"},
+    {"text": "Case three: Mount Judi near Şırnak, favored by old Syriac Christian tradition.", "shot": "MAP", "focus": [37.37, 42.47], "callout": "CASE 3", "source": "tradition"},
+    {"text": "The Quran, Hud 11:44, says the ship settled on al-Judi.", "shot": "TEXT", "scene": "'al-Judi' glows, then fades to the map", "callout": "HUD 11:44", "source": "Quran 11:44"},
+    {"text": "Case four: Pir Omar Gudrun in Iraqi Kurdistan, linked by some to Babylonian flood tablets.", "shot": "MAP", "focus": [35.6, 45.3], "callout": "CASE 4", "source": "proposed identification"},
+    {"text": "In Gilgamesh, Utnapishtim's boat lands on Mount Nimush, and that match is only proposed.", "shot": "EVENT", "scene": "clay tablet, a small boat on a peak", "callout": "ONLY PROPOSED", "source": "Epic of Gilgamesh, Tablet XI"},
+    {"text": "He sends out a dove, a swallow, then a raven.", "shot": "EVENT", "scene": "three birds leave the boat one after another", "callout": "3 BIRDS", "source": "Epic of Gilgamesh, Tablet XI"},
+    {"text": "Plainly: no verified Ark has ever been found.", "shot": "PRESENTER", "action": "shrug", "callout": "NOTHING VERIFIED", "source": "archaeology"},
+    {"text": "Four peaks, four traditions, one very old question.", "shot": "MAP", "focus": [37.6, 43.8], "zoom": "wide", "callout": "4 PEAKS", "source": "-"},
+    {"text": "Ararat, Durupınar, Judi or Gudrun: which gets your vote?", "shot": "PRESENTER", "action": "point_right", "callout": "YOUR PICK?", "source": "-"}
+  ],
+  "places": {
+    "ararat": [39.70, 44.30, "Mount Ararat", "peak", "solid"],
+    "durupinar": [39.44, 44.23, "Durupınar site", "peak", "dashed"],
+    "tushpa": [38.50, 43.34, "Tushpa (Van)", "walls", "solid"],
+    "judi": [37.37, 42.47, "Mount Judi", "peak", "dashed"],
+    "gudrun": [35.6, 45.3, "Pir Omar Gudrun", "peak", "dashed"]
+  },
+  "youtube": {
+    "title": "Where Did Noah's Ark Land? 4 Answers 🗺️ #shorts",
+    "description": "Four mountains, four traditions, and one verse that says \"mountains\" plural. Which case file convinces you?\nNo verified Ark has ever been found. These are claims, shown as claims.\n#NoahsArk #BibleHistory #Archaeology #MythUnearthed"
+  }
+}

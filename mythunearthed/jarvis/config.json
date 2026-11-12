@@ -1,0 +1,53 @@
+{
+  "your_name": "Петър",
+  "language": "bg-BG",
+  "voice_name": "",
+  "voice_rate": 175,
+
+  "wake_words": ["джарвис", "jarvis", "джарвиз", "чарвис", "жарвис"],
+  "end_words": ["край", "krai"],
+  "command_timeout": 20,
+
+  "clap": { "enabled": true, "sensitivity": 6.0, "min_level": 0.12 },
+
+  "routine": [
+    { "type": "say", "target": "Добро утро, {name}. Часът е {time}. Подготвям работното място." },
+    { "type": "open_url", "target": "https://mail.google.com" },
+    { "type": "open_url", "target": "https://calendar.google.com" },
+    { "type": "open_url", "target": "https://www.youtube.com/results?search_query=lofi+focus+music" },
+    { "type": "say", "target": "Готово." }
+  ],
+
+  "commands": [
+    { "phrases": ["изключи компютъра", "изключи се"],
+      "actions": [{ "type": "system", "target": "shutdown", "reply": "Изключвам след 30 секунди. Кажи „Джарвис, отмени, край“, ако се откажеш." }] },
+    { "phrases": ["рестартирай", "рестарт"],
+      "actions": [{ "type": "system", "target": "restart", "reply": "Рестартирам след 30 секунди." }] },
+    { "phrases": ["отмени", "откажи"],
+      "actions": [{ "type": "system", "target": "cancel", "reply": "Отменено." }] },
+    { "phrases": ["заспивай", "приспи компютъра", "сън"],
+      "actions": [{ "type": "system", "target": "sleep", "reply": "Лека нощ." }] },
+    { "phrases": ["заключи", "заключи компютъра"],
+      "actions": [{ "type": "system", "target": "lock", "reply": "Заключвам." }] },
+    { "phrases": ["сутрешна рутина", "добро утро"],
+      "actions": [{ "type": "say", "target": "Добро утро, {name}." },
+                  { "type": "open_url", "target": "https://mail.google.com" },
+                  { "type": "open_url", "target": "https://calendar.google.com" }] },
+    { "phrases": ["колко е часът", "час"],
+      "actions": [{ "type": "say", "target": "Часът е {time}." }] },
+    { "phrases": ["коя дата сме", "дата"],
+      "actions": [{ "type": "say", "target": "Днес е {date}." }] },
+    { "phrases": ["потърси", "търси", "гугъл"],
+      "actions": [{ "type": "open_url", "target": "https://www.google.com/search?q={query}", "reply": "Търся." }] },
+    { "phrases": ["пусни в youtube", "пусни", "youtube"],
+      "actions": [{ "type": "open_url", "target": "https://www.youtube.com/results?search_query={query}", "reply": "Пускам." }] },
+    { "phrases": ["отвори пощата", "поща", "имейл"],
+      "actions": [{ "type": "open_url", "target": "https://mail.google.com", "reply": "Отварям пощата." }] },
+    { "phrases": ["отвори календара", "календар"],
+      "actions": [{ "type": "open_url", "target": "https://calendar.google.com", "reply": "Ето календара." }] },
+    { "phrases": ["отвори калкулатора", "калкулатор"],
+      "actions": [{ "type": "open_app", "target": "calc", "reply": "Готово." }] },
+    { "phrases": ["какво е времето", "времето"],
+      "actions": [{ "type": "open_url", "target": "https://www.google.com/search?q=времето+днес", "reply": "Ето прогнозата." }] }
+  ]
+}

@@ -1,0 +1,13 @@
+__pycache__/
+node_modules/
+voice/venv/
+out/
+*.wav
+*.npz
+*.npy
+assets/kokoro/
+assets/terrain_tiles/
+assets/terrain_*.png
+assets/*_base.png
+*/ezra/
+noah/voice/

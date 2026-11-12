@@ -1,0 +1,48 @@
+<title>MythUnearthed Upload Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@500;700&display=swap">
+<style>
+/* Layout: one column kit — video, brand files, then copy-ready text blocks. Parchment-on-ink, single dark look. */
+:root { --ink: #0c1216; --panel: #141d22; --line: #2a3a40; --parch: #e9dcbc; --muted: #a99f86; --gold: #e8aa28;
+  --f-d: "Cormorant Garamond", Georgia, serif; --f-u: "Montserrat", system-ui, sans-serif; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--ink); color: var(--parch); font: 15px/1.5 var(--f-u); }
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 24px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 22px; }
+h1 { font: 700 clamp(30px, 5vw, 44px)/1.1 var(--f-d); margin: 0; text-wrap: balance; }
+h1 span { color: var(--gold); }
+h2 { font: 700 12px var(--f-u); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.grid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 20px; align-items: start; }
+video { width: 100%; max-width: 300px; aspect-ratio: 9 / 16; border-radius: 10px; border: 1px solid var(--line); background: #000; }
+.brand { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.brand img { border-radius: 8px; border: 1px solid var(--line); }
+.avatar { width: 120px; border-radius: 50% !important; }
+.field { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start; }
+.field pre { margin: 0; flex: 1; min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 14px/1.5 var(--f-u); }
+button { background: transparent; color: var(--gold); border: 1px solid var(--gold); border-radius: 6px; padding: 5px 10px; font: 600 12px var(--f-u); cursor: pointer; flex: none; }
+button:focus-visible { outline: 2px solid var(--parch); outline-offset: 2px; }
+.muted { color: var(--muted); font-size: 13px; }
+@media (max-width: 640px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+</style>
+<div class="wrap">
+  <h1>Myth<span>Unearthed</span> · upload kit</h1>
+  <p class="muted">Files and text for the first Short and the channel rebrand. Published at media/, brand/ paths for the upload agent.</p>
+  <div class="grid">
+    <div><h2>Short · 63 s</h2><video src="media/paul_v2.mp4" controls playsinline preload="metadata"></video></div>
+    <div class="brand">
+      <h2>Avatar · 800×800</h2><img class="avatar" src="brand/avatar_800.png" alt="Compass seal avatar">
+      <h2>Banner · 2560×1440</h2><img src="brand/banner_2560x1440.png" alt="Banner: Myth Unearthed, Bible history, mapped">
+    </div>
+  </div>
+  <section><h2>Title</h2><div class="field"><pre id="t">Paul walked 9,000 km to spread the gospel 🗺️ #shorts</pre><button data-c="t">Copy</button></div></section>
+  <section><h2>Description</h2><div class="field"><pre id="d">The three missionary journeys of the apostle Paul, mapped (Acts 13–21). Distances are straight-line between cities; the real road was far longer.
+
+#Bible #ApostlePaul #BibleHistory #Christianity</pre><button data-c="d">Copy</button></div></section>
+  <section><h2>Channel description</h2><div class="field"><pre id="c">Bible history, mapped. The journeys, empires and places of Scripture, animated on the map.</pre><button data-c="c">Copy</button></div></section>
+</div>
+<script>
+document.querySelectorAll("button[data-c]").forEach(b => b.addEventListener("click", () => {
+  const el = document.getElementById(b.dataset.c);
+  navigator.clipboard.writeText(el.textContent).then(() => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy", 1500); })
+    .catch(() => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); });
+}));
+</script>
