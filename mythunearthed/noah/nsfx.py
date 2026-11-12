@@ -50,7 +50,7 @@ def mix(voice, total, ev):
     s = np.zeros(n, np.float32)
     peak = 0.89
     wh, wp, im, th = whoosh(0.28), whoosh(0.42), impact(), thunder()
-    for t in ev["whoosh"]: add(s, t - 0.14, wh, peak * 0.30)
+    for t in ev["whoosh"]: add(s, t - 0.14, wh, peak * 0.14)
     for t in ev["whip"]: add(s, t - 0.22, wp, peak * 0.38)
     for t in ev["impact"]: add(s, t, im, peak * 0.42)
     for t in ev["pop"]: add(s, t, pop(520), peak * 0.30)

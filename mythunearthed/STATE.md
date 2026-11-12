@@ -30,12 +30,3 @@ HERALD работи на компютъра (usr-PC, D:\Claude). Публику�
 2. HELM преглежда фактите в самия JSON (без рендериране).
 3. Рендерира се с една команда (`make_short.py <script.json>`, след като бъде обобщен от noah pipeline).
 4. HELM преглежда **един** контакт-лист с 12–20 кадъра, не отделни кадри.
-
-## Възстановяване след нова машина
-Тежките файлове не са в git, защото се генерират или теглят наново:
-- `cd presenter && npm install` (three.js)
-- Kokoro: изтегли `onnx/model.onnx` и `voices/*.bin` от huggingface `onnx-community/Kokoro-82M-v1.0-ONNX` в `assets/kokoro/` и направи `voices.npz` (вж. историята в paul_v2.py)
-- Chatterbox: `uv venv voice/venv && uv pip install --python voice/venv/bin/python chatterbox-tts soundfile "setuptools<81"`, стартирай с `HF_HUB_DISABLE_XET=1`
-- Терен: `python3 mapfx/build_terrain.py base|ararat|mesopotamia|ethiopia|indian_ocean` (тегли от elevation-tiles-prod.s3.amazonaws.com)
-- Мрежа: средата „Станция Зенит“ вече разрешава huggingface и терена.
-- Готовите видеа за качване са в `videos/`.

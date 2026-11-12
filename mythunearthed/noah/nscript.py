@@ -8,8 +8,8 @@ HERE = Path(__file__).resolve().parent
 SR = 24000
 SCRIPT = json.load(open(HERE / "script.json"))
 BEATS = SCRIPT["beats"]
-GAP = 0.15
-LEAD = 0.35
+GAP = 0.08
+LEAD = 0.30
 
 
 def _trim(a, sr):
@@ -18,7 +18,7 @@ def _trim(a, sr):
     e = np.sqrt(np.convolve(a ** 2, np.ones(hop) / hop, mode="same"))
     thr = max(np.percentile(e, 98) * 0.035, 1e-4)
     idx = np.nonzero(e > thr)[0]
-    i0 = max(0, idx[0] - int(0.05 * sr)); i1 = min(len(a), idx[-1] + int(0.08 * sr))
+    i0 = max(0, idx[0] - int(0.03 * sr)); i1 = min(len(a), idx[-1] + int(0.05 * sr))
     return a[i0:i1]
 
 
@@ -28,7 +28,7 @@ def narrate(cache=HERE / "narration.npz"):
         return z["voice"], json.loads(str(z["beats"])), float(z["total"])
     clips = []
     for i in range(1, len(BEATS) + 1):
-        a, sr = sf.read(HERE / "voice" / f"beat{i:02d}.wav", dtype="float32")
+        a, sr = sf.read(HERE / "voice" / "stretch" / f"beat{i:02d}.wav", dtype="float32")
         if a.ndim > 1: a = a.mean(1)
         if sr != SR: a = resample_poly(a, SR, sr).astype(np.float32)
         a = _trim(a, SR)
@@ -46,7 +46,7 @@ def narrate(cache=HERE / "narration.npz"):
     beats, t = [], LEAD
     for i, a in enumerate(out):
         dur = len(a) / SR
-        hold = GAP if i < len(out) - 1 else 2.6
+        hold = (0.2 if i == len(out) - 2 else GAP) if i < len(out) - 1 else 2.2
         beats.append({"t0": t, "speech": dur, "t1": t + dur + hold})
         t += dur + hold
     voice = np.zeros(int(t * SR) + SR, np.float32)

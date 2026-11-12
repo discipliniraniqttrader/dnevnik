@@ -42,6 +42,11 @@ def bs(n):   # cut point = a hair before beat n starts
     return BT[n - 1]["t0"] - 0.08
 
 
+def fr(n, f):
+    a = bs(n); b = bs(n + 1) if n < 16 else TOTAL
+    return a + f * (b - a)
+
+
 # ------------------------------------------------------------------ camera helpers
 def cam(lat, lon, vis, tilt=.85, yaw=0.0, tx=540, ty=700):
     return dict(lat=lat, lon=lon, vis=vis, tilt=tilt, yaw=yaw, tx=tx, ty=ty)
@@ -67,50 +72,50 @@ PIN_T["gudrun"] = T(11, "Pir") + 0.1
 # --- beat 1 (hook)
 shot("presenter", 0.0, bs(2), 1, "cut", variant=0, action="surprised", callout=("FOUR CLAIMS", 0.45))
 # --- beat 2: CASE 1
-shot("map", bs(2), 6.3, 2, "whip", cam=(cam(38.9, 43.2, 6.0, .8, 14, 650, 700), cam(*AR, 2.5, .88, -4, 650, 690)), arc=.25, ezra="left",
+shot("map", bs(2), fr(2, .5), 2, "whip", cam=(cam(38.9, 43.2, 6.0, .8, 14, 650, 700), cam(*AR, 2.5, .88, -4, 650, 690)), arc=.25, ezra="left",
      stamp=("CASE 1", "MOUNT ARARAT", bs(2) + 0.18), labels=["TURKEY"])
-shot("map", 6.3, bs(3), 2, "punch", cam=(cam(*AR, 2.5, .88, -4, 650, 690), cam(*AR, 2.0, .9, -26, 650, 690)), ezra="left", labels=[])
+shot("map", fr(2, .5), bs(3), 2, "punch", cam=(cam(*AR, 2.5, .88, -4, 650, 690), cam(*AR, 2.0, .9, -26, 650, 690)), ezra="left", labels=[])
 # --- beat 3
-shot("map", bs(3), 11.0, 3, "zoom", cam=(cam(*AR, 2.1, .9, -26, 430, 700), cam(39.9, 44.4, 3.6, .84, -8, 430, 760)), ezra="right",
+shot("map", bs(3), fr(3, .5), 3, "zoom", cam=(cam(*AR, 2.1, .9, -26, 430, 700), cam(39.9, 44.4, 3.6, .84, -8, 430, 760)), ezra="right",
      callout=("5,137 M", bs(3) + 0.25), labels=["TURKEY"])
-shot("map", 11.0, bs(4), 3, "whip", cam=(cam(39.9, 44.4, 3.6, .84, -8, 430, 760), cam(40.0, 44.9, 4.6, .8, 10, 430, 780)), ezra="right",
+shot("map", fr(3, .5), bs(4), 3, "whip", cam=(cam(39.9, 44.4, 3.6, .84, -8, 430, 760), cam(40.0, 44.9, 4.6, .8, 10, 430, 780)), ezra="right",
      labels=["TURKEY", "ARMENIA", "IRAN"], label_at={"ARMENIA": T(3, "Armenia") - .3, "IRAN": T(3, "Iran") - .3, "TURKEY": 0})
 # --- beat 4: CASE 2
-shot("map", bs(4), 15.6, 4, "vwhip", cam=(cam(*AR, 2.4, .86, 0, 650, 700), cam(*DU, 2.4, .88, 8, 650, 700)), arc=.3, ezra="left",
+shot("map", bs(4), fr(4, .37), 4, "vwhip", cam=(cam(*AR, 2.4, .86, 0, 650, 700), cam(*DU, 2.4, .88, 8, 650, 700)), arc=.3, ezra="left",
      stamp=("CASE 2", "DURUPINAR SITE", bs(4) + 0.18), connect=("ararat", "durupinar"), labels=[])
-shot("map", 15.6, 17.9, 4, "punch", cam=(cam(*DU, 2.3, .88, 8, 650, 700), cam(*DU, 2.0, .9, 20, 650, 700)), ezra="left", labels=[])
-shot("map", 17.9, bs(5), 4, "glitch", cam=(cam(*DU, 2.6, .8, -30, 430, 720), cam(*DU, 2.2, .86, -42, 430, 720)), ezra="right",
+shot("map", fr(4, .37), fr(4, .7), 4, "punch", cam=(cam(*DU, 2.3, .88, 8, 650, 700), cam(*DU, 2.0, .9, 20, 650, 700)), ezra="left", labels=[])
+shot("map", fr(4, .7), bs(5), 4, "glitch", cam=(cam(*DU, 2.6, .8, -30, 430, 720), cam(*DU, 2.2, .86, -42, 430, 720)), ezra="right",
      labels=[])
 # --- beat 5 aerial photo
-shot("aerial", bs(5), 22.0, 5, "flash", zoom=(1.0, 1.3), focus=(0.52, 0.5), ring_at=0.5, qmark=None)
-shot("aerial", 22.0, bs(6), 5, "punch", zoom=(2.0, 2.5), focus=(880 / 1620, 1500 / 2880), ring_at=0.0, qmark=0.35,
+shot("aerial", bs(5), fr(5, .5), 5, "flash", zoom=(1.0, 1.3), focus=(0.52, 0.5), ring_at=0.5, qmark=None)
+shot("aerial", fr(5, .5), bs(6), 5, "punch", zoom=(2.0, 2.5), focus=(880 / 1620, 1500 / 2880), ring_at=0.0, qmark=0.35,
      callout=("NATURAL?", T(5, "geologists") - 0.2))
 # --- beat 6 kinetic
 shot("shatter", bs(6), bs(7), 6, "glitch", t_quote=T(6, "Genesis") - bs(6) - .15, t_word=T(6, "mountains") - bs(6) - .05,
      t_shatter=T(6, "Plural") - bs(6), t_peaks_end=T(6, "one") - bs(6) + .3, callout=("PLURAL!", T(6, "Plural") + 0.1))
 # --- beat 7: Urartu / Tushpa
-shot("map", bs(7), 32.9, 7, "whip", cam=(cam(*AR, 3.0, .84, 0, 430, 700), cam(*TU, 3.0, .86, 6, 430, 700)), arc=.45, ezra="right",
+shot("map", bs(7), fr(7, .5), 7, "whip", cam=(cam(*AR, 3.0, .84, 0, 430, 700), cam(*TU, 3.0, .86, 6, 430, 700)), arc=.45, ezra="right",
      callout=("URARTU", T(7, "Urartu") - 0.05), connect=("ararat", "tushpa"), labels=[])
-shot("map", 32.9, bs(8), 7, "iris", cam=(cam(*TU, 2.7, .88, 6, 430, 690), cam(*TU, 2.2, .9, -14, 430, 690)), ezra="right", labels=["URARTU"])
+shot("map", fr(7, .5), bs(8), 7, "iris", cam=(cam(*TU, 2.7, .88, 6, 430, 690), cam(*TU, 2.2, .9, -14, 430, 690)), ezra="right", labels=["URARTU"])
 # --- beat 8: a region
 shot("map", bs(8), bs(9), 8, "zoom", cam=(cam(38.6, 43.4, 3.6, .84, -10, 430, 700), cam(39.4, 44.4, 6.2, .78, 4, 430, 800)), ezra="right",
      callout=("A REGION", T(8, "highland") - 0.1), region=True, labels=["URARTU"])
 # --- beat 9: CASE 3
-shot("map", bs(9), 41.7, 9, "whip", cam=(cam(*TU, 3.2, .84, 0, 430, 700), cam(*JU, 2.6, .88, -10, 430, 700)), arc=.4, ezra="right",
+shot("map", bs(9), fr(9, .48), 9, "whip", cam=(cam(*TU, 3.2, .84, 0, 430, 700), cam(*JU, 2.6, .88, -10, 430, 700)), arc=.4, ezra="right",
      stamp=("CASE 3", "MOUNT JUDI", bs(9) + 0.18), connect=("tushpa", "judi"), labels=[])
-shot("map", 41.7, 43.4, 9, "punch", cam=(cam(*JU, 2.4, .88, -10, 430, 700), cam(*JU, 2.1, .9, 6, 430, 700)), ezra="right", labels=[])
-shot("map", 43.4, bs(10), 9, "vwhip", cam=(cam(*JU, 3.4, .8, 24, 650, 720), cam(*JU, 2.6, .85, 34, 650, 720)), ezra="left", labels=[])
+shot("map", fr(9, .48), fr(9, .78), 9, "punch", cam=(cam(*JU, 2.4, .88, -10, 430, 700), cam(*JU, 2.1, .9, 6, 430, 700)), ezra="right", labels=[])
+shot("map", fr(9, .78), bs(10), 9, "vwhip", cam=(cam(*JU, 3.4, .8, 24, 650, 720), cam(*JU, 2.6, .85, 34, 650, 720)), ezra="left", labels=[])
 # --- beat 10: al-Judi
 shot("judi", bs(10), bs(11), 10, "flash", t_text=T(10, "ship") - bs(10) - 1.0, t_dis=T(10, "al-Judi") - bs(10) + .1,
      callout=("HUD 11:44", T(10, "Hud") + 0.05), mapcam=cam(*JU, 2.3, .88, 6, 540, 760))
 # --- beat 11: CASE 4
-shot("map", bs(11), 52.4, 11, "zoom", cam=(cam(*JU, 2.3, .88, 6, 650, 700), cam(*GU, 2.8, .86, -10, 650, 700)), arc=.5, ezra="left",
+shot("map", bs(11), fr(11, .4), 11, "zoom", cam=(cam(*JU, 2.3, .88, 6, 650, 700), cam(*GU, 2.8, .86, -10, 650, 700)), arc=.5, ezra="left",
      stamp=("CASE 4", "PIR OMAR GUDRUN", bs(11) + 0.18), connect=("judi", "gudrun"), labels=[])
-shot("map", 52.4, 54.6, 11, "punch", cam=(cam(*GU, 2.6, .86, -10, 430, 700), cam(*GU, 2.1, .9, -26, 430, 700)), ezra="right", labels=["KURDISTAN"])
-shot("map", 54.6, bs(12), 11, "glitch", cam=(cam(*GU, 2.9, .8, 20, 650, 700), cam(*GU, 2.3, .86, 34, 650, 700)), ezra="left", labels=["KURDISTAN"])
+shot("map", fr(11, .4), fr(11, .7), 11, "punch", cam=(cam(*GU, 2.6, .86, -10, 430, 700), cam(*GU, 2.1, .9, -26, 430, 700)), ezra="right", labels=["KURDISTAN"])
+shot("map", fr(11, .7), bs(12), 11, "glitch", cam=(cam(*GU, 2.9, .8, 20, 650, 700), cam(*GU, 2.3, .86, 34, 650, 700)), ezra="left", labels=["KURDISTAN"])
 # --- beat 12: tablet
-shot("tablet", bs(12), 60.9, 12, "iris", t_marks=0.3, zoom_at=99, glow_at=99)
-shot("tablet", 60.9, bs(13), 12, "punch", t_marks=-9, zoom_at=0.05, glow_at=T(12, "only") - 60.9 - .2, callout=("ONLY PROPOSED", T(12, "only") - 0.2))
+shot("tablet", bs(12), fr(12, .55), 12, "iris", t_marks=0.3, zoom_at=99, glow_at=99)
+shot("tablet", fr(12, .55), bs(13), 12, "punch", t_marks=-9, zoom_at=0.05, glow_at=T(12, "only") - fr(12, .55) - .2, callout=("ONLY PROPOSED", T(12, "only") - 0.2))
 # --- beat 13: birds
 shot("birds", bs(13), bs(14), 13, "whip", rel={"dove": T(13, "dove") - bs(13) - .1, "swallow": T(13, "swallow") - bs(13) - .1, "raven": T(13, "raven") - bs(13) - .1},
      callout=("3 BIRDS", T(13, "sends")))
@@ -118,21 +123,37 @@ shot("birds", bs(13), bs(14), 13, "whip", rel={"dove": T(13, "dove") - bs(13) - 
 shot("presenter", bs(14), bs(15), 14, "flash", variant=1, action="shrug", callout=("NOTHING VERIFIED", bs(14) + 0.35))
 # --- beat 15: wide, 4 peaks
 WIDE = (37.4, 44.0)
-shot("map", bs(15), 72.55, 15, "zoom", cam=(cam(*WIDE, 7.2, .8, 0, 540, 960), cam(*WIDE, 6.6, .82, 0, 540, 960)), ezra=None, wide=True,
+shot("map", bs(15), fr(15, .5), 15, "zoom", cam=(cam(*WIDE, 7.2, .8, 0, 540, 960), cam(*WIDE, 6.6, .82, 0, 540, 960)), ezra=None, wide=True,
      callout=("4 PEAKS", bs(15) + 0.25), labels=[], lines_t=(T(15, "peaks"), T(15, "traditions") + .4))
-shot("map", 72.55, bs(16), 15, "punch", cam=(cam(*WIDE, 6.4, .82, 0, 540, 960), cam(*WIDE, 6.0, .85, -8, 540, 960)), ezra=None, wide=True, labels=[],
+shot("map", fr(15, .5), bs(16), 15, "punch", cam=(cam(*WIDE, 6.4, .82, 0, 540, 960), cam(*WIDE, 6.0, .85, -8, 540, 960)), ezra=None, wide=True, labels=[],
      lines_t=(0, 0))
 # --- beat 16: end card
 shot("end", bs(16), TOTAL, 16, "whip", variant=2, action="point_right")
 
+ORIG = list(SHOTS)
+# owner feedback: flashes/glitches/whips flicker -> calm set
+CALM = {"flash": "fade", "glitch": "fade", "iris": "fade", "whip": "fade", "vwhip": "fade", "punch": "fade"}
+TRANS_CYC = ["zoom", "punch", "whip", "punch", "vwhip", "zoom", "glitch", "punch", "whip"]
+_new = []
+for s in SHOTS:
+    dur = s["t1"] - s["t0"]
+    n = 1 if dur <= 2.3 else int(math.ceil(dur / 2.2))
+    for k in range(n):
+        sub = dict(s)
+        sub["ot0"], sub["odur"] = s["t0"], dur
+        sub["t0"] = s["t0"] + k * dur / n; sub["t1"] = s["t0"] + (k + 1) * dur / n
+        sub["sub"], sub["nsub"] = k, n
+        if k > 0: sub["trans"] = TRANS_CYC[(len(_new) + k) % len(TRANS_CYC)]
+        _new.append(sub)
+SHOTS[:] = _new
 for i, s in enumerate(SHOTS):
     s["idx"], s["dur"] = i, s["t1"] - s["t0"]
     s["ezra_slide"] = bool(s.get("ezra") and not (i and SHOTS[i - 1].get("ezra") == s.get("ezra")))
     s["dir"] = 1 if i % 2 else -1
     sc = []
-    if "stamp" in s: sc.append((s["stamp"][2], 12, .4))
-    if "callout" in s: sc.append((s["callout"][1], 7, .25))
-    if s["kind"] == "shatter": sc.append((s["t0"] + s["t_shatter"], 18, .5))
+    if "stamp" in s: sc.append((s["stamp"][2], 5, .3))
+    if "callout" in s: sc.append((s["callout"][1], 3, .2))
+    if s["kind"] == "shatter": sc.append((s["ot0"] + s["t_shatter"], 7, .4))
     s["shakes"] = sc
 for s in SHOTS:
     if s["kind"] == "map": s.setdefault("labels", [])
@@ -147,9 +168,9 @@ def shot_at(t):
 # ------------------------------------------------------------------ Ezra actions
 def ezra_actions():
     acts = []
-    for s in SHOTS:
-        if s["kind"] in ("presenter", "end"): acts.append((s["t0"] + .1, s["dur"] - .1, s["action"]))
-        elif s.get("ezra"): acts.append((s["t0"] + .15, s["dur"] - .15, "point_right" if s["ezra"] == "left" else "point_left"))
+    for s in ORIG:
+        if s["kind"] in ("presenter", "end"): acts.append((s["t0"] + .1, s["t1"] - s["t0"] - .1, s["action"]))
+        elif s.get("ezra"): acts.append((s["t0"] + .15, s["t1"] - s["t0"] - .15, "point_right" if s["ezra"] == "left" else "point_left"))
         elif s["kind"] == "map": pass
     return acts
 
@@ -218,7 +239,7 @@ class Renderer:
 
     # ---- map shot
     def cam_at(self, s, t):
-        u = ease((t - s["t0"]) / max(s["dur"], 1e-3))
+        u = ease((t - s["ot0"]) / max(s["odur"], 1e-3))
         a, b = s["cam"]
         out = {}
         for k in a:
@@ -227,6 +248,10 @@ class Renderer:
             else:
                 out[k] = a[k] + (b[k] - a[k]) * u
         out["vis"] *= 1 + s.get("arc", 0) * math.sin(math.pi * u)
+        k = s.get("sub", 0) if s.get("nsub", 1) > 1 else 0
+        out["vis"] *= [1.0, .8, 1.12, .88, 1.06][k % 5]
+        out["yaw"] += [0, 14, -12, 8, -6][k % 5]
+        out["tilt"] = min(.92, out["tilt"] + [0, .04, -.03, .05, 0][k % 5])
         return out
 
     def map_frame(self, cm, t, s):
@@ -235,7 +260,7 @@ class Renderer:
         glow = np.zeros_like(fr)
         # region highlight (beat 8)
         if s.get("region"):
-            al = ease((t - s["t0"] - .2) / .8) * .62
+            al = ease((t - s["ot0"] - .2) / .8) * .62
             pts = np.array([[float(v) for v in MS.R.wpx(la, lo)] for la, lo in URARTU_POLY]).T
             sp = V.project(np.c_[pts[0], pts[1]]).astype(np.int32)
             ov = fr.copy()
@@ -251,13 +276,13 @@ class Renderer:
                         cv2.line(fr, tuple(p0.astype(int)), tuple(p1.astype(int)), (255, 226, 150), 5, cv2.LINE_AA)
                         cv2.line(glow, tuple(p0.astype(int)), tuple(p1.astype(int)), (90, 70, 20), 12, cv2.LINE_AA)
         for key in s.get("labels", []):
-            t0 = s["t0"] + .15 + s.get("label_at", {}).get(key, 0) * 0
+            t0 = s["ot0"] + .15
             if key in s.get("label_at", {}): t0 = s["label_at"][key]
             region_label(key, t0).draw(fr, V, t)
         # connectors: flight line between sites
         if s.get("connect"):
             a_, b_ = s["connect"]
-            u = ease((t - s["t0"]) / (s["dur"] * .8))
+            u = ease((t - s["ot0"]) / (s["odur"] * .8))
             self.line(fr, glow, V, wxy(a_), wxy(b_), u, t)
         if s.get("wide") and s.get("lines_t") is not None:
             order = ["ararat", "durupinar", "judi", "gudrun", "ararat"]
@@ -294,9 +319,9 @@ class Renderer:
     # ---- presenter / end card
     def presenter(self, s, t):
         back, front = DK.backdrop(t, s["variant"])
-        lt = t - s["t0"]
+        lt = t - s["ot0"]
         end = s["kind"] == "end"
-        sc = 1.0 + 0.06 * (lt / max(s["dur"], 1e-3)) if not end else .74
+        sc = 1.0 + 0.06 * (lt / max(s["odur"], 1e-3)) if not end else .74
         ez = self.ezra(t).resize((int(900 * sc), int(1200 * sc)), Image.BICUBIC)
         back = back.convert("RGBA")
         if end:
@@ -321,7 +346,7 @@ class Renderer:
             img.alpha_composite(spr, (int(150 + i * 250 - spr.width / 2 + 40), int(450 - spr.height / 2)))
 
     def end_card(self, img, s, t):
-        lt = t - s["t0"]
+        lt = t - s["ot0"]
         names = [("ARARAT", "ararat", T(16, "Ararat")), ("DURUPINAR", "durupinar", T(16, "Durupınar")), ("JUDI", "judi", T(16, "Judi")), ("GUDRUN", "gudrun", T(16, "Gudrun"))]
         bw, bh, gap, x0, y0 = 240, 250, 12, 42, 1160
         if not hasattr(self, "_ic2"): self._ic2 = Image.fromarray(FX.make_icon("peak", 150))
@@ -409,7 +434,8 @@ class Renderer:
         if f < 0: return
         sp = self.stamp_sprite(big, small)
         sc = 1.0 + 1.1 * (1 - ease(f / 5.0)) if f < 5 else 1.0
-        a = min(1, f / 2)
+        a = min(1, f / 2) * (1 - ease((f / FPS - 2.6) / .4))
+        if a <= 0: return
         sp = sp.rotate(-4, Image.BICUBIC, expand=True)
         sp = sp.resize((int(sp.width * sc * .9), int(sp.height * sc * .9)), Image.LANCZOS)
         if a < 1: sp.putalpha(sp.split()[3].point(lambda v: int(v * a)))
@@ -461,11 +487,12 @@ class Renderer:
 
     # ---- shot dispatcher
     def shot_img(self, s, t):
-        lt = t - s["t0"]; k = s["kind"]
+        lt = t - s["ot0"]; k = s["kind"]
+        s = dict(s, dur=s["odur"], t0=s["ot0"]) if False else s
         if k == "map":
             cm = self.cam_at(s, t); arr = self.map_frame(cm, t, s)
         elif k == "aerial":
-            arr = EV.aerial_scene(lt, s["dur"], t, s["zoom"], s["focus"], s.get("qmark"), s["ring_at"])
+            arr = EV.aerial_scene(lt, s["odur"], t, s["zoom"], s["focus"], s.get("qmark"), s["ring_at"])
         elif k == "shatter":
             arr = EV.shatter_scene(lt, t, s["t_quote"], s["t_word"], s["t_shatter"], s["t_peaks_end"])
         elif k == "judi":
@@ -473,9 +500,9 @@ class Renderer:
             if lt > s["t_dis"] - .1:
                 s2 = dict(s, labels=[], kind="map")
                 mf = self.map_frame(s["mapcam"], t, s2)
-            arr = EV.judi_scene(lt, s["dur"], t, s["t_text"], s["t_dis"], mf)
+            arr = EV.judi_scene(lt, s["odur"], t, s["t_text"], s["t_dis"], mf)
         elif k == "tablet":
-            arr = EV.tablet_scene(lt, s["dur"], t, s["t_marks"] + 0 if s["t_marks"] > -5 else -9, s["zoom_at"], s["glow_at"])
+            arr = EV.tablet_scene(lt, s["odur"], t, s["t_marks"] + 0 if s["t_marks"] > -5 else -9, s["zoom_at"], s["glow_at"])
         elif k == "birds":
             arr = EV.birds_scene(lt, t, s["rel"])
         elif k in ("presenter", "end"):
@@ -498,13 +525,16 @@ class Renderer:
         img = self.shot_img(s, t)
         lt = t - s["t0"]
         sc = extra
+        if s["kind"] != "map":
+            p_ = lt / max(s["dur"], 1e-3); k_ = s.get("sub", 0)
+            sc *= (1.0 + .08 * p_) if k_ % 2 == 0 else (1.12 - .08 * p_)
         dx = dy = 0.0; shk = 0.0
         for st, amp, dur in s.get("shakes", []):
             d_ = t - st
             if 0 <= d_ < dur: shk = max(shk, amp * math.exp(-4 * d_ / dur))
         if shk > .5:
             r = np.random.default_rng(int(round(t * FPS)))
-            dx, dy = r.uniform(-1, 1, 2) * shk; sc *= 1.0 + shk / 700
+            dx, dy = r.uniform(-1, 1, 2) * shk; sc *= 1.0 + shk / 230
         if sc == 1.0 and dx == 0: return img
         ax, ay = 540, 960
         return img.transform((W, H), Image.AFFINE, (1 / sc, 0, ax - ax / sc - dx / sc, 0, 1 / sc, ay - ay / sc - dy / sc), Image.BILINEAR)
@@ -544,28 +574,22 @@ class Renderer:
         t = fi / FPS
         s = shot_at(t); i = s["idx"]
         fin = fi - int(round(s["t0"] * FPS))
-        tr = s["trans"]
+        tr = CALM.get(s["trans"], s["trans"])
         punch = 1.0
         if tr in ("punch", "flash") and i and fin < 6:
-            punch = 1 + 0.12 * (1 - ease(fin / 5.0))
+            punch = 1 + 0.04 * (1 - ease(fin / 5.0))
         img = self.final(s, t, punch)
-        if i and fin < 6 and tr in ("whip", "vwhip", "zoom", "glitch", "iris"):
+        if i and fin < 8 and tr in ("zoom", "fade"):
             prev = self.final(SHOTS[i - 1], t)
             img = self.transition(tr, prev, img, fin, s["dir"])
-        wh = 0.0
-        if tr == "flash" and fin == 0: wh = .65
-        elif tr == "flash" and fin == 1: wh = .3
-        nxt = SHOTS[i + 1] if i + 1 < len(SHOTS) else None
-        if nxt and nxt["trans"] == "flash":
-            fb = int(round(nxt["t0"] * FPS))
-            if fi == fb - 2: wh = .5
-            elif fi == fb - 1: wh = 1.0
-        if wh: img = Image.blend(img, Image.new("RGB", (W, H), (255, 250, 240)), wh)
+        # no white flashes (owner: flashing is unpleasant to watch)
         self.hud(img, t)
         return Image.blend(img, Image.merge("RGB", [self.grain] * 3), 0.03)
 
     def transition(self, tr, prev, img, fin, d):
-        p = (fin + 1) / 6.0; e = ease(p)
+        p = (fin + 1) / 8.0; e = ease(p)
+        if tr == "fade":
+            return Image.blend(prev, img, e)
         A = np.asarray(prev, np.float32); B = np.asarray(img, np.float32)
         if tr in ("whip", "vwhip"):
             vert = tr == "vwhip"
@@ -579,11 +603,11 @@ class Renderer:
                 acc += canvas[o:o + H] if vert else canvas[:, o:o + W]
             return Image.fromarray((acc / 7).astype(np.uint8))
         if tr == "zoom":
-            sc = 1 + 0.9 * e
+            sc = 1 + 0.25 * e
             M = np.array([[sc, 0, 540 - 540 * sc], [0, sc, 960 - 960 * sc]], np.float32)
             Az = cv2.warpAffine(A, M, (W, H), flags=cv2.INTER_LINEAR)
-            Az = cv2.GaussianBlur(Az, (0, 0), 6 * math.sin(math.pi * p) + .1)
-            s2 = 0.75 + 0.25 * e
+            Az = cv2.GaussianBlur(Az, (0, 0), 1.5 * math.sin(math.pi * p) + .1)
+            s2 = 0.92 + 0.08 * e
             M2 = np.array([[s2, 0, 540 - 540 * s2], [0, s2, 960 - 960 * s2]], np.float32)
             Bz = cv2.warpAffine(B, M2, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
             a = ease(min(1, p * 1.4))
@@ -620,9 +644,8 @@ def _inter(size):
 def sfx_events():
     ev = {k: [] for k in ("whoosh", "whip", "impact", "pop", "place", "tick", "flap", "birdwhoosh", "shatter", "shimmer", "wind")}
     for s in SHOTS[1:]:
-        (ev["whip"] if s["trans"] in ("whip", "vwhip", "zoom") else ev["whoosh"]).append(s["t0"])
-        if s["trans"] == "glitch": ev["tick"] += [s["t0"] + i * .02 for i in range(5)]
-    for s in SHOTS:
+        if CALM.get(s["trans"], s["trans"]) == "zoom": ev["whoosh"].append(s["t0"])  # soft whoosh only on zoom cuts
+    for s in ORIG:
         if "callout" in s: ev["pop"].append(s["callout"][1])
         if "stamp" in s: ev["impact"].append(s["stamp"][2] + 5 / FPS)
         if s["kind"] == "shatter":
@@ -687,7 +710,7 @@ def main():
     print("audio done", flush=True)
     n = 24; step = math.ceil(NF / n)
     jobs = [(i, i * step, min(NF, (i + 1) * step)) for i in range(n) if i * step < NF]
-    with mp.Pool(4, initializer=_init) as pool:
+    with mp.get_context("spawn").Pool(4, initializer=_init) as pool:
         parts = pool.map(_chunk, jobs, chunksize=1)
     lst = OUT / "_noah_list.txt"; lst.write_text("".join(f"file '{p}'\n" for p in parts))
     final = OUT / "noah.mp4"
