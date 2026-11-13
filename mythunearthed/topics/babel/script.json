@@ -1,0 +1,28 @@
+{
+  "title": "The Real Tower of Babel?",
+  "author": "QUILL",
+  "notes": "Etemenanki link framed as a hypothesis. Herodotus cited as description, not proof. Not-proven line in beat 11.",
+  "beats": [
+    {"text": "Was the Tower of Babel a real building?", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "REAL BUILDING?", "source": "-"},
+    {"text": "Genesis 11 says they used brick for stone and bitumen for mortar.", "shot": "TEXT", "kind": "quote", "display": "Brick for stone, bitumen for mortar", "callout": "BRICK + BITUMEN", "source": "Genesis 11:3"},
+    {"text": "Babel is Hebrew for Babylon, in what is now Iraq.", "shot": "MAP", "focus": [32.54, 44.42], "zoom": "wide", "pins": ["babylon"], "callout": "BABEL = BABYLON", "source": "Genesis 11:9; archaeology"},
+    {"text": "Babylon's great ziggurat was Etemenanki: 'house of the foundation of heaven and earth.'", "say": "Babylon's great ziggurat was EH-teh-MEN-an-kee: house of the foundation of heaven and earth.", "shot": "EVENT", "scene": "object", "object": "tower", "label": "ETEMENANKI", "callout": "ETEMENANKI", "source": "Babylonian texts / archaeology"},
+    {"text": "Herodotus described a stepped tower of eight tiers there.", "say": "Her-ODD-oh-tus described a stepped tower of eight tiers there.", "shot": "TEXT", "kind": "big_number", "display": "8 TIERS", "callout": "HERODOTUS", "source": "Herodotus, Histories 1.181"},
+    {"text": "Today only its foundation survives, near the modern city of Hillah.", "say": "Today only its foundation survives, near the modern city of HIL-lah.", "shot": "MAP", "focus": [32.54, 44.42], "zoom": "close", "pins": ["babylon"], "callout": "FOUNDATION ONLY", "source": "archaeology"},
+    {"text": "Another candidate: the ziggurat at Borsippa, now called Birs Nimrud.", "say": "Another candidate: the ziggurat at bor-SIP-ah, now called BEERS nim-ROOD.", "shot": "MAP", "focus": [32.39, 44.35], "zoom": "mid", "pins": ["borsippa"], "callout": "BORSIPPA", "source": "proposed identification"},
+    {"text": "King Nebuchadnezzar II says in inscriptions that he rebuilt it.", "say": "King NEB-uh-kud-NEZ-er the Second says in inscriptions that he rebuilt it.", "shot": "EVENT", "scene": "tablet", "label": "NEBUCHADNEZZAR II REBUILDS", "callout": "REBUILT", "source": "Nebuchadnezzar II inscriptions"},
+    {"text": "Genesis puns on the name: Babel sounds like the Hebrew for 'confuse.'", "shot": "TEXT", "kind": "word_shatter", "display": "BABEL / BALAL", "callout": "A WORD PLAY", "source": "Genesis 11:9"},
+    {"text": "Many scholars link the story to Etemenanki, but Borsippa still has its fans.", "say": "Many scholars link the story to EH-teh-MEN-an-kee, but bor-SIP-ah still has its fans.", "shot": "MAP", "focus": [32.46, 44.39], "zoom": "mid", "pins": ["babylon", "borsippa"], "callout": "TWO CANDIDATES", "source": "scholarly debate"},
+    {"text": "Plainly: the link is a hypothesis, and no tower is proven to be Babel's.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "A HYPOTHESIS", "source": "archaeology"},
+    {"text": "Babylon's tower fell to dust, but its story did not.", "shot": "MAP", "focus": [32.4, 44.4], "zoom": "wide", "pins": ["babylon", "borsippa"], "callout": "STORY SURVIVES", "source": "-"},
+    {"text": "Real ziggurat or pure legend? What do you think?", "shot": "PRESENTER", "action": "point_right", "backdrop": "desert", "callout": "REAL OR LEGEND?", "source": "-"}
+  ],
+  "places": {
+    "babylon": [32.54, 44.42, "Babylon (Etemenanki)", "ruins", "solid"],
+    "borsippa": [32.39, 44.35, "Borsippa (Birs Nimrud)", "ruins", "dashed"]
+  },
+  "youtube": {
+    "title": "The Real Tower of Babel? 🗺️ #shorts",
+    "description": "Babylon had a giant ziggurat called Etemenanki, and Herodotus described a stepped tower there.\nLinking it to Genesis 11 is a hypothesis, not a proven fact.\n#TowerOfBabel #BibleHistory #Archaeology #MythUnearthed"
+  }
+}

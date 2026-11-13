@@ -1,0 +1,31 @@
+{
+  "title": "Samson Carried a City Gate 60 km?",
+  "approved_by": "QUILL (draft, pending HELM)",
+  "notes": "Gaza-Hebron straight-line ~60 km. The 'facing Hebron' nuance (beat 6) is the single not-proven line.",
+  "beats": [
+    {"text": "Samson carried a city gate how far?", "shot": "PRESENTER", "action": "surprised", "backdrop": "city", "callout": "HOW FAR?", "source": "-"},
+    {"text": "Judges sixteen: at midnight, Samson lifts the doors of Gaza's gate.", "shot": "MAP", "focus": [31.50, 34.47], "zoom": "mid", "pins": ["gaza"], "callout": "GAZA, MIDNIGHT", "source": "Judges 16:1-3"},
+    {"text": "He takes doors, posts and bar, and carries them off on his shoulders.", "shot": "EVENT", "scene": "object", "object": "gate", "label": "GAZA'S GATE", "callout": "BAR AND ALL", "source": "Judges 16:3"},
+    {"text": "Destination: the hill facing Hebron, roughly sixty kilometres in a straight line.", "say": "Destination: the hill facing HEB-ron, roughly sixty kilometres in a straight line.", "shot": "MAP", "focus": [31.52, 34.80], "zoom": "wide", "pins": ["gaza", "hebron"], "callout": "GAZA TO HEBRON", "source": "Judges 16:3; straight-line distance"},
+    {"text": "Hebron sits about nine hundred metres above Gaza: uphill.", "say": "HEB-ron sits about nine hundred metres above Gaza: uphill.", "shot": "TEXT", "kind": "big_number", "display": "~60 KM", "callout": "~900 M UPHILL", "source": "geography"},
+    {"text": "What's not proven: the exact hill. The Hebrew can mean 'facing' Hebron, not at it.", "say": "What's not proven: the exact hill. The Hebrew can mean 'facing' HEB-ron, not at it.", "shot": "PRESENTER", "action": "shrug", "backdrop": "mountain", "callout": "NOT PROVEN", "source": "Judges 16:3 (Hebrew phrase)"},
+    {"text": "He grew up in Zorah, fell for a woman in Timnah, and struck thirty men at Ashkelon.", "say": "He grew up in ZOR-ah, fell for a woman in TIM-nah, and struck thirty men at ASH-keh-lon.", "shot": "MAP", "focus": [31.68, 34.78], "zoom": "mid", "pins": ["zorah", "timnah", "ashkelon", "gaza"], "callout": "HIS HOME GROUND", "source": "Judges 13:2, 14:1, 14:19"},
+    {"text": "Later, captured and blinded, he grinds grain in a Gaza prison.", "shot": "TEXT", "kind": "glow_word", "display": "BLINDED", "callout": "BLINDED", "source": "Judges 16:21"},
+    {"text": "There, Philistines gather in the temple of Dagon to celebrate.", "say": "There, FILL-iss-teens gather in the temple of DAY-gon to celebrate.", "shot": "MAP", "focus": [31.50, 34.47], "zoom": "close", "pins": ["gaza"], "callout": "TEMPLE OF DAGON", "source": "Judges 16:23"},
+    {"text": "Judges says about three thousand people watch from the roof.", "shot": "EVENT", "scene": "crowd", "label": "~3,000 ON THE ROOF", "callout": "~3,000 PEOPLE", "source": "Judges 16:27"},
+    {"text": "Samson pushes the two middle pillars, and the building comes down.", "shot": "TEXT", "kind": "word_shatter", "display": "PILLARS", "callout": "TWO PILLARS", "source": "Judges 16:29-30"},
+    {"text": "Zorah to Gaza is nearly sixty kilometres. His world is small; his legend is big.", "say": "ZOR-ah to Gaza is nearly sixty kilometres. His world is small; his legend is big.", "shot": "MAP", "focus": [31.60, 34.70], "zoom": "wide", "pins": ["zorah", "gaza", "hebron"], "callout": "SMALL WORLD", "source": "straight-line distance"},
+    {"text": "A gate, a hill, a temple: legend, memory, or both?", "shot": "PRESENTER", "action": "point_right", "backdrop": "city", "callout": "LEGEND OR MEMORY?", "source": "-"}
+  ],
+  "places": {
+    "gaza": [31.50, 34.47, "Gaza", "temple", "solid"],
+    "hebron": [31.53, 35.10, "Hebron", "walls", "solid"],
+    "zorah": [31.78, 34.98, "Zorah", "dot", "dashed"],
+    "timnah": [31.78, 34.91, "Timnah", "dot", "dashed"],
+    "ashkelon": [31.66, 34.55, "Ashkelon", "walls", "solid"]
+  },
+  "youtube": {
+    "title": "Samson Carried a City Gate 60 km? 🗺️ #shorts",
+    "description": "From Gaza's gate to the hill facing Hebron: roughly 60 km straight-line, and uphill. Legend or memory?\nThe exact hill is not proven; the Hebrew can mean 'facing' Hebron.\n#Samson #Judges #BibleHistory #MythUnearthed"
+  }
+}

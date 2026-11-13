@@ -1,0 +1,124 @@
+"""Narration: Chatterbox per beat (cached) -> atempo 1.11 -> trim/normalise -> timeline. Word timing for captions."""
+import hashlib, json, os, re, subprocess, sys
+from pathlib import Path
+import numpy as np, soundfile as sf
+from scipy.signal import resample_poly
+from .common import ROOT
+
+SR = 24000
+GAP = 0.08          # pause between sentences (QUALITY 2a: 0.06-0.10)
+LEAD = 0.30
+PRE_END_HOLD = 0.2  # slightly longer breath before the closing question
+END_HOLD = 2.0      # tail on the end card
+VENV_PY = ROOT / "voice/venv/bin/python"
+PROMPT = ROOT / "out/voice_am_michael.wav"
+
+
+def generate(topic_dir, beats, cfg):
+    """raw wavs -> <topic>/voice/beatNN.wav ; stretched -> <topic>/voice/stretch/beatNN.wav (same layout as noah/)"""
+    vd = Path(topic_dir) / "voice"; sd = vd / "stretch"
+    sd.mkdir(parents=True, exist_ok=True)
+    vcfg = cfg.get("voice", {})
+    jobs = [[b["i"], b["tts"], str(vd / f"beat{b['i']:02d}.wav")] for b in beats if not (sd / f"beat{b['i']:02d}.wav").exists()
+            and not (vd / f"beat{b['i']:02d}.wav").exists()]
+    if jobs:
+        jf = vd / "_jobs.json"
+        json.dump({"prompt": str(vcfg.get("prompt", PROMPT)), "exaggeration": vcfg.get("exaggeration", 0.6), "cfg": vcfg.get("cfg", 0.45), "jobs": jobs}, open(jf, "w"))
+        env = dict(os.environ, HF_HUB_DISABLE_XET="1")
+        r = subprocess.run([str(VENV_PY), str(Path(__file__).parent / "tts_worker.py"), str(jf)], env=env)
+        if r.returncode: raise RuntimeError("chatterbox failed")
+    tempo = float(vcfg.get("tempo", 1.11))
+    for b in beats:
+        raw = vd / f"beat{b['i']:02d}.wav"; out = sd / f"beat{b['i']:02d}.wav"
+        if out.exists() or not raw.exists(): continue
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw), "-filter:a", f"atempo={tempo}", str(out)], check=True)
+
+
+def _trim(a, sr):
+    hop = int(sr * 0.01)
+    e = np.sqrt(np.convolve(a ** 2, np.ones(hop) / hop, mode="same"))
+    thr = max(np.percentile(e, 98) * 0.035, 1e-4)
+    idx = np.nonzero(e > thr)[0]
+    if len(idx) == 0: return a
+    return a[max(0, idx[0] - int(0.03 * sr)): min(len(a), idx[-1] + int(0.05 * sr))]
+
+
+def narrate(topic_dir, beats, cache_dir):
+    """returns voice(np.float32 @24k), beat timeline [{t0,speech,t1}], total seconds"""
+    sd = Path(topic_dir) / "voice" / "stretch"
+    key = hashlib.sha1(("|".join(f"{b['i']}:{(sd / f'beat{b['i']:02d}.wav').stat().st_size}" for b in beats) + f"{GAP}{LEAD}{END_HOLD}").encode()).hexdigest()[:12]
+    cache = Path(cache_dir) / f"narration_{key}.npz"
+    if cache.exists():
+        z = np.load(cache, allow_pickle=True)
+        return z["voice"], json.loads(str(z["beats"])), float(z["total"])
+    clips = []
+    for b in beats:
+        a, sr = sf.read(sd / f"beat{b['i']:02d}.wav", dtype="float32")
+        if a.ndim > 1: a = a.mean(1)
+        if sr != SR: a = resample_poly(a, SR, sr).astype(np.float32)
+        a = _trim(a, SR)
+        f = int(0.012 * SR); a[:f] *= np.linspace(0, 1, f); a[-f:] *= np.linspace(1, 0, f)
+        clips.append(a)
+    tgt, out = 0.085, []
+    for a in clips:
+        act = a[np.abs(a) > 0.02 * np.max(np.abs(a))]
+        a = a * (tgt / (np.sqrt(np.mean(act ** 2)) + 1e-9))
+        a = np.tanh(a / 0.8) * 0.8 if np.max(np.abs(a)) > 0.8 else a
+        out.append(a.astype(np.float32))
+    tl, t = [], LEAD
+    for i, a in enumerate(out):
+        dur = len(a) / SR
+        hold = (PRE_END_HOLD if i == len(out) - 2 else GAP) if i < len(out) - 1 else END_HOLD
+        tl.append({"t0": t, "speech": dur, "t1": t + dur + hold}); t += dur + hold
+    voice = np.zeros(int(t * SR) + SR, np.float32)
+    for b, a in zip(tl, out):
+        i = int(b["t0"] * SR); voice[i:i + len(a)] += a
+    voice = voice[: int(t * SR)]
+    voice *= 0.89 / np.max(np.abs(voice))
+    Path(cache_dir).mkdir(parents=True, exist_ok=True)
+    np.savez(cache, voice=voice, beats=json.dumps(tl), total=t)
+    return voice, tl, t
+
+
+def word_times(text, t0, dur, voice=None):
+    """Word start/end. Weights by letters; phrase boundaries (, . : ? !) snap to real pauses in the audio when found."""
+    words = text.split()
+    w = [len(re.sub(r"[^\w]", "", x)) + 1.2 for x in words]
+    brk = [i for i, x in enumerate(words[:-1]) if x[-1] in ",.:;?!"]
+    bounds = None
+    if voice is not None and brk:
+        a = voice[int(t0 * SR): int((t0 + dur) * SR)]
+        hop = int(0.01 * SR); n = len(a) // hop
+        e = np.sqrt((a[: n * hop].reshape(n, hop) ** 2).mean(1))
+        thr = max(np.percentile(e, 90) * 0.12, 1e-4)
+        sil = e < thr; runs, i = [], 0
+        while i < n:
+            if sil[i]:
+                j = i
+                while j < n and sil[j]: j += 1
+                if j - i >= 5 and i > 8 and j < n - 4: runs.append((j - i, (i + j) / 2 * 0.01))
+                i = j
+            else: i += 1
+        if len(runs) >= len(brk):
+            cw = np.cumsum(w) / np.sum(w); chosen, last = [], -1
+            for b in brk:
+                pk = cw[b] * dur; best = None
+                for ri, (ln, tc) in enumerate(runs):
+                    if ri <= last: continue
+                    sc = ln * 0.01 - 0.6 * abs(tc - pk)
+                    if best is None or sc > best[0]: best = (sc, ri)
+                if best is None: chosen = None; break
+                chosen.append(runs[best[1]][1]); last = best[1]
+            bounds = chosen
+    out, ws = [], np.array(w)
+    if bounds is None:
+        tot = ws.sum(); t = t0
+        for x, wt in zip(words, ws):
+            d = dur * wt / tot; out.append((x, t, t + d)); t += d
+        return out
+    edges = [0.0] + bounds + [dur]; ids = [0] + [b + 1 for b in brk] + [len(words)]
+    for k in range(len(edges) - 1):
+        seg = ws[ids[k]: ids[k + 1]]; a, b = edges[k], edges[k + 1]; t = a
+        for x, wt in zip(words[ids[k]: ids[k + 1]], seg):
+            d = (b - a) * wt / seg.sum(); out.append((x, t0 + t, t0 + t + d)); t += d
+    return out

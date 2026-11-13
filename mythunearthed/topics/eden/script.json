@@ -1,0 +1,31 @@
+{
+  "title": "Was the Garden of Eden in Iraq?",
+  "author": "QUILL",
+  "notes": "All Eden locations are proposals. Pishon/Gihon explicitly unidentified. Not-proven line in beat 11.",
+  "beats": [
+    {"text": "Was the Garden of Eden in Iraq?", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "EDEN IN IRAQ?", "source": "-"},
+    {"text": "Genesis 2 names four rivers flowing out of Eden.", "shot": "TEXT", "kind": "big_number", "display": "4 RIVERS", "callout": "FOUR RIVERS", "source": "Genesis 2:10-14"},
+    {"text": "Two are real: the Tigris and the Euphrates, both flowing through Iraq today.", "say": "Two are real: the TY-gris and the yoo-FRAY-teez, both flowing through Iraq today.", "shot": "MAP", "focus": [32.5, 44.8], "zoom": "wide", "pins": ["tigris", "euphrates"], "callout": "TWO ARE REAL", "source": "Genesis 2:14"},
+    {"text": "The other two, Pishon and Gihon, were never securely identified.", "say": "The other two, PIE-shon and GEE-hon, were never securely identified.", "shot": "TEXT", "kind": "word_shatter", "display": "PISHON? GIHON?", "callout": "UNIDENTIFIED", "source": "Genesis 2:11-13"},
+    {"text": "The Pishon circles Havilah, where the gold is good.", "say": "The PIE-shon circles HAV-ih-lah, where the gold is good.", "shot": "EVENT", "scene": "object", "object": "gold_pile", "label": "HAVILAH: GOOD GOLD", "callout": "GOOD GOLD", "source": "Genesis 2:11-12"},
+    {"text": "One proposal points to dried riverbeds now buried beneath the Persian Gulf.", "shot": "MAP", "focus": [29.8, 48.8], "zoom": "mid", "pins": ["gulf"], "callout": "PROPOSAL 1", "source": "proposed identification"},
+    {"text": "Another looks north, where the Tigris and Euphrates both begin.", "say": "Another looks north, where the TY-gris and yoo-FRAY-teez both begin.", "shot": "MAP", "focus": [39.0, 41.5], "zoom": "wide", "pins": ["highlands"], "callout": "PROPOSAL 2", "source": "proposed identification"},
+    {"text": "So Eden sits at either end of the rivers, depending on who you ask.", "shot": "EVENT", "scene": "split_compare", "left": "NORTH: Armenian highlands", "right": "SOUTH: Persian Gulf", "label": "NORTH OR SOUTH?", "callout": "NORTH OR SOUTH?", "source": "proposed identifications"},
+    {"text": "At al-Qurnah, where they meet, locals show a tree called Adam's.", "say": "At al-KOOR-nah, where they meet, locals show a tree called Adam's.", "shot": "MAP", "focus": [31.0, 47.43], "zoom": "close", "pins": ["qurnah"], "callout": "ADAM'S TREE", "source": "local tradition"},
+    {"text": "Some scholars link 'Eden' to the Sumerian word edin, meaning plain.", "say": "Some scholars link Eden to the Sumerian word EH-din, meaning plain.", "shot": "EVENT", "scene": "tablet", "label": "EDIN = PLAIN?", "callout": "EDIN = PLAIN?", "source": "proposed etymology"},
+    {"text": "Plainly: Eden's location is not proven. These are proposals, not discoveries.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "NOT PROVEN", "source": "scholarly consensus"},
+    {"text": "Real rivers, a lost garden, and no confirmed site.", "shot": "MAP", "focus": [34.5, 45.0], "zoom": "wide", "pins": ["highlands", "tigris", "euphrates", "qurnah", "gulf"], "callout": "NO CONFIRMED SITE", "source": "-"},
+    {"text": "Iraq, the Gulf, or Armenia: where would you search?", "shot": "PRESENTER", "action": "point_right", "backdrop": "desert", "callout": "WHERE WOULD YOU LOOK?", "source": "-"}
+  ],
+  "places": {
+    "tigris": [33.31, 44.37, "Tigris (Baghdad)", "river", "solid"],
+    "euphrates": [31.30, 45.28, "Euphrates (Samawah)", "river", "solid"],
+    "gulf": [29.80, 48.80, "Gulf proposal", "dot", "dashed"],
+    "highlands": [39.20, 41.30, "Highlands proposal", "peak", "dashed"],
+    "qurnah": [31.00, 47.43, "Al-Qurnah", "river", "solid"]
+  },
+  "youtube": {
+    "title": "Was the Garden of Eden in Iraq? 🗺️ #shorts",
+    "description": "Genesis 2 names four rivers. Two are real, two are still unidentified.\nEvery Eden location, from the Gulf to the highlands, is a proposal, not a discovery.\n#GardenOfEden #BibleHistory #Archaeology #MythUnearthed"
+  }
+}

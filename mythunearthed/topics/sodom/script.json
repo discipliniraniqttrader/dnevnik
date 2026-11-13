@@ -1,0 +1,29 @@
+{
+  "title": "Where Was Sodom? Archaeology Still Argues",
+  "author": "QUILL",
+  "notes": "Three candidates, all dashed. The 2021 airburst paper is only called 'disputed' (not 'retracted' or 'corrected'). Not-proven line in beat 11.",
+  "beats": [
+    {"text": "Nobody agrees where Sodom actually stood.", "say": "Nobody agrees where SOD-um actually stood.", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "WHERE WAS IT?", "source": "-"},
+    {"text": "Abraham bargains, from fifty righteous people down to ten.", "shot": "TEXT", "kind": "big_number", "display": "50 -> 10", "callout": "FIFTY TO TEN", "source": "Genesis 18:24-32"},
+    {"text": "Then Genesis 19 says sulfur and fire rained from the sky.", "shot": "EVENT", "scene": "fire_rain", "label": "SULFUR AND FIRE", "callout": "FIRE FROM HEAVEN", "source": "Genesis 19:24"},
+    {"text": "Lot's wife looks back and becomes a pillar of salt.", "shot": "TEXT", "kind": "glow_word", "display": "PILLAR OF SALT", "callout": "DON'T LOOK BACK", "source": "Genesis 19:26"},
+    {"text": "Genesis places the cities on the plain of the Jordan.", "shot": "MAP", "focus": [31.6, 35.55], "zoom": "wide", "pins": ["babedhdhra", "numeira", "hammam"], "callout": "THE PLAIN", "source": "Genesis 13:10-12"},
+    {"text": "Candidate one, Bab edh-Dhra: a walled Bronze Age town beside a huge cemetery.", "say": "Candidate one, BAHB eh-DRAH: a walled Bronze Age town beside a huge cemetery.", "shot": "MAP", "focus": [31.25, 35.53], "zoom": "close", "pins": ["babedhdhra"], "callout": "CASE 1", "source": "archaeology (Bab edh-Dhra excavations)"},
+    {"text": "Candidate two, Numeira, a small town nearby, also abandoned in the Bronze Age.", "say": "Candidate two, noo-MAY-rah, a small town nearby, also abandoned in the Bronze Age.", "shot": "MAP", "focus": [31.17, 35.51], "zoom": "close", "pins": ["numeira"], "callout": "CASE 2", "source": "archaeology (Numeira excavations)"},
+    {"text": "Both lie southeast of the Dead Sea. A rival theory looks north.", "shot": "EVENT", "scene": "split_compare", "left": "SOUTHEAST: Bab edh-Dhra, Numeira", "right": "NORTH: Tall el-Hammam", "label": "SOUTH OR NORTH?", "callout": "SOUTH OR NORTH?", "source": "scholarly debate"},
+    {"text": "Candidate three, Tall el-Hammam, was a large Middle Bronze Age city.", "say": "Candidate three, Tall el-Ham-MAHM, was a large Middle Bronze Age city.", "shot": "MAP", "focus": [31.84, 35.68], "zoom": "mid", "pins": ["hammam"], "callout": "CASE 3", "source": "archaeology (Tall el-Hammam excavations)"},
+    {"text": "A 2021 paper blamed a meteor airburst there, but many scientists dispute it.", "shot": "TEXT", "kind": "glow_word", "display": "AIRBURST?", "callout": "DEBATED", "source": "2021 Scientific Reports paper; disputed by many scientists"},
+    {"text": "Plainly: no dig has proven that any of these is Sodom.", "say": "Plainly: no dig has proven that any of these is SOD-um.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "NOT PROVEN", "source": "archaeology"},
+    {"text": "Three sites, one story, and no proof.", "shot": "MAP", "focus": [31.55, 35.58], "zoom": "wide", "pins": ["babedhdhra", "numeira", "hammam"], "callout": "3 SITES", "source": "-"},
+    {"text": "Bab edh-Dhra, Numeira, or Hammam: which gets your vote?", "say": "BAHB eh-DRAH, noo-MAY-rah, or Ham-MAHM: which gets your vote?", "shot": "PRESENTER", "action": "point_left", "backdrop": "desert", "callout": "YOUR VOTE?", "source": "-"}
+  ],
+  "places": {
+    "babedhdhra": [31.25, 35.53, "Bab edh-Dhra", "ruins", "dashed"],
+    "numeira": [31.17, 35.51, "Numeira", "ruins", "dashed"],
+    "hammam": [31.84, 35.68, "Tall el-Hammam", "ruins", "dashed"]
+  },
+  "youtube": {
+    "title": "Where Was Sodom? Archaeology Still Argues 🗺️ #shorts",
+    "description": "Three Bronze Age sites near the Dead Sea, each proposed as Sodom, each debated.\nA 2021 airburst paper on Tall el-Hammam is disputed by many scientists. No dig has proven any of them.\n#Sodom #BibleHistory #Archaeology #MythUnearthed"
+  }
+}

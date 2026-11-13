@@ -1,0 +1,35 @@
+{
+  "title": "Where Is the Ark of the Covenant Now?",
+  "author": "QUILL",
+  "notes": "Aksum claim is shown as a claim (Kebra Nagast, c. 14th century). Not-proven line in beat 12.",
+  "beats": [
+    {"text": "Israel's holiest chest vanished from the Bible.", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "WHERE IS IT?", "source": "-"},
+    {"text": "Philistines capture the Ark and carry it to Ashdod.", "say": "Philistines capture the Ark and carry it to Ash-dod.", "shot": "MAP", "focus": [31.9, 35.0], "zoom": "wide", "pins": ["shiloh", "ashdod"], "callout": "CAPTURED", "source": "1 Samuel 4-5"},
+    {"text": "There, their god Dagon is found face down before it.", "say": "There, their god DAY-gon is found face down before it.", "shot": "EVENT", "scene": "object", "object": "ark_box", "label": "DAGON FALLS", "callout": "FACE DOWN", "source": "1 Samuel 5:3"},
+    {"text": "Sickness follows it through Gath and Ekron.", "say": "Sickness follows it through Gath and EK-ron.", "shot": "MAP", "focus": [31.74, 34.85], "zoom": "mid", "pins": ["gath", "ekron"], "callout": "GATH, EKRON", "source": "1 Samuel 5:8-12"},
+    {"text": "After seven months, they send it home.", "shot": "TEXT", "kind": "big_number", "display": "7 MONTHS", "callout": "SEVEN MONTHS", "source": "1 Samuel 6:1"},
+    {"text": "It reaches Beth-shemesh, then waits at Kiriath-jearim for twenty years.", "say": "It reaches Beth-SHEM-esh, then waits at KIR-ee-ath-JEE-uh-rim for twenty years.", "shot": "MAP", "focus": [31.78, 35.04], "zoom": "mid", "pins": ["bethshemesh", "kiriath"], "callout": "20 YEARS", "source": "1 Samuel 6-7:2"},
+    {"text": "David brings it to Jerusalem, and Solomon sets it in the Temple.", "shot": "MAP", "focus": [31.78, 35.23], "zoom": "close", "pins": ["jerusalem"], "callout": "THE TEMPLE", "source": "2 Samuel 6; 1 Kings 8"},
+    {"text": "Then Babylon burns the Temple, yet the loot list in Second Kings never names the Ark.", "shot": "EVENT", "scene": "object", "object": "fire", "label": "LOOT LIST", "callout": "NOT LISTED", "source": "2 Kings 25:8-17"},
+    {"text": "Jeremiah 3:16 even says people will stop speaking of it.", "shot": "TEXT", "kind": "quote", "display": "\"Neither shall it come to mind\" - Jeremiah 3:16", "callout": "JEREMIAH 3:16", "source": "Jeremiah 3:16"},
+    {"text": "Ethiopia says it sits today in a chapel in Aksum.", "say": "Ethiopia says it sits today in a chapel in AHK-soom.", "shot": "MAP", "focus": [14.13, 38.72], "zoom": "mid", "pins": ["aksum"], "callout": "AKSUM?", "source": "claim by the Ethiopian Orthodox tradition"},
+    {"text": "That story comes from the Kebra Nagast, compiled around the fourteenth century.", "say": "That story comes from the KEB-rah NAH-gahst, compiled around the fourteenth century.", "shot": "EVENT", "scene": "object", "object": "scroll", "label": "KEBRA NAGAST, c. 14TH CENTURY", "callout": "14TH CENTURY", "source": "Kebra Nagast (compiled c. 14th century)"},
+    {"text": "Plainly: nobody outside has verified it, because it's never been shown publicly.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "NOT PROVEN", "source": "archaeology"},
+    {"text": "From Shiloh to Aksum, the trail goes cold.", "say": "From SHY-loh to AHK-soom, the trail goes cold.", "shot": "MAP", "focus": [24.0, 36.5], "zoom": "wide", "pins": ["shiloh", "jerusalem", "aksum"], "callout": "COLD TRAIL", "source": "-"},
+    {"text": "Destroyed, hidden, or in Aksum? What's your theory?", "say": "Destroyed, hidden, or in AHK-soom? What's your theory?", "shot": "PRESENTER", "action": "point_right", "backdrop": "desert", "callout": "YOUR THEORY?", "source": "-"}
+  ],
+  "places": {
+    "shiloh": [32.05, 35.29, "Shiloh", "tent", "solid"],
+    "ashdod": [31.80, 34.65, "Ashdod", "temple", "solid"],
+    "gath": [31.70, 34.85, "Gath", "walls", "solid"],
+    "ekron": [31.78, 34.85, "Ekron", "walls", "solid"],
+    "bethshemesh": [31.75, 34.98, "Beth-shemesh", "walls", "solid"],
+    "kiriath": [31.81, 35.11, "Kiriath-jearim", "ruins", "solid"],
+    "jerusalem": [31.78, 35.23, "Jerusalem", "temple", "solid"],
+    "aksum": [14.13, 38.72, "Aksum (claim)", "temple", "dashed"]
+  },
+  "youtube": {
+    "title": "Where Is the Ark of the Covenant Now? 🗺️ #shorts",
+    "description": "From Shiloh to Jerusalem, the Ark's route is in the Bible. After that, the trail goes cold.\nEthiopia's Aksum claim rests on the Kebra Nagast (c. 14th century), and the Ark has never been shown publicly. Claims are shown as claims.\n#ArkOfTheCovenant #BibleHistory #Archaeology #MythUnearthed"
+  }
+}
