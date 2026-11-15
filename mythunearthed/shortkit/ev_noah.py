@@ -142,7 +142,7 @@ def aerial_scene(lt, dur, t, zoom=(1.0, 1.25), focus=(0.5, 0.5), qmark_at=None, 
     for i in range(1, 14):
         yy = 56 + i * (H - 112) / 14
         d.line([(38, yy), (60, yy)], fill=(236, 224, 190, 190), width=3); d.line([(W - 38, yy), (W - 60, yy)], fill=(236, 224, 190, 190), width=3)
-    f = F("sans-semi.ttf", 30)
+    f = F("sans-semi.ttf", 44)
     d.text((64, 78), caption[:34].upper(), font=f, fill=(246, 236, 200, 235), stroke_width=3, stroke_fill=(10, 8, 6, 255))
     d.text((W - 64, H - 78), "PRINT " + f"{int(17 + (t * 9) % 60):03d}", font=f, fill=(246, 236, 200, 210), anchor="rd", stroke_width=3, stroke_fill=(10, 8, 6, 255))
     return np.asarray(pil)

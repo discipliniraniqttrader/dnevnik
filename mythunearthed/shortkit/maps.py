@@ -175,6 +175,7 @@ class MapKit:
                 u = 1.0 if t1 <= t0 else ease((t - (t0 + (t1 - t0) * i / n)) / ((t1 - t0) / n + .05))
                 self.line(fr, glow, V, self.wxy(keys[i]), self.wxy(keys[i + 1]), u, t, thin=True)
         keys = [k for k in s["pins"] if t >= self.pin_t[k]]
+        self.last_pins = [tuple(float(v) for v in V.project([self.wxy(k)])[0]) for k in keys]       # screen xy, for caption nudging
         for k in sorted(keys, key=lambda k: V.project([self.wxy(k)])[0][1]):
             gl = (.8 + .2 * math.sin(t * 4 + hash(k) % 7)) if s.get("wide") else 0.0
             self.draw_pin(k, fr, glow, V, t, gl)

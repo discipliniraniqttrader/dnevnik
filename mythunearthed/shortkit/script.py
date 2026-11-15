@@ -117,6 +117,11 @@ def load(topic_dir):
     for i, b in enumerate(raw["beats"], 1):
         beats.append(norm_beat(b, i, len(raw["beats"]), places, tts_over, S, warns))
     S["beats"] = beats
+    rv = [b for b in beats if b["reveal"]]
+    for k, b in enumerate(rv, 1):                       # bare "1"/"true" -> "k/total"
+        if not re.search(r"\d\s*/\s*\d", b["reveal"]): b["reveal"] = f"{k}/{len(rv)}"
+        else: b["reveal"] = re.sub(r"\s+", "", b["reveal"])
+    S["improvements"] = [str(x) for x in (raw.get("improvements") or [])]
     S["warnings"] = warns
     return S
 
@@ -163,6 +168,11 @@ def norm_beat(b, i, n, places, tts_over, S, warns):
     o["tts"] = tts; o["used_say"] = bool(say) or (str(i) in tts_over)
     o["callout"] = (b.get("callout") or "").strip() or None
     o["source"] = b.get("source", "-")
+    kw = b.get("keyword")
+    o["keyword"] = str(kw).strip() if kw and str(kw).strip() else None
+    rv = b.get("reveal")
+    o["reveal"] = (str(rv).strip() or None) if rv not in (None, False, "") else None      # "2/4" or an int (total filled in load())
+    o["action_given"] = b.get("action") in ACTIONS
     last = i == n
     if shot == "PRESENTER":
         a = b.get("action", "idle"); o["action"] = a if a in ACTIONS else "idle"

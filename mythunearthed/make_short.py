@@ -8,7 +8,7 @@
 
 Stages and caches (all under <topic_dir>): voice/ (Chatterbox raw + stretch), cache/ (narration, plan, ezra_<hash>/), assets/terrain_auto_* (shared).
 """
-import json, math, multiprocessing as mp, pickle, sys, time
+import hashlib, json, math, multiprocessing as mp, os, pickle, sys, time
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
@@ -57,7 +57,7 @@ def main():
     preview = opt("--frames") is not None
     t0 = time.time(); ezra_dir, nz, rendered = EZ.ensure(cache, voice, TOTAL, P["acts"], render=(not preview) or ("--ezra" in args)); stage("ezra" + ("" if rendered else "_cached"), t0)
     D = dict(S=S, plan=P, region=region["name"], ezra_dir=str(ezra_dir), NF=nz, BT=BT, TOTAL=TOTAL)
-    pkl = cache / "plan.pkl"; pickle.dump(D, open(pkl, "wb"))
+    pkl = cache / "plan.pkl"; tmpk = cache / "plan.pkl.tmp"; pickle.dump(D, open(tmpk, "wb")); os.replace(tmpk, pkl)
 
     if preview:
         t0 = time.time()
@@ -67,27 +67,34 @@ def main():
     # ---- audio
     t0 = time.time(); audio = sfx.mix(voice, TOTAL, P["sfx"]); wav = cache / "audio.wav"; sf.write(wav, audio, VO.SR); stage("audio", t0)
 
-    # ---- frames (spawn pool)
+    # ---- frames (spawn pool). Resumable: chunks already rendered for THIS plan+code (key) are validated with ffprobe and skipped.
     t0 = time.time()
     step = 75
-    jobs = [(i, f0, min(nframes, f0 + step), str(cache)) for i, f0 in enumerate(range(0, nframes, step))]
-    parts, means = [], []
+    key = hashlib.sha1(open(pkl, "rb").read() + b"".join(p_.read_bytes() for p_ in sorted((ROOT / "shortkit").glob("*.py")))
+                       + f"{nframes}|{FPS}".encode()).hexdigest()[:16]
+    for q in cache.glob("_part*.tmp.mp4"): q.unlink(missing_ok=True)                      # unfinished chunk from a crashed run
+    jobs = [(i, f0, min(nframes, f0 + step), str(cache), key) for i, f0 in enumerate(range(0, nframes, step))]
+    parts, means, mints, reused = [], [], [], 0
     with mp.get_context("spawn").Pool(4, initializer=compose.init_worker, initargs=(str(pkl),)) as pool:
-        for k, (path, mn) in enumerate(pool.imap(compose.render_chunk, jobs, chunksize=1)):
-            parts.append(path); means += mn
-            print(f"  chunk {k + 1}/{len(jobs)}  {time.time() - t0:.0f}s", flush=True)
+        for k, (path, mn, mt, skipped) in enumerate(pool.imap(compose.render_chunk, jobs, chunksize=1)):
+            parts.append(path); means += mn; mints.append(mt); reused += bool(skipped)
+            print(f"  chunk {k + 1}/{len(jobs)}  {time.time() - t0:.0f}s{'  (reused)' if skipped else ''}", flush=True)
     stage("frames", t0)
-    t0 = time.time(); final = out / f"{name}.mp4"; encode.mux(parts, wav, final, cache); stage("mux", t0)
+    t0 = time.time(); final = out / f"{name}.mp4"; tmpf = out / f"{name}.tmp.mp4"; encode.mux(parts, wav, tmpf, cache); os.replace(tmpf, final); stage("mux", t0)
 
     # ---- guards
     m = np.array(means); jumps = np.abs(np.diff(m)); jmax = float(jumps.max()) if len(jumps) else 0.0; jt = float((int(jumps.argmax()) + 1) / FPS) if len(jumps) else 0.0
-    n_shots = len(P["shots"]); warns = list(S["warnings"])
-    if TOTAL > 65: warns.append(f"LENGTH {TOTAL:.1f}s > 65s")
+    shots = P["shots"]; n_shots = len(shots); warns = list(S["warnings"]); dur_s = nframes / FPS
+    avg_shot = TOTAL / n_shots; sd = [s_["dur"] for s_ in shots[:-1]] if n_shots > 1 else []        # the end card holds long on purpose
+    off = [round(x, 2) for x in sd if x < 1.15 or x > 2.1]
+    min_text = float(min(mints)) if mints else 0.0
+    if not (40 <= dur_s <= 50): warns.append(f"DURATION {dur_s:.1f}s outside 40-50s")
     if jmax > 15: warns.append(f"FLICKER max frame-to-frame brightness jump {jmax:.1f} at {jt:.2f}s > 15")
-    if TOTAL / n_shots > 2.0: warns.append(f"avg shot {TOTAL / n_shots:.2f}s > 2s")
-    if P["ezra_share"] < .30: warns.append(f"Ezra on screen only {P['ezra_share'] * 100:.0f}% of the time (<30%)")
+    if avg_shot > 2.0: warns.append(f"avg shot {avg_shot:.2f}s > 2s")
+    if P["ezra_share"] < .35: warns.append(f"Ezra on screen only {P['ezra_share'] * 100:.0f}% of the time (<35%)")
+    if min_text < 44: warns.append(f"smallest overlay text {min_text:.0f}px < 44px")
     words = sum(len(b["text"].split()) for b in beats)
-    if not (130 <= words <= 155): warns.append(f"word count {words} outside 130-155")
+    if not (100 <= words <= 135): warns.append(f"word count {words} outside 100-135")
 
     # ---- 9 MB HEVC + sheet
     small = out / f"{name}_9mb.mp4"; size9 = None
@@ -96,7 +103,9 @@ def main():
         if size9 >= 10_000_000: warns.append("9mb file still >= 10 MB")
     t0 = time.time(); encode.contact_sheet(final, out / f"{name}_sheet.png", TOTAL); stage("sheet", t0)
     T["total"] = round(time.time() - t00, 1)
-    rep = dict(topic=name, title=S["title"], duration_s=round(nframes / FPS, 2), narration_s=round(TOTAL, 2), shot_count=n_shots, avg_shot_s=round(TOTAL / n_shots, 2),
+    rep = dict(topic=name, title=S["title"], duration_s=round(nframes / FPS, 2), narration_s=round(TOTAL, 2), shot_count=n_shots, avg_shot_s=round(avg_shot, 2),
+               shots_outside_1p2_2p0=off, wow_shots=sum(1 for s_ in shots if s_.get("wow")), keywords=[k_ for k_ in P["kws"] if k_["word"]],
+               min_text_px=round(min_text, 1), chunks=len(jobs), chunks_reused=reused, improvements=S.get("improvements", []),
                max_brightness_jump=round(jmax, 2), max_jump_at_s=round(jt, 2), words=words, ezra_share=round(P["ezra_share"], 3),
                say_beats=[b["i"] for b in beats if b["used_say"]], beats=len(beats), region=region["name"], mp4_bytes=final.stat().st_size, mp4_9mb_bytes=size9,
                warnings=warns, stage_seconds=T)

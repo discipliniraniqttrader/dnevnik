@@ -1,31 +1,180 @@
 {
-  "title": "The Lost Ten Tribes: Where Did They Go?",
-  "author": "QUILL",
-  "notes": "Modern descent claims are framed as claims. Sargon II figure given as 'about 27,000'. Not-proven line in beat 11.",
-  "beats": [
-    {"text": "Ten tribes of Israel vanished. Where did they go?", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "TEN TRIBES GONE", "source": "-"},
-    {"text": "Assyria conquers Samaria, capital of the northern kingdom.", "say": "Assyria conquers Suh-MARE-ee-uh, capital of the northern kingdom.", "shot": "MAP", "focus": [32.28, 35.19], "zoom": "mid", "pins": ["samaria"], "callout": "SAMARIA FALLS", "source": "2 Kings 17:6"},
-    {"text": "Sargon II's own records boast of deporting about 27,000 people.", "say": "SAR-gon the Second's own records boast of deporting about twenty-seven thousand people.", "shot": "TEXT", "kind": "big_number", "display": "ABOUT 27,000", "callout": "ABOUT 27,000", "source": "Sargon II annals"},
-    {"text": "Second Kings says they were settled in Halah, and by the Habor river in Gozan.", "say": "Second Kings says they were settled in HAY-lah, and by the HAY-bor river in GO-zan.", "shot": "MAP", "focus": [36.8, 40.0], "zoom": "mid", "pins": ["gozan"], "callout": "HALAH, HABOR, GOZAN", "source": "2 Kings 17:6"},
-    {"text": "Others went to the cities of the Medes, in what is now Iran.", "say": "Others went to the cities of the MEEDS, in what is now Iran.", "shot": "MAP", "focus": [34.8, 48.5], "zoom": "wide", "pins": ["media"], "callout": "THE MEDES", "source": "2 Kings 17:6"},
-    {"text": "Deportation was Assyrian policy, and foreign peoples were moved into Samaria.", "shot": "EVENT", "scene": "crowd", "label": "DEPORTED", "callout": "ASSYRIAN POLICY", "source": "2 Kings 17:24; Assyrian records"},
-    {"text": "Yet some northerners remained: Hezekiah later invited them to Passover.", "say": "Yet some northerners remained: Hez-eh-KY-ah later invited them to Passover.", "shot": "TEXT", "kind": "quote", "display": "Some northerners stayed - 2 Chronicles 30", "callout": "SOME STAYED", "source": "2 Chronicles 30:1-11"},
-    {"text": "The Bnei Menashe of northeast India say they descend from Manasseh.", "say": "The BNAY men-NAH-sheh of northeast India say they descend from Manasseh.", "shot": "MAP", "focus": [24.8, 93.9], "zoom": "mid", "pins": ["manipur"], "callout": "A CLAIM", "source": "claim by Bnei Menashe"},
-    {"text": "Some Pashtun traditions claim Israelite roots, but most scholars doubt it.", "say": "Some PUSH-toon traditions claim Israelite roots, but most scholars doubt it.", "shot": "MAP", "focus": [34.0, 70.5], "zoom": "wide", "pins": ["pashtun"], "callout": "ANOTHER CLAIM", "source": "claim; doubted by most scholars"},
-    {"text": "Britain, India, Afghanistan: loud claims, but no proof.", "shot": "EVENT", "scene": "split_compare", "left": "MODERN CLAIMS: many", "right": "PROOF: none", "label": "CLAIMS VS PROOF", "callout": "CLAIMS VS PROOF", "source": "claims (British Israelism; Bnei Menashe; Pashtun tradition)"},
-    {"text": "Plainly: no modern group has been proven to descend from them.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "NOT PROVEN", "source": "scholarly consensus"},
-    {"text": "From Samaria to Media, the written trail goes cold.", "say": "From Suh-MARE-ee-uh to MEE-dee-uh, the written trail goes cold.", "shot": "MAP", "focus": [34.5, 42.0], "zoom": "wide", "pins": ["samaria", "gozan", "media"], "callout": "COLD TRAIL", "source": "-"},
-    {"text": "So where do you think the ten tribes went?", "shot": "PRESENTER", "action": "point_left", "backdrop": "desert", "callout": "YOUR THEORY?", "source": "-"}
-  ],
-  "places": {
-    "samaria": [32.28, 35.19, "Samaria", "walls", "solid"],
-    "gozan": [36.82, 40.04, "Gozan (Habor river)", "river", "solid"],
-    "media": [34.80, 48.50, "Cities of the Medes (region)", "walls", "dashed"],
-    "manipur": [24.82, 93.94, "Bnei Menashe (claim)", "dot", "dashed"],
-    "pashtun": [34.00, 70.50, "Pashtun tradition (claim)", "dot", "dashed"]
+ "title": "10 Tribes Vanished. Where Did They Go?",
+ "author": "QUILL",
+ "notes": "Modern descent claims framed as claims. Sargon II 'about 27,000'. Not-proven line in beat 9. British Israelism shown only as a claim.",
+ "beats": [
+  {
+   "text": "Ten tribes of Israel vanished from history.",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "desert",
+   "callout": "10 TRIBES GONE",
+   "keyword": "vanished",
+   "source": "-"
   },
-  "youtube": {
-    "title": "The Lost Ten Tribes: Where Did They Go? 🗺️ #shorts",
-    "description": "Assyria deported Israelites from Samaria to Halah, Gozan and the cities of the Medes. Then the record goes quiet.\nModern descent claims are shown as claims. None is proven.\n#LostTribes #BibleHistory #Archaeology #MythUnearthed"
+  {
+   "text": "Assyria's Sargon II boasts of deporting about 27,000 people.",
+   "say": "Assyria's SAR-gon the Second boasts of deporting about twenty-seven thousand people.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "ABOUT 27,000",
+   "callout": "ABOUT 27,000",
+   "keyword": "27,000",
+   "source": "Sargon II annals"
+  },
+  {
+   "text": "So where did they go? Three modern claims, and the last is the strangest.",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "desert",
+   "callout": "3 CLAIMS",
+   "keyword": "strangest",
+   "source": "-"
+  },
+  {
+   "text": "Second Kings says Halah, the Habor river in Gozan, and the cities of the Medes.",
+   "say": "Second Kings says HAY-lah, the HAY-bor river in GO-zan, and the cities of the MEEDS.",
+   "shot": "MAP",
+   "focus": [
+    36.0,
+    44.0
+   ],
+   "zoom": "wide",
+   "pins": [
+    "samaria",
+    "gozan",
+    "media"
+   ],
+   "callout": "HALAH, GOZAN, MEDES",
+   "keyword": "Gozan",
+   "source": "2 Kings 17:6"
+  },
+  {
+   "text": "But some northerners stayed. Hezekiah later invited them to Passover.",
+   "say": "But some northerners stayed. Hez-eh-KY-ah later invited them to Passover.",
+   "shot": "EVENT",
+   "scene": "crowd",
+   "label": "SOME STAYED",
+   "callout": "SOME STAYED",
+   "keyword": "stayed",
+   "source": "2 Chronicles 30:1-11"
+  },
+  {
+   "text": "Claim one: India's Bnei Menashe say they descend from Manasseh.",
+   "say": "Claim one: India's BNAY men-NAH-sheh say they descend from Manasseh.",
+   "shot": "MAP",
+   "focus": [
+    24.8,
+    93.9
+   ],
+   "zoom": "mid",
+   "pins": [
+    "manipur"
+   ],
+   "callout": "A CLAIM",
+   "keyword": "Menashe",
+   "reveal": "1/3",
+   "source": "claim by Bnei Menashe"
+  },
+  {
+   "text": "Two: some Pashtun traditions claim Israelite roots, but most scholars doubt it.",
+   "say": "Two: some PUSH-toon traditions claim Israelite roots, but most scholars doubt it.",
+   "shot": "TEXT",
+   "kind": "glow_word",
+   "display": "PASHTUN?",
+   "callout": "ANOTHER CLAIM",
+   "keyword": "Pashtun",
+   "reveal": "2/3",
+   "source": "claim; doubted by most scholars"
+  },
+  {
+   "text": "Three, the strangest: British Israelism says the British descend from them.",
+   "shot": "EVENT",
+   "scene": "split_compare",
+   "left": "BRITISH ISRAELISM: a claim",
+   "right": "EVIDENCE: none shown",
+   "label": "CLAIM ONLY",
+   "callout": "CLAIMS VS PROOF",
+   "keyword": "British",
+   "reveal": "3/3",
+   "source": "claim (British Israelism)"
+  },
+  {
+   "text": "Not proven: no modern group is shown to descend from them.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "night",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "scholarly consensus"
+  },
+  {
+   "text": "From Samaria to Media, the written trail goes cold.",
+   "say": "From Suh-MARE-ee-uh to MEE-dee-uh, the written trail goes cold.",
+   "shot": "MAP",
+   "focus": [
+    34.5,
+    42.0
+   ],
+   "zoom": "wide",
+   "pins": [
+    "samaria",
+    "gozan",
+    "media"
+   ],
+   "callout": "COLD TRAIL",
+   "keyword": "cold",
+   "source": "-"
+  },
+  {
+   "text": "Ten tribes vanished from history. Lost in Assyria, or alive today?",
+   "shot": "PRESENTER",
+   "action": "point_left",
+   "backdrop": "desert",
+   "callout": "YOUR THEORY?",
+   "keyword": "vanished",
+   "source": "-"
   }
+ ],
+ "places": {
+  "samaria": [
+   32.28,
+   35.19,
+   "Samaria",
+   "walls",
+   "solid"
+  ],
+  "gozan": [
+   36.82,
+   40.04,
+   "Gozan (Habor river)",
+   "river",
+   "solid"
+  ],
+  "media": [
+   34.8,
+   48.5,
+   "Cities of the Medes (region)",
+   "walls",
+   "dashed"
+  ],
+  "manipur": [
+   24.82,
+   93.94,
+   "Bnei Menashe (claim)",
+   "dot",
+   "dashed"
+  ],
+  "pashtun": [
+   34.0,
+   70.5,
+   "Pashtun tradition (claim)",
+   "dot",
+   "dashed"
+  ]
+ },
+ "youtube": {
+  "title": "10 Tribes Vanished. Where Did They Go? 🗺️ #shorts",
+  "description": "Assyria deported Israelites from Samaria around 722 BC, and then the record goes quiet. Three modern claims say they found them.\nNo modern group has been shown to descend from the ten tribes. Claims are shown as claims.\n#LostTribes #BibleHistory #Archaeology #MythUnearthed"
+ }
 }

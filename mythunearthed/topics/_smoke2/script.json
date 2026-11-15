@@ -1,0 +1,80 @@
+{
+ "title": "Babylon Smoke Test",
+ "chip": "BABYLON",
+ "beats": [
+  {
+   "text": "Babylon's walls were so wide that chariots could race on top.",
+   "shot": "MAP",
+   "callout": "WIDE WALLS",
+   "source": "Herodotus, Histories 1.178",
+   "keyword": "chariots",
+   "focus": [
+    32.54,
+    44.42
+   ],
+   "zoom": "mid",
+   "pins": [
+    "babylon"
+   ]
+  },
+  {
+   "text": "The city stood on the Euphrates, south of modern Baghdad.",
+   "shot": "MAP",
+   "focus": [
+    32.54,
+    44.42
+   ],
+   "zoom": "close",
+   "pins": [
+    "babylon"
+   ],
+   "callout": "BABYLON",
+   "source": "archaeology",
+   "reveal": "1/3",
+   "keyword": "Euphrates"
+  },
+  {
+   "text": "Herodotus claims the outer wall ran for about fifty miles.",
+   "shot": "EVENT",
+   "scene": "counter",
+   "number": 50,
+   "label": "MILES",
+   "source": "x",
+   "keyword": "fifty miles"
+  },
+  {
+   "text": "Inside, the Ark of the Covenant is not mentioned, but a golden treasure was.",
+   "shot": "MAP",
+   "callout": "NOT PROVEN",
+   "say": "Inside, the Ark of the Covenant is not mentioned, but a golden treasure was.",
+   "source": "tradition",
+   "reveal": "3/3",
+   "keyword": "golden",
+   "focus": [
+    30.96,
+    46.1
+   ],
+   "zoom": "mid",
+   "pins": [
+    "ur",
+    "babylon"
+   ]
+  }
+ ],
+ "places": {
+  "babylon": [
+   32.54,
+   44.42,
+   "Babylon",
+   "walls",
+   "solid"
+  ],
+  "ur": [
+   30.96,
+   46.1,
+   "Ur",
+   "ruins",
+   "solid"
+  ]
+ }
+}

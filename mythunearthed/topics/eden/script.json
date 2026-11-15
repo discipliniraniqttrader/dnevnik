@@ -1,31 +1,179 @@
 {
-  "title": "Was the Garden of Eden in Iraq?",
-  "author": "QUILL",
-  "notes": "All Eden locations are proposals. Pishon/Gihon explicitly unidentified. Not-proven line in beat 11.",
-  "beats": [
-    {"text": "Was the Garden of Eden in Iraq?", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "EDEN IN IRAQ?", "source": "-"},
-    {"text": "Genesis 2 names four rivers flowing out of Eden.", "shot": "TEXT", "kind": "big_number", "display": "4 RIVERS", "callout": "FOUR RIVERS", "source": "Genesis 2:10-14"},
-    {"text": "Two are real: the Tigris and the Euphrates, both flowing through Iraq today.", "say": "Two are real: the TY-gris and the yoo-FRAY-teez, both flowing through Iraq today.", "shot": "MAP", "focus": [32.5, 44.8], "zoom": "wide", "pins": ["tigris", "euphrates"], "callout": "TWO ARE REAL", "source": "Genesis 2:14"},
-    {"text": "The other two, Pishon and Gihon, were never securely identified.", "say": "The other two, PIE-shon and GEE-hon, were never securely identified.", "shot": "TEXT", "kind": "word_shatter", "display": "PISHON? GIHON?", "callout": "UNIDENTIFIED", "source": "Genesis 2:11-13"},
-    {"text": "The Pishon circles Havilah, where the gold is good.", "say": "The PIE-shon circles HAV-ih-lah, where the gold is good.", "shot": "EVENT", "scene": "object", "object": "gold_pile", "label": "HAVILAH: GOOD GOLD", "callout": "GOOD GOLD", "source": "Genesis 2:11-12"},
-    {"text": "One proposal points to dried riverbeds now buried beneath the Persian Gulf.", "shot": "MAP", "focus": [29.8, 48.8], "zoom": "mid", "pins": ["gulf"], "callout": "PROPOSAL 1", "source": "proposed identification"},
-    {"text": "Another looks north, where the Tigris and Euphrates both begin.", "say": "Another looks north, where the TY-gris and yoo-FRAY-teez both begin.", "shot": "MAP", "focus": [39.0, 41.5], "zoom": "wide", "pins": ["highlands"], "callout": "PROPOSAL 2", "source": "proposed identification"},
-    {"text": "So Eden sits at either end of the rivers, depending on who you ask.", "shot": "EVENT", "scene": "split_compare", "left": "NORTH: Armenian highlands", "right": "SOUTH: Persian Gulf", "label": "NORTH OR SOUTH?", "callout": "NORTH OR SOUTH?", "source": "proposed identifications"},
-    {"text": "At al-Qurnah, where they meet, locals show a tree called Adam's.", "say": "At al-KOOR-nah, where they meet, locals show a tree called Adam's.", "shot": "MAP", "focus": [31.0, 47.43], "zoom": "close", "pins": ["qurnah"], "callout": "ADAM'S TREE", "source": "local tradition"},
-    {"text": "Some scholars link 'Eden' to the Sumerian word edin, meaning plain.", "say": "Some scholars link Eden to the Sumerian word EH-din, meaning plain.", "shot": "EVENT", "scene": "tablet", "label": "EDIN = PLAIN?", "callout": "EDIN = PLAIN?", "source": "proposed etymology"},
-    {"text": "Plainly: Eden's location is not proven. These are proposals, not discoveries.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "NOT PROVEN", "source": "scholarly consensus"},
-    {"text": "Real rivers, a lost garden, and no confirmed site.", "shot": "MAP", "focus": [34.5, 45.0], "zoom": "wide", "pins": ["highlands", "tigris", "euphrates", "qurnah", "gulf"], "callout": "NO CONFIRMED SITE", "source": "-"},
-    {"text": "Iraq, the Gulf, or Armenia: where would you search?", "shot": "PRESENTER", "action": "point_right", "backdrop": "desert", "callout": "WHERE WOULD YOU LOOK?", "source": "-"}
-  ],
-  "places": {
-    "tigris": [33.31, 44.37, "Tigris (Baghdad)", "river", "solid"],
-    "euphrates": [31.30, 45.28, "Euphrates (Samawah)", "river", "solid"],
-    "gulf": [29.80, 48.80, "Gulf proposal", "dot", "dashed"],
-    "highlands": [39.20, 41.30, "Highlands proposal", "peak", "dashed"],
-    "qurnah": [31.00, 47.43, "Al-Qurnah", "river", "solid"]
+ "title": "2 of Eden's 4 Rivers Are Real",
+ "author": "QUILL",
+ "notes": "All Eden locations are proposals. Pishon/Gihon unidentified. Not-proven line in beat 9.",
+ "beats": [
+  {
+   "text": "Two of Eden's four rivers are real.",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "desert",
+   "callout": "2 OF 4 REAL",
+   "keyword": "real",
+   "source": "Genesis 2:10-14"
   },
-  "youtube": {
-    "title": "Was the Garden of Eden in Iraq? 🗺️ #shorts",
-    "description": "Genesis 2 names four rivers. Two are real, two are still unidentified.\nEvery Eden location, from the Gulf to the highlands, is a proposal, not a discovery.\n#GardenOfEden #BibleHistory #Archaeology #MythUnearthed"
+  {
+   "text": "Genesis 2 names four. The last clue is one Sumerian word.",
+   "say": "Genesis 2 names four. The last clue is one soo-MARE-ee-an word.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "4 RIVERS",
+   "callout": "4 RIVERS",
+   "keyword": "Sumerian",
+   "source": "Genesis 2:10-14"
+  },
+  {
+   "text": "Two are real: the Tigris and Euphrates, both flowing through Iraq today.",
+   "say": "Two are real: the TY-gris and the yoo-FRAY-teez, both flowing through Iraq today.",
+   "shot": "PRESENTER",
+   "action": "point_left",
+   "backdrop": "desert",
+   "callout": "TWO ARE REAL",
+   "keyword": "Tigris",
+   "source": "Genesis 2:14"
+  },
+  {
+   "text": "But Pishon and Gihon were never securely identified.",
+   "say": "But PIE-shon and GEE-hon were never securely identified.",
+   "shot": "TEXT",
+   "kind": "word_shatter",
+   "display": "PISHON? GIHON?",
+   "callout": "UNIDENTIFIED",
+   "keyword": "identified",
+   "source": "Genesis 2:11-13"
+  },
+  {
+   "text": "Proposal one: dried riverbeds now buried beneath the Persian Gulf.",
+   "shot": "MAP",
+   "focus": [
+    29.8,
+    48.8
+   ],
+   "zoom": "mid",
+   "pins": [
+    "gulf"
+   ],
+   "callout": "PROPOSAL 1",
+   "keyword": "Gulf",
+   "reveal": "1/2",
+   "source": "proposed identification"
+  },
+  {
+   "text": "Proposal two looks north, where both rivers begin. Eden at either end?",
+   "shot": "EVENT",
+   "scene": "split_compare",
+   "left": "NORTH: Armenian highlands",
+   "right": "SOUTH: Persian Gulf",
+   "label": "NORTH OR SOUTH?",
+   "callout": "NORTH OR SOUTH?",
+   "keyword": "north",
+   "reveal": "2/2",
+   "source": "proposed identifications"
+  },
+  {
+   "text": "At al-Qurnah, where the rivers meet, locals show a tree called Adam's.",
+   "say": "At al-KOOR-nah, where the rivers meet, locals show a tree called Adam's.",
+   "shot": "MAP",
+   "focus": [
+    31.0,
+    47.43
+   ],
+   "zoom": "close",
+   "pins": [
+    "qurnah"
+   ],
+   "callout": "ADAM'S TREE",
+   "keyword": "Adam's",
+   "source": "local tradition"
+  },
+  {
+   "text": "Here's the last clue: some scholars link Eden to Sumerian edin, meaning plain.",
+   "say": "Here's the last clue: some scholars link Eden to Sumerian EH-din, meaning plain.",
+   "shot": "EVENT",
+   "scene": "tablet",
+   "label": "EDIN = PLAIN?",
+   "callout": "EDIN = PLAIN?",
+   "keyword": "edin",
+   "source": "proposed etymology"
+  },
+  {
+   "text": "Not proven: Eden's location. These are proposals, not discoveries.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "night",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "scholarly consensus"
+  },
+  {
+   "text": "Real rivers, a lost garden, one Sumerian word.",
+   "say": "Real rivers, a lost garden, one soo-MARE-ee-an word.",
+   "shot": "MAP",
+   "focus": [
+    34.5,
+    45.0
+   ],
+   "zoom": "wide",
+   "pins": [
+    "highlands",
+    "tigris",
+    "euphrates",
+    "qurnah",
+    "gulf"
+   ],
+   "callout": "3 CLUES",
+   "keyword": "Sumerian",
+   "source": "-"
+  },
+  {
+   "text": "Two of Eden's four rivers are real. So Iraq, or Armenia?",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "desert",
+   "callout": "IRAQ OR ARMENIA?",
+   "keyword": "real",
+   "source": "-"
   }
+ ],
+ "places": {
+  "tigris": [
+   33.31,
+   44.37,
+   "Tigris (Baghdad)",
+   "river",
+   "solid"
+  ],
+  "euphrates": [
+   31.3,
+   45.28,
+   "Euphrates (Samawah)",
+   "river",
+   "solid"
+  ],
+  "gulf": [
+   29.8,
+   48.8,
+   "Gulf proposal",
+   "dot",
+   "dashed"
+  ],
+  "highlands": [
+   39.2,
+   41.3,
+   "Highlands proposal",
+   "peak",
+   "dashed"
+  ],
+  "qurnah": [
+   31.0,
+   47.43,
+   "Al-Qurnah",
+   "river",
+   "solid"
+  ]
+ },
+ "youtube": {
+  "title": "2 of Eden's 4 Rivers Are Real 🗺️ #shorts",
+  "description": "Genesis 2 names four rivers. Two flow through Iraq today, two are still unidentified, and one Sumerian word may be the last clue.\nEvery Eden location is a proposal, not a discovery.\n#GardenOfEden #BibleHistory #Archaeology #MythUnearthed"
+ }
 }

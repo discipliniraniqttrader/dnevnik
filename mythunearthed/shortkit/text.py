@@ -43,7 +43,7 @@ def quote_scene(lt, dur, t, text, attribution=""):
     if attribution:
         aa = ease((lt - span * .5) / .5)
         d.line([(340, 1250), (740, 1250)], fill=(232, 170, 40, int(255 * aa)), width=4)
-        d.text((540, 1300), attribution.upper()[:40], font=F("sans-semi.ttf", 40), fill=(236, 214, 150, int(255 * aa)), anchor="mm", stroke_width=3, stroke_fill=(10, 8, 6, int(255 * aa)))
+        d.text((540, 1300), attribution.upper()[:40], font=F("sans-semi.ttf", 44), fill=(236, 214, 150, int(255 * aa)), anchor="mm", stroke_width=3, stroke_fill=(10, 8, 6, int(255 * aa)))
     return np.asarray(pil.convert("RGB"))
 
 

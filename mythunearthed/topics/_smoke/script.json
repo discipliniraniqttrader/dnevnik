@@ -2,13 +2,70 @@
   "title": "Babylon Smoke Test",
   "chip": "BABYLON",
   "beats": [
-    {"text": "Babylon's walls were so wide that chariots could race on top.", "shot": "PRESENTER", "action": "surprised", "backdrop": "city", "callout": "WIDE WALLS", "source": "Herodotus, Histories 1.178"},
-    {"text": "The city stood on the Euphrates, south of modern Baghdad.", "shot": "MAP", "focus": [32.54, 44.42], "zoom": "mid", "pins": ["babylon"], "callout": "BABYLON", "source": "archaeology"},
-    {"text": "Herodotus claims the outer wall ran for about fifty miles.", "shot": "TEXT", "kind": "big_number", "display": "50", "number": 50, "unit": "MILES OF WALL", "callout": "CLAIMED", "source": "claim by Herodotus"},
-    {"text": "Inside, the Ark of the Covenant is not mentioned, but a golden treasure was.", "shot": "EVENT", "scene": "object", "object": "ark_box", "label": "THE ARK", "callout": "NOT PROVEN", "say": "Inside, the Ark of the Covenant is not mentioned, but a golden treasure was.", "source": "tradition"}
+    {
+      "text": "Babylon's walls were so wide that chariots could race on top.",
+      "shot": "PRESENTER",
+      "action": "surprised",
+      "backdrop": "city",
+      "callout": "WIDE WALLS",
+      "source": "Herodotus, Histories 1.178",
+      "keyword": "chariots"
+    },
+    {
+      "text": "The city stood on the Euphrates, south of modern Baghdad.",
+      "shot": "MAP",
+      "focus": [
+        32.54,
+        44.42
+      ],
+      "zoom": "mid",
+      "pins": [
+        "babylon"
+      ],
+      "callout": "BABYLON",
+      "source": "archaeology",
+      "reveal": "1/3",
+      "keyword": "Euphrates"
+    },
+    {
+      "text": "Herodotus claims the outer wall ran for about fifty miles.",
+      "shot": "TEXT",
+      "kind": "big_number",
+      "display": "50",
+      "number": 50,
+      "unit": "MILES OF WALL",
+      "callout": "CLAIMED",
+      "source": "claim by Herodotus",
+      "reveal": "2/3",
+      "keyword": "fifty miles"
+    },
+    {
+      "text": "Inside, the Ark of the Covenant is not mentioned, but a golden treasure was.",
+      "shot": "EVENT",
+      "scene": "object",
+      "object": "ark_box",
+      "label": "THE ARK",
+      "callout": "NOT PROVEN",
+      "say": "Inside, the Ark of the Covenant is not mentioned, but a golden treasure was.",
+      "source": "tradition",
+      "reveal": "3/3",
+      "keyword": "golden"
+    }
   ],
   "places": {
-    "babylon": [32.54, 44.42, "Babylon", "walls", "solid"],
-    "ur": [30.96, 46.10, "Ur", "ruins", "solid"]
+    "babylon": [
+      32.54,
+      44.42,
+      "Babylon",
+      "walls",
+      "solid"
+    ],
+    "ur": [
+      30.96,
+      46.1,
+      "Ur",
+      "ruins",
+      "solid"
+    ]
   }
 }

@@ -1,33 +1,201 @@
 {
-  "title": "Abraham's Road: From Ur to Canaan",
-  "approved_by": "QUILL (draft, pending HELM)",
-  "notes": "Distances are straight-line (as the crow flies), not walking routes. Historicity flagged as debated in beat 12.",
+  "title": "No Record Outside the Bible Names Abraham",
+  "author": "QUILL",
+  "notes": "Distance is straight-line. Camel anachronism is a claim by some scholars. Not-proven line in beat 10.",
   "beats": [
-    {"text": "How far did Abraham really travel?", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "HOW FAR?", "source": "-"},
-    {"text": "Genesis eleven begins in Ur of the Chaldeans, in southern Mesopotamia.", "say": "Genesis eleven begins in Ur of the Kal-DEE-ans, in southern Mess-oh-poh-TAY-mee-ah.", "shot": "MAP", "focus": [30.96, 46.10], "zoom": "mid", "pins": ["ur"], "callout": "UR", "source": "Genesis 11:28, 11:31"},
-    {"text": "Ur was real: its ziggurat still stands in Iraq.", "say": "Ur was real: its ZIG-oo-rat still stands in Iraq.", "shot": "EVENT", "scene": "object", "object": "tower", "label": "UR'S ZIGGURAT", "callout": "A REAL CITY", "source": "archaeology"},
-    {"text": "His father Terah leads the family north-west to Haran, in what is now Turkey.", "say": "His father TEH-rah leads the family north-west to HAR-an, in what is now Turkey.", "shot": "MAP", "focus": [36.86, 39.03], "zoom": "mid", "pins": ["ur", "haran"], "callout": "HARAN", "source": "Genesis 11:31"},
-    {"text": "Ur to Haran: about nine hundred kilometres as the crow flies.", "say": "Ur to HAR-an: about nine hundred kilometres as the crow flies.", "shot": "TEXT", "kind": "big_number", "display": "~900 KM", "callout": "STRAIGHT-LINE", "source": "straight-line distance"},
-    {"text": "In Haran, God tells Abram to go. He is seventy-five.", "say": "In HAR-an, God tells AY-bram to go. He is seventy-five.", "shot": "PRESENTER", "action": "point_right", "backdrop": "night", "callout": "AGE 75", "source": "Genesis 12:1-4"},
-    {"text": "He crosses to Shechem, in the hills of Canaan, and builds an altar.", "say": "He crosses to SHEK-em, in the hills of Canaan, and builds an altar.", "shot": "MAP", "focus": [32.21, 35.28], "zoom": "mid", "pins": ["haran", "shechem"], "callout": "SHECHEM", "source": "Genesis 12:6-7"},
-    {"text": "To your offspring I will give this land.", "shot": "TEXT", "kind": "quote", "display": "To your offspring I will give this land.", "callout": "GENESIS 12:7", "source": "Genesis 12:7"},
-    {"text": "Then Bethel, where he builds another altar, and on south into the Negev.", "say": "Then BETH-el, where he builds another altar, and on south into the NEG-ev.", "shot": "MAP", "focus": [31.5, 35.0], "zoom": "mid", "pins": ["shechem", "bethel", "negev"], "callout": "BETHEL, NEGEV", "source": "Genesis 12:8-9"},
-    {"text": "Famine strikes, so he goes down to Egypt.", "shot": "EVENT", "scene": "object", "object": "jar", "label": "FAMINE", "callout": "FAMINE", "source": "Genesis 12:10"},
-    {"text": "Genesis twelve lists camels among Pharaoh's gifts. Some scholars say domesticated camels came later.", "shot": "TEXT", "kind": "glow_word", "display": "CAMELS?", "callout": "CAMELS?", "source": "Genesis 12:16; claim by some scholars"},
-    {"text": "What's not proven: Abraham himself. No record outside the Bible names him, and historicity is debated.", "shot": "PRESENTER", "action": "shrug", "backdrop": "desert", "callout": "NOT PROVEN", "source": "archaeology / scholarly debate"},
-    {"text": "Ur to Egypt: one family's road across the Fertile Crescent.", "shot": "MAP", "focus": [32.5, 40.0], "zoom": "wide", "pins": ["ur", "haran", "shechem", "bethel", "negev", "egypt"], "callout": "THE ROAD", "source": "Genesis 11:27-12:10"},
-    {"text": "Real journey, legend, or memory of both? What do you think?", "shot": "PRESENTER", "action": "point_right", "backdrop": "desert", "callout": "YOUR TAKE?", "source": "-"}
+    {
+      "text": "Outside the Bible, no undisputed record names Abraham.",
+      "shot": "PRESENTER",
+      "action": "surprised",
+      "backdrop": "desert",
+      "callout": "NO OTHER RECORD",
+      "keyword": "record",
+      "source": "archaeology / scholarly debate"
+    },
+    {
+      "text": "Yet his road is mapped, and the strangest clue is a camel.",
+      "shot": "TEXT",
+      "kind": "glow_word",
+      "display": "CAMEL?",
+      "callout": "CAMEL?",
+      "keyword": "camel",
+      "source": "Genesis 12:16"
+    },
+    {
+      "text": "Ur of the Chaldeans: its ziggurat still stands in Iraq.",
+      "say": "Ur of the Kal-DEE-ans: its ZIG-oo-rat still stands in Iraq.",
+      "shot": "MAP",
+      "focus": [
+        30.96,
+        46.1
+      ],
+      "zoom": "mid",
+      "pins": [
+        "ur"
+      ],
+      "callout": "UR",
+      "keyword": "ziggurat",
+      "source": "Genesis 11:28; archaeology"
+    },
+    {
+      "text": "Terah leads the family north-west. Then Abram, seventy-five, hears: go.",
+      "say": "TEH-rah leads the family north-west. Then AY-bram, seventy-five, hears: go.",
+      "shot": "PRESENTER",
+      "action": "point_right",
+      "backdrop": "night",
+      "callout": "AGE 75",
+      "keyword": "seventy-five",
+      "source": "Genesis 11:31; 12:1-4"
+    },
+    {
+      "text": "Ur to Haran, in Turkey: about 900 kilometres as the crow flies.",
+      "say": "Ur to HAR-an, in Turkey: about nine hundred kilometres as the crow flies.",
+      "shot": "MAP",
+      "focus": [
+        36.0,
+        40.0
+      ],
+      "zoom": "wide",
+      "pins": [
+        "ur",
+        "haran"
+      ],
+      "callout": "~900 KM",
+      "keyword": "900",
+      "source": "straight-line distance"
+    },
+    {
+      "text": "God promises: To your offspring I will give this land.",
+      "shot": "TEXT",
+      "kind": "quote",
+      "display": "To your offspring I will give this land.",
+      "callout": "GENESIS 12:7",
+      "keyword": "promises",
+      "source": "Genesis 12:7"
+    },
+    {
+      "text": "He crosses to Shechem in Canaan and builds an altar.",
+      "say": "He crosses to SHEK-em in Canaan and builds an altar.",
+      "shot": "MAP",
+      "focus": [
+        32.21,
+        35.28
+      ],
+      "zoom": "mid",
+      "pins": [
+        "haran",
+        "shechem",
+        "bethel",
+        "negev"
+      ],
+      "callout": "SHECHEM",
+      "keyword": "Shechem",
+      "source": "Genesis 12:6-8"
+    },
+    {
+      "text": "But famine strikes, so he goes down to Egypt.",
+      "shot": "EVENT",
+      "scene": "object",
+      "object": "jar",
+      "label": "FAMINE",
+      "callout": "FAMINE",
+      "keyword": "famine",
+      "source": "Genesis 12:10"
+    },
+    {
+      "text": "Genesis lists camels among Pharaoh's gifts. Some scholars say domesticated camels came later.",
+      "shot": "TEXT",
+      "kind": "glow_word",
+      "display": "CAMELS?",
+      "callout": "LATE CAMELS?",
+      "keyword": "camels",
+      "source": "Genesis 12:16; claim by some scholars"
+    },
+    {
+      "text": "Not proven: Abraham himself. His historicity is debated.",
+      "shot": "PRESENTER",
+      "action": "shrug",
+      "backdrop": "desert",
+      "callout": "NOT PROVEN",
+      "keyword": "proven",
+      "source": "archaeology / scholarly debate"
+    },
+    {
+      "text": "Ur to Egypt: one family's road across the Fertile Crescent.",
+      "shot": "MAP",
+      "focus": [
+        32.5,
+        40.0
+      ],
+      "zoom": "wide",
+      "pins": [
+        "ur",
+        "haran",
+        "shechem",
+        "bethel",
+        "negev",
+        "egypt"
+      ],
+      "callout": "THE ROAD",
+      "keyword": "road",
+      "source": "Genesis 11:27-12:10"
+    },
+    {
+      "text": "Outside the Bible, no undisputed record names Abraham. Real journey, or legend?",
+      "shot": "PRESENTER",
+      "action": "point_left",
+      "backdrop": "desert",
+      "callout": "YOUR TAKE?",
+      "keyword": "record",
+      "source": "-"
+    }
   ],
   "places": {
-    "ur": [30.96, 46.10, "Ur", "ruins", "solid"],
-    "haran": [36.86, 39.03, "Haran", "walls", "solid"],
-    "shechem": [32.21, 35.28, "Shechem", "walls", "solid"],
-    "bethel": [31.93, 35.24, "Bethel", "temple", "dashed"],
-    "negev": [30.85, 34.78, "The Negev", "dot", "dashed"],
-    "egypt": [30.8, 31.0, "Egypt", "river", "dashed"]
+    "ur": [
+      30.96,
+      46.1,
+      "Ur",
+      "ruins",
+      "solid"
+    ],
+    "haran": [
+      36.86,
+      39.03,
+      "Haran",
+      "walls",
+      "solid"
+    ],
+    "shechem": [
+      32.21,
+      35.28,
+      "Shechem",
+      "walls",
+      "solid"
+    ],
+    "bethel": [
+      31.93,
+      35.24,
+      "Bethel",
+      "temple",
+      "dashed"
+    ],
+    "negev": [
+      30.85,
+      34.78,
+      "The Negev",
+      "dot",
+      "dashed"
+    ],
+    "egypt": [
+      30.8,
+      31.0,
+      "Egypt",
+      "river",
+      "dashed"
+    ]
   },
   "youtube": {
-    "title": "Abraham's Road: From Ur to Canaan 🗺️ #shorts",
-    "description": "From Ur to Haran to Shechem to Egypt: Genesis 11-12 traced on the map. How much of the road would you trust?\nAbraham's historicity is debated, and distances shown are straight-line.\n#Abraham #Genesis #BibleHistory #MythUnearthed"
+    "title": "No Record Outside the Bible Names Abraham 🗺️ #shorts",
+    "description": "From Ur to Haran to Shechem to Egypt: Genesis 11-12 traced on the map, and one odd clue about camels.\nAbraham's historicity is debated, and distances shown are straight-line.\n#Abraham #Genesis #BibleHistory #MythUnearthed"
   }
 }

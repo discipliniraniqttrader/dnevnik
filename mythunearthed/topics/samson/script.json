@@ -1,31 +1,178 @@
 {
-  "title": "Samson Carried a City Gate 60 km?",
-  "approved_by": "QUILL (draft, pending HELM)",
-  "notes": "Gaza-Hebron straight-line ~60 km. The 'facing Hebron' nuance (beat 6) is the single not-proven line.",
-  "beats": [
-    {"text": "Samson carried a city gate how far?", "shot": "PRESENTER", "action": "surprised", "backdrop": "city", "callout": "HOW FAR?", "source": "-"},
-    {"text": "Judges sixteen: at midnight, Samson lifts the doors of Gaza's gate.", "shot": "MAP", "focus": [31.50, 34.47], "zoom": "mid", "pins": ["gaza"], "callout": "GAZA, MIDNIGHT", "source": "Judges 16:1-3"},
-    {"text": "He takes doors, posts and bar, and carries them off on his shoulders.", "shot": "EVENT", "scene": "object", "object": "gate", "label": "GAZA'S GATE", "callout": "BAR AND ALL", "source": "Judges 16:3"},
-    {"text": "Destination: the hill facing Hebron, roughly sixty kilometres in a straight line.", "say": "Destination: the hill facing HEB-ron, roughly sixty kilometres in a straight line.", "shot": "MAP", "focus": [31.52, 34.80], "zoom": "wide", "pins": ["gaza", "hebron"], "callout": "GAZA TO HEBRON", "source": "Judges 16:3; straight-line distance"},
-    {"text": "Hebron sits about nine hundred metres above Gaza: uphill.", "say": "HEB-ron sits about nine hundred metres above Gaza: uphill.", "shot": "TEXT", "kind": "big_number", "display": "~60 KM", "callout": "~900 M UPHILL", "source": "geography"},
-    {"text": "What's not proven: the exact hill. The Hebrew can mean 'facing' Hebron, not at it.", "say": "What's not proven: the exact hill. The Hebrew can mean 'facing' HEB-ron, not at it.", "shot": "PRESENTER", "action": "shrug", "backdrop": "mountain", "callout": "NOT PROVEN", "source": "Judges 16:3 (Hebrew phrase)"},
-    {"text": "He grew up in Zorah, fell for a woman in Timnah, and struck thirty men at Ashkelon.", "say": "He grew up in ZOR-ah, fell for a woman in TIM-nah, and struck thirty men at ASH-keh-lon.", "shot": "MAP", "focus": [31.68, 34.78], "zoom": "mid", "pins": ["zorah", "timnah", "ashkelon", "gaza"], "callout": "HIS HOME GROUND", "source": "Judges 13:2, 14:1, 14:19"},
-    {"text": "Later, captured and blinded, he grinds grain in a Gaza prison.", "shot": "TEXT", "kind": "glow_word", "display": "BLINDED", "callout": "BLINDED", "source": "Judges 16:21"},
-    {"text": "There, Philistines gather in the temple of Dagon to celebrate.", "say": "There, FILL-iss-teens gather in the temple of DAY-gon to celebrate.", "shot": "MAP", "focus": [31.50, 34.47], "zoom": "close", "pins": ["gaza"], "callout": "TEMPLE OF DAGON", "source": "Judges 16:23"},
-    {"text": "Judges says about three thousand people watch from the roof.", "shot": "EVENT", "scene": "crowd", "label": "~3,000 ON THE ROOF", "callout": "~3,000 PEOPLE", "source": "Judges 16:27"},
-    {"text": "Samson pushes the two middle pillars, and the building comes down.", "shot": "TEXT", "kind": "word_shatter", "display": "PILLARS", "callout": "TWO PILLARS", "source": "Judges 16:29-30"},
-    {"text": "Zorah to Gaza is nearly sixty kilometres. His world is small; his legend is big.", "say": "ZOR-ah to Gaza is nearly sixty kilometres. His world is small; his legend is big.", "shot": "MAP", "focus": [31.60, 34.70], "zoom": "wide", "pins": ["zorah", "gaza", "hebron"], "callout": "SMALL WORLD", "source": "straight-line distance"},
-    {"text": "A gate, a hill, a temple: legend, memory, or both?", "shot": "PRESENTER", "action": "point_right", "backdrop": "city", "callout": "LEGEND OR MEMORY?", "source": "-"}
-  ],
-  "places": {
-    "gaza": [31.50, 34.47, "Gaza", "temple", "solid"],
-    "hebron": [31.53, 35.10, "Hebron", "walls", "solid"],
-    "zorah": [31.78, 34.98, "Zorah", "dot", "dashed"],
-    "timnah": [31.78, 34.91, "Timnah", "dot", "dashed"],
-    "ashkelon": [31.66, 34.55, "Ashkelon", "walls", "solid"]
+ "title": "Samson's Gate: 60 km Uphill?",
+ "author": "QUILL",
+ "notes": "Gaza-Hebron straight-line ~60 km, Hebron ~900 m higher. 'Facing Hebron' nuance is the single not-proven line (beat 6).",
+ "beats": [
+  {
+   "text": "Samson carried a gate sixty kilometres uphill?",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "city",
+   "callout": "60 KM UPHILL?",
+   "keyword": "sixty",
+   "source": "Judges 16:3; straight-line distance"
   },
-  "youtube": {
-    "title": "Samson Carried a City Gate 60 km? 🗺️ #shorts",
-    "description": "From Gaza's gate to the hill facing Hebron: roughly 60 km straight-line, and uphill. Legend or memory?\nThe exact hill is not proven; the Hebrew can mean 'facing' Hebron.\n#Samson #Judges #BibleHistory #MythUnearthed"
+  {
+   "text": "At midnight, in Gaza. But the gate isn't the strangest part.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "~60 KM",
+   "callout": "MIDNIGHT",
+   "keyword": "strangest",
+   "source": "Judges 16:3"
+  },
+  {
+   "text": "Judges 16: Samson lifts the doors of Gaza's gate, posts and bar.",
+   "shot": "MAP",
+   "focus": [
+    31.5,
+    34.47
+   ],
+   "zoom": "mid",
+   "pins": [
+    "gaza"
+   ],
+   "callout": "GAZA GATE",
+   "keyword": "Gaza",
+   "source": "Judges 16:1-3"
+  },
+  {
+   "text": "Bar and all, he carries it off on his shoulders.",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "city",
+   "callout": "BAR AND ALL",
+   "keyword": "shoulders",
+   "source": "Judges 16:3"
+  },
+  {
+   "text": "Destination: the hill facing Hebron, about 60 kilometres away and 900 metres uphill.",
+   "say": "Destination: the hill facing HEB-ron, about sixty kilometres away and nine hundred metres uphill.",
+   "shot": "MAP",
+   "focus": [
+    31.52,
+    34.8
+   ],
+   "zoom": "wide",
+   "pins": [
+    "gaza",
+    "hebron"
+   ],
+   "callout": "~900 M UP",
+   "keyword": "Hebron",
+   "source": "Judges 16:3; straight-line distance; geography"
+  },
+  {
+   "text": "Not proven: the exact hill. The Hebrew can mean 'facing' Hebron, not at it.",
+   "say": "Not proven: the exact hill. The Hebrew can mean 'facing' HEB-ron, not at it.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "mountain",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "Judges 16:3 (Hebrew phrase)"
+  },
+  {
+   "text": "But he ends up blinded, grinding grain in a Gaza prison.",
+   "shot": "MAP",
+   "focus": [
+    31.5,
+    34.47
+   ],
+   "zoom": "close",
+   "pins": [
+    "gaza"
+   ],
+   "callout": "BLINDED",
+   "keyword": "blinded",
+   "source": "Judges 16:21"
+  },
+  {
+   "text": "Philistines gather in Dagon's temple, with about 3,000 on the roof.",
+   "say": "FILL-iss-teens gather in DAY-gon's temple, with about three thousand on the roof.",
+   "shot": "EVENT",
+   "scene": "crowd",
+   "label": "~3,000 ON THE ROOF",
+   "callout": "~3,000 ON THE ROOF",
+   "keyword": "3,000",
+   "source": "Judges 16:23-27"
+  },
+  {
+   "text": "Samson pushes the two middle pillars, and the building comes down.",
+   "shot": "TEXT",
+   "kind": "word_shatter",
+   "display": "PILLARS",
+   "callout": "TWO PILLARS",
+   "keyword": "pillars",
+   "source": "Judges 16:29-30"
+  },
+  {
+   "text": "Zorah to Gaza is nearly 60 kilometres. His world is small; his legend is big.",
+   "say": "ZOR-ah to Gaza is nearly sixty kilometres. His world is small; his legend is big.",
+   "shot": "MAP",
+   "focus": [
+    31.6,
+    34.7
+   ],
+   "zoom": "wide",
+   "pins": [
+    "zorah",
+    "gaza",
+    "hebron"
+   ],
+   "callout": "SMALL WORLD",
+   "keyword": "legend",
+   "source": "straight-line distance"
+  },
+  {
+   "text": "Samson carried a gate sixty kilometres uphill? Legend, or memory?",
+   "shot": "PRESENTER",
+   "action": "point_left",
+   "backdrop": "city",
+   "callout": "LEGEND OR MEMORY?",
+   "keyword": "sixty",
+   "source": "-"
   }
+ ],
+ "places": {
+  "gaza": [
+   31.5,
+   34.47,
+   "Gaza",
+   "temple",
+   "solid"
+  ],
+  "hebron": [
+   31.53,
+   35.1,
+   "Hebron",
+   "walls",
+   "solid"
+  ],
+  "zorah": [
+   31.78,
+   34.98,
+   "Zorah",
+   "dot",
+   "dashed"
+  ],
+  "timnah": [
+   31.78,
+   34.91,
+   "Timnah",
+   "dot",
+   "dashed"
+  ],
+  "ashkelon": [
+   31.66,
+   34.55,
+   "Ashkelon",
+   "walls",
+   "solid"
+  ]
+ },
+ "youtube": {
+  "title": "Samson's Gate: 60 km Uphill? 🗺️ #shorts",
+  "description": "From Gaza's gate to the hill facing Hebron: roughly 60 km straight-line, and about 900 metres uphill. Legend or memory?\nThe exact hill is not proven; the Hebrew can mean 'facing' Hebron.\n#Samson #Judges #BibleHistory #MythUnearthed"
+ }
 }

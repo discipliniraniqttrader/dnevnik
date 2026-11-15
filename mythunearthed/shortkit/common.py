@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parent.parent          # /home/user/zenit
 ASSETS = ROOT / "assets"
 GOLD, CREAM, INK = (232, 170, 40), (246, 236, 210), (10, 8, 6)
 INTER_BLACK = "/usr/share/fonts/opentype/inter/Inter-Black.otf"
+MONT_BLACK = "montserrat-black.ttf"               # assets/ (Montserrat Black, latin)
+KW_GOLD = (255, 196, 46)
 
 
 def ease(x):
@@ -34,6 +36,12 @@ def cap_font(word, size=76):
     """Black sans; Inter Black for words with glyphs outside Latin-1 (ğ ş ı ...)."""
     if any(ord(c) > 255 for c in word): return F(INTER_BLACK, size)
     return F("sans-black.ttf", size)
+
+
+def big_font(word, size=110):
+    """Viral-caption face: Montserrat Black; Inter Black for glyphs Montserrat-latin lacks (ğ ş ı ...)."""
+    if any(ord(c) > 255 and c not in "’‘“”–—…" for c in word): return F(INTER_BLACK, size)
+    return F(MONT_BLACK, size)
 
 
 def vgrad(stops, h=H, w=W):

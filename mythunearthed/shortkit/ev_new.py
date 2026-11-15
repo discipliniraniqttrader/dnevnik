@@ -107,7 +107,7 @@ def icon_grid_scene(lt, dur, t, icon="dot", count=12, label=""):
     f = F("sans-black.ttf", 190)
     d.text((540, 360), f"{shown_n}", font=f, fill=(255, 244, 222), anchor="mm", stroke_width=12, stroke_fill=(10, 18, 24))
     if label:
-        f2, lines = fit_font("sans-black.ttf", label.upper(), 940, 160, 76, 40)
+        f2, lines = fit_font("sans-black.ttf", label.upper(), 940, 160, 76, 44)
         for i, ln in enumerate(lines):
             d.text((540, 520 + i * f2.size * 1.1), ln, font=f2, fill=(244, 188, 60), anchor="mm", stroke_width=8, stroke_fill=(10, 18, 24))
     return np.asarray(pil.convert("RGB"))
@@ -141,7 +141,7 @@ def split_scene(lt, dur, t, left, right, sub=0):
         if e <= 0: continue
         x = 60 + sgn * (1 - min(e, 1)) * 1200
         p = pan.copy(); d = ImageDraw.Draw(p)
-        f, lines = fit_font("sans-black.ttf", txt.upper(), 840, 330, 100, 40, 1.1)
+        f, lines = fit_font("sans-black.ttf", txt.upper(), 840, 330, 100, 44, 1.1)
         y_ = 260 - (len(lines) - 1) * f.size * .55 + 20
         for ln in lines:
             d.text((480, y_), ln, font=f, fill=(255, 246, 226, 255), anchor="mm", stroke_width=8, stroke_fill=(20, 10, 6, 255)); y_ += f.size * 1.1

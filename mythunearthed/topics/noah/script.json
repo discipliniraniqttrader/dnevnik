@@ -1,0 +1,193 @@
+{
+ "title": "The Bible Never Says 'Mount Ararat'",
+ "author": "QUILL",
+ "notes": "Hook is a true contradiction: Genesis 8:4 says 'mountains of Ararat'. Not-proven line in beat 10. Gilgamesh match is only proposed.",
+ "beats": [
+  {
+   "text": "The Bible never says 'Mount Ararat.'",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "mountain",
+   "callout": "NO 'MOUNT'?",
+   "keyword": "Ararat",
+   "source": "Genesis 8:4"
+  },
+  {
+   "text": "Four mountains claim Noah's Ark. The last answer is the strangest.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "4 CLAIMS",
+   "callout": "4 CLAIMS",
+   "keyword": "strangest",
+   "source": "-"
+  },
+  {
+   "text": "One: Mount Ararat in Turkey, 5,137 metres tall.",
+   "shot": "MAP",
+   "focus": [
+    39.7,
+    44.3
+   ],
+   "zoom": "close",
+   "pins": [
+    "ararat"
+   ],
+   "callout": "5,137 M",
+   "keyword": "5,137",
+   "reveal": "1/4",
+   "source": "tradition"
+  },
+  {
+   "text": "Two: a boat-shaped mound near Doğubayazıt, spotted in 1959 aerial photos.",
+   "say": "Two: a boat-shaped mound near DOH-oo-bah-yah-ZUHT, spotted in 1959 aerial photos.",
+   "shot": "EVENT",
+   "scene": "aerial",
+   "label": "BOAT-SHAPED MOUND?",
+   "callout": "1959 PHOTOS",
+   "keyword": "1959",
+   "reveal": "2/4",
+   "source": "1959 aerial survey"
+  },
+  {
+   "text": "Ron Wyatt promoted it, but most geologists say it's natural.",
+   "shot": "PRESENTER",
+   "action": "point_left",
+   "backdrop": "desert",
+   "callout": "NATURAL?",
+   "keyword": "geologists",
+   "source": "claim by Ron Wyatt; geology consensus"
+  },
+  {
+   "text": "Three: Mount Judi, backed by old Syriac tradition and the Quran.",
+   "say": "Three: Mount JOO-dee, backed by old SIR-ee-ak tradition and the Kor-AHN.",
+   "shot": "MAP",
+   "focus": [
+    37.37,
+    42.47
+   ],
+   "zoom": "mid",
+   "pins": [
+    "judi"
+   ],
+   "callout": "CASE 3",
+   "keyword": "Quran",
+   "reveal": "3/4",
+   "source": "tradition; Quran 11:44"
+  },
+  {
+   "text": "Genesis says 'mountains of Ararat.' Plural. Ararat was Urartu, a whole kingdom.",
+   "say": "Genesis says 'mountains of Ararat.' Plural. Ararat was oo-RAR-too, a whole kingdom.",
+   "shot": "TEXT",
+   "kind": "glow_word",
+   "display": "PLURAL",
+   "callout": "PLURAL!",
+   "keyword": "Plural",
+   "source": "Genesis 8:4; Urartu / Assyrian records"
+  },
+  {
+   "text": "Four, the strangest: Pir Omar Gudrun, in Iraqi Kurdistan.",
+   "say": "Four, the strangest: Peer OH-mar GOOD-roon, in Iraqi KUR-dih-stan.",
+   "shot": "MAP",
+   "focus": [
+    35.6,
+    45.3
+   ],
+   "zoom": "mid",
+   "pins": [
+    "gudrun"
+   ],
+   "callout": "CASE 4",
+   "keyword": "Gudrun",
+   "reveal": "4/4",
+   "source": "proposed identification"
+  },
+  {
+   "text": "Why? Babylon's Gilgamesh flood tablet lands its boat on Mount Nimush, and some match it here.",
+   "say": "Why? Babylon's GIL-ga-mesh flood tablet lands its boat on Mount NIM-ush, and some match it here.",
+   "shot": "EVENT",
+   "scene": "tablet",
+   "label": "GILGAMESH TABLET",
+   "callout": "MOUNT NIMUSH",
+   "keyword": "Nimush",
+   "source": "Epic of Gilgamesh, Tablet XI; proposed match"
+  },
+  {
+   "text": "Not proven: no Ark has ever been verified on any of them.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "night",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "archaeology"
+  },
+  {
+   "text": "Four peaks, four traditions, one plural verse.",
+   "shot": "MAP",
+   "focus": [
+    37.6,
+    43.8
+   ],
+   "zoom": "wide",
+   "pins": [
+    "ararat",
+    "durupinar",
+    "judi",
+    "gudrun"
+   ],
+   "callout": "4 PEAKS",
+   "keyword": "plural",
+   "source": "Genesis 8:4"
+  },
+  {
+   "text": "So the Bible never says 'Mount Ararat.' Famous Ararat, or strange Gudrun?",
+   "say": "So the Bible never says 'Mount Ararat.' Famous Ararat, or strange GOOD-roon?",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "mountain",
+   "callout": "YOUR PICK?",
+   "keyword": "Ararat",
+   "source": "-"
+  }
+ ],
+ "places": {
+  "ararat": [
+   39.7,
+   44.3,
+   "Mount Ararat",
+   "peak",
+   "solid"
+  ],
+  "durupinar": [
+   39.44,
+   44.23,
+   "Durupınar site",
+   "peak",
+   "dashed"
+  ],
+  "tushpa": [
+   38.5,
+   43.34,
+   "Tushpa (Van)",
+   "walls",
+   "solid"
+  ],
+  "judi": [
+   37.37,
+   42.47,
+   "Mount Judi",
+   "peak",
+   "dashed"
+  ],
+  "gudrun": [
+   35.6,
+   45.3,
+   "Pir Omar Gudrun",
+   "peak",
+   "dashed"
+  ]
+ },
+ "youtube": {
+  "title": "The Bible Never Says 'Mount Ararat' 🗺️ #shorts",
+  "description": "Genesis 8:4 says 'mountains of Ararat', plural. Four peaks claim the Ark, and the last answer is the strangest.\nNo Ark has ever been verified. These are claims, shown as claims.\n#NoahsArk #BibleHistory #Archaeology #MythUnearthed"
+ }
+}

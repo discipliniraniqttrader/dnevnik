@@ -1,28 +1,169 @@
 {
-  "title": "The Real Tower of Babel?",
-  "author": "QUILL",
-  "notes": "Etemenanki link framed as a hypothesis. Herodotus cited as description, not proof. Not-proven line in beat 11.",
-  "beats": [
-    {"text": "Was the Tower of Babel a real building?", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "REAL BUILDING?", "source": "-"},
-    {"text": "Genesis 11 says they used brick for stone and bitumen for mortar.", "shot": "TEXT", "kind": "quote", "display": "Brick for stone, bitumen for mortar", "callout": "BRICK + BITUMEN", "source": "Genesis 11:3"},
-    {"text": "Babel is Hebrew for Babylon, in what is now Iraq.", "shot": "MAP", "focus": [32.54, 44.42], "zoom": "wide", "pins": ["babylon"], "callout": "BABEL = BABYLON", "source": "Genesis 11:9; archaeology"},
-    {"text": "Babylon's great ziggurat was Etemenanki: 'house of the foundation of heaven and earth.'", "say": "Babylon's great ziggurat was EH-teh-MEN-an-kee: house of the foundation of heaven and earth.", "shot": "EVENT", "scene": "object", "object": "tower", "label": "ETEMENANKI", "callout": "ETEMENANKI", "source": "Babylonian texts / archaeology"},
-    {"text": "Herodotus described a stepped tower of eight tiers there.", "say": "Her-ODD-oh-tus described a stepped tower of eight tiers there.", "shot": "TEXT", "kind": "big_number", "display": "8 TIERS", "callout": "HERODOTUS", "source": "Herodotus, Histories 1.181"},
-    {"text": "Today only its foundation survives, near the modern city of Hillah.", "say": "Today only its foundation survives, near the modern city of HIL-lah.", "shot": "MAP", "focus": [32.54, 44.42], "zoom": "close", "pins": ["babylon"], "callout": "FOUNDATION ONLY", "source": "archaeology"},
-    {"text": "Another candidate: the ziggurat at Borsippa, now called Birs Nimrud.", "say": "Another candidate: the ziggurat at bor-SIP-ah, now called BEERS nim-ROOD.", "shot": "MAP", "focus": [32.39, 44.35], "zoom": "mid", "pins": ["borsippa"], "callout": "BORSIPPA", "source": "proposed identification"},
-    {"text": "King Nebuchadnezzar II says in inscriptions that he rebuilt it.", "say": "King NEB-uh-kud-NEZ-er the Second says in inscriptions that he rebuilt it.", "shot": "EVENT", "scene": "tablet", "label": "NEBUCHADNEZZAR II REBUILDS", "callout": "REBUILT", "source": "Nebuchadnezzar II inscriptions"},
-    {"text": "Genesis puns on the name: Babel sounds like the Hebrew for 'confuse.'", "shot": "TEXT", "kind": "word_shatter", "display": "BABEL / BALAL", "callout": "A WORD PLAY", "source": "Genesis 11:9"},
-    {"text": "Many scholars link the story to Etemenanki, but Borsippa still has its fans.", "say": "Many scholars link the story to EH-teh-MEN-an-kee, but bor-SIP-ah still has its fans.", "shot": "MAP", "focus": [32.46, 44.39], "zoom": "mid", "pins": ["babylon", "borsippa"], "callout": "TWO CANDIDATES", "source": "scholarly debate"},
-    {"text": "Plainly: the link is a hypothesis, and no tower is proven to be Babel's.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "A HYPOTHESIS", "source": "archaeology"},
-    {"text": "Babylon's tower fell to dust, but its story did not.", "shot": "MAP", "focus": [32.4, 44.4], "zoom": "wide", "pins": ["babylon", "borsippa"], "callout": "STORY SURVIVES", "source": "-"},
-    {"text": "Real ziggurat or pure legend? What do you think?", "shot": "PRESENTER", "action": "point_right", "backdrop": "desert", "callout": "REAL OR LEGEND?", "source": "-"}
-  ],
-  "places": {
-    "babylon": [32.54, 44.42, "Babylon (Etemenanki)", "ruins", "solid"],
-    "borsippa": [32.39, 44.35, "Borsippa (Birs Nimrud)", "ruins", "dashed"]
+ "title": "Was Babel Just Babylon? The Clues",
+ "author": "QUILL",
+ "notes": "Etemenanki link framed as hypothesis; Herodotus cited as description. Not-proven line in beat 10.",
+ "beats": [
+  {
+   "text": "Babel is just the Hebrew word for Babylon.",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "desert",
+   "callout": "BABEL = BABYLON",
+   "keyword": "Babylon",
+   "source": "Genesis 11:9; archaeology"
   },
-  "youtube": {
-    "title": "The Real Tower of Babel? 🗺️ #shorts",
-    "description": "Babylon had a giant ziggurat called Etemenanki, and Herodotus described a stepped tower there.\nLinking it to Genesis 11 is a hypothesis, not a proven fact.\n#TowerOfBabel #BibleHistory #Archaeology #MythUnearthed"
+  {
+   "text": "Two real towers fit the story. The strangest clue is a pun.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "2 TOWERS",
+   "callout": "2 TOWERS",
+   "keyword": "strangest",
+   "source": "-"
+  },
+  {
+   "text": "Babylon, in modern Iraq, had a great ziggurat: Etemenanki.",
+   "say": "Babylon, in modern Iraq, had a great ZIG-oo-rat: EH-teh-MEN-an-kee.",
+   "shot": "MAP",
+   "focus": [
+    32.54,
+    44.42
+   ],
+   "zoom": "wide",
+   "pins": [
+    "babylon"
+   ],
+   "callout": "ETEMENANKI",
+   "keyword": "Etemenanki",
+   "reveal": "1/2",
+   "source": "Babylonian texts / archaeology"
+  },
+  {
+   "text": "Its name means 'house of the foundation of heaven and earth.'",
+   "say": "Its name means 'house of the foundation of heaven and earth.'",
+   "shot": "EVENT",
+   "scene": "object",
+   "object": "tower",
+   "label": "ETEMENANKI",
+   "callout": "ETEMENANKI",
+   "keyword": "foundation",
+   "source": "Babylonian texts / archaeology"
+  },
+  {
+   "text": "Herodotus described a stepped tower of eight tiers there.",
+   "say": "Her-ODD-oh-tus described a stepped tower of eight tiers there.",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "desert",
+   "callout": "8 TIERS",
+   "keyword": "eight",
+   "source": "Herodotus, Histories 1.181"
+  },
+  {
+   "text": "Today only its foundation survives, near the city of Hillah.",
+   "say": "Today only its foundation survives, near the city of HIL-lah.",
+   "shot": "MAP",
+   "focus": [
+    32.54,
+    44.42
+   ],
+   "zoom": "close",
+   "pins": [
+    "babylon"
+   ],
+   "callout": "FOUNDATION ONLY",
+   "keyword": "foundation",
+   "source": "archaeology"
+  },
+  {
+   "text": "King Nebuchadnezzar II says in inscriptions that he rebuilt it.",
+   "say": "King NEB-uh-kud-NEZ-er the Second says in inscriptions that he rebuilt it.",
+   "shot": "EVENT",
+   "scene": "tablet",
+   "label": "NEBUCHADNEZZAR II REBUILDS",
+   "callout": "REBUILT",
+   "keyword": "rebuilt",
+   "source": "Nebuchadnezzar II inscriptions"
+  },
+  {
+   "text": "But a rival candidate stands at Borsippa, now called Birs Nimrud.",
+   "say": "But a rival candidate stands at bor-SIP-ah, now called BEERS nim-ROOD.",
+   "shot": "MAP",
+   "focus": [
+    32.39,
+    44.35
+   ],
+   "zoom": "mid",
+   "pins": [
+    "borsippa"
+   ],
+   "callout": "BORSIPPA",
+   "keyword": "rival",
+   "reveal": "2/2",
+   "source": "proposed identification"
+  },
+  {
+   "text": "The strangest clue: Genesis puns that Babel sounds like the Hebrew for 'confuse.'",
+   "shot": "TEXT",
+   "kind": "word_shatter",
+   "display": "BABEL / BALAL",
+   "callout": "A PUN",
+   "keyword": "puns",
+   "source": "Genesis 11:9"
+  },
+  {
+   "text": "Not proven: that either tower is the Tower of Babel.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "night",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "archaeology"
+  },
+  {
+   "text": "Babylon's tower fell to dust, but its story did not.",
+   "shot": "MAP",
+   "focus": [
+    32.4,
+    44.4
+   ],
+   "zoom": "wide",
+   "pins": [
+    "babylon",
+    "borsippa"
+   ],
+   "callout": "STORY SURVIVES",
+   "keyword": "story",
+   "source": "-"
+  },
+  {
+   "text": "Babel is just the Hebrew word for Babylon. Real ziggurat, or pure legend?",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "desert",
+   "callout": "REAL OR LEGEND?",
+   "keyword": "Babylon",
+   "source": "-"
   }
+ ],
+ "places": {
+  "babylon": [
+   32.54,
+   44.42,
+   "Babylon (Etemenanki)",
+   "ruins",
+   "solid"
+  ],
+  "borsippa": [
+   32.39,
+   44.35,
+   "Borsippa (Birs Nimrud)",
+   "ruins",
+   "dashed"
+  ]
+ },
+ "youtube": {
+  "title": "Was Babel Just Babylon? The Clues 🗺️ #shorts",
+  "description": "Babylon had a giant ziggurat called Etemenanki, Herodotus described eight tiers, and Genesis hides a pun in the name.\nLinking it to Genesis 11 is a hypothesis, not a proven fact.\n#TowerOfBabel #BibleHistory #Archaeology #MythUnearthed"
+ }
 }

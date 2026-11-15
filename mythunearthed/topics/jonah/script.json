@@ -1,32 +1,180 @@
 {
-  "title": "Jonah Ran the Wrong Way",
-  "author": "QUILL",
-  "notes": "Tarshish shown as two dashed candidates. 'Great fish' (Hebrew dag gadol) not 'whale'. Nebi Yunus 2014 destruction is real. Not-proven line in beat 10.",
-  "beats": [
-    {"text": "Jonah ran from God, in exactly the wrong direction.", "shot": "PRESENTER", "action": "surprised", "backdrop": "sea", "callout": "WRONG WAY", "source": "-"},
-    {"text": "God sends him east to Nineveh, but he boards a ship at Joppa.", "say": "God sends him east to NIN-eh-vuh, but he boards a ship at JOP-ah.", "shot": "MAP", "focus": [34.2, 39.0], "zoom": "wide", "pins": ["joppa", "nineveh"], "callout": "EAST? NO.", "source": "Jonah 1:1-3"},
-    {"text": "The ship's destination: Tarshish, maybe Tartessos in Spain, maybe Tarsus in Turkey.", "say": "The ship's destination: TAR-shish, maybe tar-TESS-os in Spain, maybe TAR-sus in Turkey.", "shot": "MAP", "focus": [36.0, 5.0], "zoom": "wide", "pins": ["joppa", "tartessos", "tarsus"], "callout": "TARSHISH?", "source": "Jonah 1:3; proposed identifications"},
-    {"text": "A storm hits, and the sailors cast lots. The lot falls on Jonah.", "shot": "EVENT", "scene": "object", "object": "ship", "label": "STORM AT SEA", "callout": "THE LOT FALLS", "source": "Jonah 1:4-7"},
-    {"text": "In Hebrew, the creature is a 'great fish,' not a whale.", "say": "In Hebrew, the creature is a DAHG gah-DOLE, a great fish, not a whale.", "shot": "TEXT", "kind": "word_shatter", "display": "WHALE -> GREAT FISH", "callout": "DAG GADOL", "source": "Jonah 1:17 (Hebrew dag gadol)"},
-    {"text": "It swallows him for three days and three nights.", "shot": "EVENT", "scene": "object", "object": "whale", "label": "GREAT FISH", "callout": "3 DAYS, 3 NIGHTS", "source": "Jonah 1:17"},
-    {"text": "Freed, he reaches Nineveh, a city 'three days' journey' across.", "say": "Freed, he reaches NIN-eh-vuh, a city three days' journey across.", "shot": "MAP", "focus": [36.36, 43.15], "zoom": "mid", "pins": ["nineveh"], "callout": "NINEVEH", "source": "Jonah 3:3"},
-    {"text": "His warning: forty days, and Nineveh falls.", "say": "His warning: forty days, and NIN-eh-vuh falls.", "shot": "TEXT", "kind": "big_number", "display": "40 DAYS", "callout": "FORTY DAYS", "source": "Jonah 3:4"},
-    {"text": "The whole city repents, even the king.", "shot": "EVENT", "scene": "crowd", "label": "NINEVEH REPENTS", "callout": "EVEN THE KING", "source": "Jonah 3:5-6"},
-    {"text": "Plainly: no Assyrian record mentions Jonah's mission.", "say": "Plainly: no Assyrian record mentions JOE-nah's mission.", "shot": "PRESENTER", "action": "shrug", "backdrop": "night", "callout": "NOT PROVEN", "source": "archaeology"},
-    {"text": "In Mosul, atop ancient Nineveh, the Nebi Yunus shrine marked Jonah's traditional tomb.", "say": "In Mosul, atop ancient NIN-eh-vuh, the NEB-ee YOO-nus shrine marked Jonah's traditional tomb.", "shot": "MAP", "focus": [36.34, 43.15], "zoom": "close", "pins": ["nebiyunus"], "callout": "NEBI YUNUS", "source": "tradition"},
-    {"text": "ISIS blew it up in 2014, and Assyrian remains were later found beneath.", "say": "EYE-sis blew it up in 2014, and Assyrian remains were later found beneath.", "shot": "EVENT", "scene": "object", "object": "ruins", "label": "DESTROYED 2014", "callout": "DESTROYED 2014", "source": "news reports; archaeology"},
-    {"text": "From Joppa to Nineveh to Spain, a long way to run.", "say": "From JOP-ah to NIN-eh-vuh to Spain, a long way to run.", "shot": "MAP", "focus": [36.0, 18.0], "zoom": "wide", "pins": ["joppa", "nineveh", "tartessos", "tarsus"], "callout": "LONG WAY", "source": "-"},
-    {"text": "Would you have gone to Nineveh, or run too?", "say": "Would you have gone to NIN-eh-vuh, or run too?", "shot": "PRESENTER", "action": "point_right", "backdrop": "sea", "callout": "RUN OR GO?", "source": "-"}
-  ],
-  "places": {
-    "joppa": [32.05, 34.75, "Joppa (Jaffa)", "ship", "solid"],
-    "nineveh": [36.36, 43.15, "Nineveh", "walls", "solid"],
-    "tartessos": [37.20, -6.10, "Tartessos? (Spain)", "ship", "dashed"],
-    "tarsus": [36.92, 34.89, "Tarsus? (Turkey)", "ship", "dashed"],
-    "nebiyunus": [36.34, 43.15, "Nebi Yunus", "temple", "solid"]
+ "title": "Jonah Never Met a 'Whale'",
+ "author": "QUILL",
+ "notes": "Hebrew dag gadol = great fish. Nebi Yunus 2014 destruction is real. Tarshish two dashed candidates. Not-proven line in beat 8.",
+ "beats": [
+  {
+   "text": "The Book of Jonah never says 'whale.'",
+   "say": "The Book of JOE-nah never says 'whale.'",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "sea",
+   "callout": "NO WHALE?",
+   "keyword": "whale",
+   "source": "Jonah 1:17 (Hebrew dag gadol)"
   },
-  "youtube": {
-    "title": "Jonah Ran the Wrong Way 🗺️ #shorts",
-    "description": "Nineveh lay east. Jonah boarded a ship at Joppa for Tarshish, possibly Spain or Turkey.\nThe Hebrew says 'great fish', not whale. No outside record confirms his mission.\n#Jonah #BibleHistory #Archaeology #MythUnearthed"
+  {
+   "text": "It says dag gadol: a great fish. The strangest part lies under his tomb.",
+   "say": "It says DAHG gah-DOLE: a great fish. The strangest part lies under his tomb.",
+   "shot": "TEXT",
+   "kind": "word_shatter",
+   "display": "WHALE -> GREAT FISH",
+   "callout": "DAG GADOL",
+   "keyword": "strangest",
+   "source": "Jonah 1:17"
+  },
+  {
+   "text": "It swallows him for three days and three nights.",
+   "shot": "EVENT",
+   "scene": "object",
+   "object": "whale",
+   "label": "GREAT FISH",
+   "callout": "3 DAYS, 3 NIGHTS",
+   "keyword": "swallows",
+   "source": "Jonah 1:17"
+  },
+  {
+   "text": "God says go east to Nineveh. But Jonah runs the other way.",
+   "say": "God says go east to NIN-eh-vuh. But JOE-nah runs the other way.",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "sea",
+   "callout": "WRONG WAY",
+   "keyword": "Nineveh",
+   "source": "Jonah 1:1-3"
+  },
+  {
+   "text": "He boards a ship at Joppa for Tarshish: maybe Spain, maybe Turkey.",
+   "say": "He boards a ship at JOP-ah for TAR-shish: maybe Spain, maybe Turkey.",
+   "shot": "MAP",
+   "focus": [
+    36.0,
+    18.0
+   ],
+   "zoom": "wide",
+   "pins": [
+    "joppa",
+    "nineveh",
+    "tartessos",
+    "tarsus"
+   ],
+   "callout": "TARSHISH?",
+   "keyword": "Tarshish",
+   "source": "Jonah 1:3; proposed identifications"
+  },
+  {
+   "text": "Freed, he warns Nineveh: forty days, and it falls.",
+   "say": "Freed, he warns NIN-eh-vuh: forty days, and it falls.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "40 DAYS",
+   "callout": "FORTY DAYS",
+   "keyword": "forty",
+   "source": "Jonah 3:4"
+  },
+  {
+   "text": "Nineveh, a city three days' journey across, repents, even its king.",
+   "say": "NIN-eh-vuh, a city three days' journey across, repents, even its king.",
+   "shot": "MAP",
+   "focus": [
+    36.36,
+    43.15
+   ],
+   "zoom": "mid",
+   "pins": [
+    "nineveh"
+   ],
+   "callout": "EVEN THE KING",
+   "keyword": "repents",
+   "source": "Jonah 3:3-6"
+  },
+  {
+   "text": "Not proven: no Assyrian record mentions Jonah's mission.",
+   "say": "Not proven: no Assyrian record mentions JOE-nah's mission.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "night",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "archaeology"
+  },
+  {
+   "text": "In 2014, ISIS blew up his traditional tomb in Mosul.",
+   "say": "In 2014, EYE-sis blew up his traditional tomb in Mosul.",
+   "shot": "EVENT",
+   "scene": "object",
+   "object": "ruins",
+   "label": "DESTROYED 2014",
+   "callout": "DESTROYED 2014",
+   "keyword": "2014",
+   "source": "news reports"
+  },
+  {
+   "text": "Under the rubble, Assyrian remains were later found, beneath ancient Nineveh.",
+   "say": "Under the rubble, Assyrian remains were later found, beneath ancient NIN-eh-vuh.",
+   "shot": "MAP",
+   "focus": [
+    36.34,
+    43.15
+   ],
+   "zoom": "close",
+   "pins": [
+    "nebiyunus"
+   ],
+   "callout": "NEBI YUNUS",
+   "keyword": "Assyrian",
+   "source": "news reports; archaeology"
+  },
+  {
+   "text": "The Book of Jonah never says 'whale.' Would you run, or go?",
+   "say": "The Book of JOE-nah never says 'whale.' Would you run, or go?",
+   "shot": "PRESENTER",
+   "action": "point_left",
+   "backdrop": "sea",
+   "callout": "RUN OR GO?",
+   "keyword": "whale",
+   "source": "-"
   }
+ ],
+ "places": {
+  "joppa": [
+   32.05,
+   34.75,
+   "Joppa (Jaffa)",
+   "ship",
+   "solid"
+  ],
+  "nineveh": [
+   36.36,
+   43.15,
+   "Nineveh",
+   "walls",
+   "solid"
+  ],
+  "tartessos": [
+   37.2,
+   -6.1,
+   "Tartessos? (Spain)",
+   "ship",
+   "dashed"
+  ],
+  "tarsus": [
+   36.92,
+   34.89,
+   "Tarsus? (Turkey)",
+   "ship",
+   "dashed"
+  ],
+  "nebiyunus": [
+   36.34,
+   43.15,
+   "Nebi Yunus",
+   "temple",
+   "solid"
+  ]
+ },
+ "youtube": {
+  "title": "Jonah Never Met a 'Whale' 🗺️ #shorts",
+  "description": "The Book of Jonah says dag gadol, a great fish. And the strangest part of his story lies under his tomb.\nNo Assyrian record mentions his mission. The 2014 destruction of the Nebi Yunus shrine is real.\n#Jonah #BibleHistory #Archaeology #MythUnearthed"
+ }
 }

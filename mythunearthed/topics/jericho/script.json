@@ -1,29 +1,153 @@
 {
-  "title": "Did Jericho's Walls Really Fall?",
-  "approved_by": "QUILL (draft, pending HELM)",
-  "notes": "Dating is contested; the script presents Garstang, Kenyon and Wood as claims. Not-proven line is beat 12.",
-  "beats": [
-    {"text": "Did Jericho's walls really fall?", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "DID THEY FALL?", "source": "-"},
-    {"text": "Joshua six: Israel marches around Jericho for seven days, and the wall falls.", "shot": "MAP", "focus": [31.871, 35.444], "zoom": "mid", "pins": ["jericho"], "callout": "JOSHUA 6", "source": "Joshua 6"},
-    {"text": "The wall fell down flat.", "shot": "TEXT", "kind": "quote", "display": "The wall fell down flat.", "callout": "JOSHUA 6:20", "source": "Joshua 6:20 (KJV)"},
-    {"text": "Jericho is Tell es-Sultan, a mound beside a spring in the Jordan Valley.", "say": "Jericho is Tel es-sool-TAHN, a mound beside a spring in the Jordan Valley.", "shot": "MAP", "focus": [31.871, 35.444], "zoom": "close", "pins": ["jericho", "jordan"], "callout": "TELL ES-SULTAN", "source": "archaeology"},
-    {"text": "In the nineteen thirties, John Garstang found collapsed, burned walls near fourteen hundred BC.", "say": "In the nineteen thirties, John GAR-stang found collapsed, burned walls near fourteen hundred B C.", "shot": "EVENT", "scene": "object", "object": "ruins", "label": "GARSTANG: C. 1400 BC", "callout": "1930s DIG", "source": "claim by John Garstang"},
-    {"text": "In the nineteen fifties, Kathleen Kenyon re-dug it and disagreed.", "say": "In the nineteen fifties, Kathleen KEN-yon re-dug it and disagreed.", "shot": "PRESENTER", "action": "point_left", "backdrop": "desert", "callout": "1950s RE-DIG", "source": "Kenyon excavations 1952-58"},
-    {"text": "Those walls, she said, were far older: about twenty-three hundred BC.", "say": "Those walls, she said, were far older: about twenty-three hundred B C.", "shot": "TEXT", "kind": "big_number", "display": "~2300 BC", "callout": "MUCH OLDER", "source": "claim by Kathleen Kenyon"},
-    {"text": "Her date for the later city's burning: about fifteen fifty BC.", "say": "Her date for the later city's burning: about fifteen fifty B C.", "shot": "MAP", "focus": [31.871, 35.444], "zoom": "close", "pins": ["jericho"], "callout": "C. 1550 BC", "source": "claim by Kathleen Kenyon"},
-    {"text": "In nineteen ninety, Bryant Wood argued pottery and scarabs fit fourteen hundred BC.", "say": "In nineteen ninety, Bryant Wood argued pottery and SCARE-abs fit fourteen hundred B C.", "shot": "EVENT", "scene": "object", "object": "jar", "label": "WOOD: C. 1400 BC", "callout": "WOOD'S CASE", "source": "claim by Bryant Wood, 1990"},
-    {"text": "But radiocarbon dates on burned grain lean toward Kenyon's earlier date.", "shot": "TEXT", "kind": "glow_word", "display": "RADIOCARBON", "callout": "LEANS EARLIER", "source": "radiocarbon studies of Jericho grain, 1990s"},
-    {"text": "Jericho sits roughly two hundred fifty metres below sea level, among the oldest cities known.", "shot": "MAP", "focus": [31.80, 35.45], "zoom": "wide", "pins": ["jericho", "jordan"], "callout": "BELOW SEA LEVEL", "source": "archaeology"},
-    {"text": "What's not proven: that these walls fell for Joshua. The dating stays contested.", "shot": "PRESENTER", "action": "shrug", "backdrop": "desert", "callout": "NOT PROVEN", "source": "archaeology"},
-    {"text": "Garstang, Kenyon, Wood: one mound, three verdicts.", "say": "GAR-stang, KEN-yon, Wood: one mound, three verdicts.", "shot": "MAP", "focus": [31.871, 35.444], "zoom": "close", "pins": ["jericho"], "callout": "3 VERDICTS", "source": "-"},
-    {"text": "Did the walls fall, or were they long gone? What's your verdict?", "shot": "PRESENTER", "action": "point_right", "backdrop": "desert", "callout": "YOUR VERDICT?", "source": "-"}
-  ],
-  "places": {
-    "jericho": [31.871, 35.444, "Tell es-Sultan (Jericho)", "walls", "solid"],
-    "jordan": [31.837, 35.551, "Jordan River", "river", "solid"]
+ "title": "Jericho's Walls May Be 900 Years Too Old",
+ "author": "QUILL",
+ "notes": "Dating contested; Garstang, Kenyon, Wood are claims. 900 = 2300 BC minus 1400 BC. Not-proven line in beat 9.",
+ "beats": [
+  {
+   "text": "Jericho's walls may be 900 years too old.",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "desert",
+   "callout": "900 YEARS?",
+   "keyword": "900",
+   "source": "claim by Kathleen Kenyon (c. 2300 BC vs c. 1400 BC)"
   },
-  "youtube": {
-    "title": "Did Jericho's Walls Really Fall? 🗺️ #shorts",
-    "description": "Garstang, Kenyon and Bryant Wood read the same mound three ways. Which dating convinces you?\nWhether these walls fell for Joshua is not proven; the dating is still contested.\n#Jericho #BibleHistory #Archaeology #MythUnearthed"
+  {
+   "text": "That's the gap between two digs, and a lab test breaks the tie.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "~900 YEARS",
+   "callout": "900-YEAR GAP",
+   "keyword": "tie",
+   "source": "-"
+  },
+  {
+   "text": "Joshua 6: seven days of marching, and the wall falls down flat.",
+   "shot": "MAP",
+   "focus": [
+    31.871,
+    35.444
+   ],
+   "zoom": "mid",
+   "pins": [
+    "jericho"
+   ],
+   "callout": "JOSHUA 6",
+   "keyword": "seven",
+   "source": "Joshua 6"
+  },
+  {
+   "text": "In the 1930s, John Garstang finds collapsed, burned walls and dates them near 1400 BC.",
+   "say": "In the nineteen thirties, John GAR-stang finds collapsed, burned walls and dates them near fourteen hundred B C.",
+   "shot": "EVENT",
+   "scene": "object",
+   "object": "ruins",
+   "label": "GARSTANG: C. 1400 BC",
+   "callout": "GARSTANG: C. 1400 BC",
+   "keyword": "Garstang",
+   "source": "claim by John Garstang"
+  },
+  {
+   "text": "But in the 1950s, Kathleen Kenyon re-digs it and disagrees.",
+   "say": "But in the nineteen fifties, Kathleen KEN-yon re-digs it and disagrees.",
+   "shot": "PRESENTER",
+   "action": "point_left",
+   "backdrop": "desert",
+   "callout": "1950s RE-DIG",
+   "keyword": "Kenyon",
+   "source": "Kenyon excavations 1952-58"
+  },
+  {
+   "text": "Her walls are far older: about 2300 BC.",
+   "say": "Her walls are far older: about twenty-three hundred B C.",
+   "shot": "MAP",
+   "focus": [
+    31.871,
+    35.444
+   ],
+   "zoom": "close",
+   "pins": [
+    "jericho",
+    "jordan"
+   ],
+   "callout": "~2300 BC",
+   "keyword": "2300",
+   "source": "claim by Kathleen Kenyon"
+  },
+  {
+   "text": "In 1990, Bryant Wood argued pottery and scarabs fit 1400 BC.",
+   "say": "In nineteen ninety, Bryant Wood argued pottery and SCARE-abs fit fourteen hundred B C.",
+   "shot": "EVENT",
+   "scene": "object",
+   "object": "jar",
+   "label": "WOOD: C. 1400 BC",
+   "callout": "WOOD: C. 1400 BC",
+   "keyword": "Wood",
+   "source": "claim by Bryant Wood, 1990"
+  },
+  {
+   "text": "The lab verdict: radiocarbon on burned grain leans toward Kenyon.",
+   "say": "The lab verdict: radiocarbon on burned grain leans toward KEN-yon.",
+   "shot": "TEXT",
+   "kind": "glow_word",
+   "display": "RADIOCARBON",
+   "callout": "LEANS EARLIER",
+   "keyword": "radiocarbon",
+   "source": "radiocarbon studies of Jericho grain, 1990s"
+  },
+  {
+   "text": "Not proven: that these walls fell for Joshua.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "desert",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "archaeology"
+  },
+  {
+   "text": "Jericho, 250 metres below sea level: one mound, three verdicts.",
+   "shot": "MAP",
+   "focus": [
+    31.8,
+    35.45
+   ],
+   "zoom": "wide",
+   "pins": [
+    "jericho",
+    "jordan"
+   ],
+   "callout": "3 VERDICTS",
+   "keyword": "verdicts",
+   "source": "archaeology"
+  },
+  {
+   "text": "Jericho's walls may be 900 years too old. Did they fall for Joshua, or earlier?",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "desert",
+   "callout": "YOUR VERDICT?",
+   "keyword": "900",
+   "source": "-"
   }
+ ],
+ "places": {
+  "jericho": [
+   31.871,
+   35.444,
+   "Tell es-Sultan (Jericho)",
+   "walls",
+   "solid"
+  ],
+  "jordan": [
+   31.837,
+   35.551,
+   "Jordan River",
+   "river",
+   "solid"
+  ]
+ },
+ "youtube": {
+  "title": "Jericho's Walls May Be 900 Years Too Old 🗺️ #shorts",
+  "description": "Garstang, Kenyon and Bryant Wood read the same mound three ways, and radiocarbon leans toward the older date.\nWhether these walls fell for Joshua is not proven; the dating is still contested.\n#Jericho #BibleHistory #Archaeology #MythUnearthed"
+ }
 }

@@ -1,30 +1,188 @@
 {
-  "title": "Solomon's Gold: Where Was Ophir?",
-  "approved_by": "QUILL (draft, pending HELM)",
-  "notes": "Talent weight given as a range (roughly 26-34 kg per talent). Great Zimbabwe myth stated plainly in beats 10-12.",
-  "beats": [
-    {"text": "Where did Solomon's gold come from?", "shot": "PRESENTER", "action": "surprised", "backdrop": "sea", "callout": "WHERE FROM?", "source": "-"},
-    {"text": "First Kings nine: Solomon builds a fleet at Ezion-geber, on the Red Sea shore.", "say": "First Kings nine: Solomon builds a fleet at EZ-ee-on GEH-ber, on the Red Sea shore.", "shot": "MAP", "focus": [29.53, 35.0], "zoom": "close", "pins": ["ezion"], "callout": "EZION-GEBER", "source": "1 Kings 9:26"},
-    {"text": "King Hiram of Tyre sends sailors who know the sea to crew it.", "say": "King HIGH-ram of Tire sends sailors who know the sea to crew it.", "shot": "EVENT", "scene": "object", "object": "ship", "label": "HIRAM'S SAILORS", "callout": "TYRIAN CREW", "source": "1 Kings 9:27"},
-    {"text": "They return from Ophir with four hundred twenty talents of gold.", "say": "They return from OH-fur with four hundred twenty talents of gold.", "shot": "TEXT", "kind": "big_number", "display": "420 TALENTS", "callout": "420 TALENTS", "source": "1 Kings 9:28"},
-    {"text": "Roughly eleven to fourteen tonnes, depending on which talent standard you use.", "shot": "EVENT", "scene": "object", "object": "gold_pile", "label": "11-14 TONNES?", "callout": "DEPENDS ON STANDARD", "source": "talent standards of roughly 26-34 kg"},
-    {"text": "First Kings ten adds almug wood and precious stones, also carried from Ophir.", "say": "First Kings ten adds AL-mug wood and precious stones, also carried from OH-fur.", "shot": "MAP", "focus": [24.0, 40.0], "zoom": "wide", "pins": ["ezion"], "callout": "ALMUG WOOD", "source": "1 Kings 10:11"},
-    {"text": "What's not proven: where Ophir was. The Bible never says.", "say": "What's not proven: where OH-fur was. The Bible never says.", "shot": "PRESENTER", "action": "shrug", "backdrop": "sea", "callout": "NOT PROVEN", "source": "1 Kings 9-10; archaeology"},
-    {"text": "Guess one: southern Arabia, around Yemen. Guess two: India's western coast, a far longer voyage.", "shot": "MAP", "focus": [17.0, 58.0], "zoom": "wide", "pins": ["ezion", "arabia", "india"], "callout": "ARABIA OR INDIA?", "source": "proposed identifications"},
-    {"text": "Guess three: East Africa, far down the coast.", "shot": "MAP", "focus": [-10.0, 38.0], "zoom": "wide", "pins": ["ezion", "eastafrica"], "callout": "EAST AFRICA?", "source": "proposed identification"},
-    {"text": "In eighteen seventy-one, explorer Karl Mauch linked Great Zimbabwe to Ophir.", "say": "In eighteen seventy-one, explorer Karl Mowkh linked Great Zim-BAB-way to OH-fur.", "shot": "EVENT", "scene": "object", "object": "ruins", "label": "GREAT ZIMBABWE", "callout": "1871 CLAIM", "source": "claim by Karl Mauch"},
-    {"text": "But Shona-speaking peoples built Great Zimbabwe, around the eleventh to fifteenth centuries AD, about two thousand years after Solomon.", "say": "But SHOH-na-speaking peoples built Great Zim-BAB-way, around the eleventh to fifteenth centuries A D, about two thousand years after Solomon.", "shot": "PRESENTER", "action": "surprised", "backdrop": "desert", "callout": "SHONA BUILT IT", "source": "archaeology"},
-    {"text": "The Solomon link is a colonial-era myth, not archaeology.", "shot": "TEXT", "kind": "word_shatter", "display": "MYTH", "callout": "COLONIAL-ERA MYTH", "source": "archaeology / historiography"},
-    {"text": "Arabia, India or East Africa: where would you place Ophir?", "say": "Arabia, India or East Africa: where would you place OH-fur?", "shot": "MAP", "focus": [8.0, 50.0], "zoom": "wide", "pins": ["ezion", "arabia", "india", "eastafrica"], "callout": "YOUR PICK?", "source": "-"}
-  ],
-  "places": {
-    "ezion": [29.53, 35.0, "Ezion-geber", "ship", "solid"],
-    "arabia": [15.4, 44.2, "Yemen / S. Arabia", "dot", "dashed"],
-    "india": [19.0, 72.8, "W. India", "dot", "dashed"],
-    "eastafrica": [-4.0, 39.7, "East Africa", "dot", "dashed"]
+ "title": "420 Talents of Gold, and No Address",
+ "author": "QUILL",
+ "notes": "Talent weight ~26-34 kg gives ~11-14 t. Great Zimbabwe link is a colonial-era myth. Not-proven line in beat 5.",
+ "beats": [
+  {
+   "text": "420 talents of gold, and no address.",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "sea",
+   "callout": "NO ADDRESS",
+   "keyword": "address",
+   "source": "1 Kings 9:28"
   },
-  "youtube": {
-    "title": "Solomon's Gold: Where Was Ophir? 🗺️ #shorts",
-    "description": "Four hundred twenty talents of gold, and a Bible that never names the place. Arabia, India or East Africa?\nThe location of Ophir is not proven; the Great Zimbabwe link is a colonial-era myth.\n#Ophir #KingSolomon #BibleHistory #MythUnearthed"
+  {
+   "text": "Solomon's fleet fetched it from Ophir. One famous guess is a myth.",
+   "say": "Solomon's fleet fetched it from OH-fur. One famous guess is a myth.",
+   "shot": "TEXT",
+   "kind": "big_number",
+   "display": "420 TALENTS",
+   "callout": "420 TALENTS",
+   "keyword": "myth",
+   "source": "1 Kings 9:28"
+  },
+  {
+   "text": "The fleet sails from Ezion-geber on the Red Sea, crewed by Hiram's sailors from Tyre.",
+   "say": "The fleet sails from EZ-ee-on GEH-ber on the Red Sea, crewed by HIGH-ram's sailors from Tire.",
+   "shot": "MAP",
+   "focus": [
+    29.53,
+    35.0
+   ],
+   "zoom": "close",
+   "pins": [
+    "ezion"
+   ],
+   "callout": "EZION-GEBER",
+   "keyword": "Ezion-geber",
+   "source": "1 Kings 9:26-27"
+  },
+  {
+   "text": "420 talents is roughly eleven to fourteen tonnes, depending on the standard.",
+   "shot": "EVENT",
+   "scene": "object",
+   "object": "gold_pile",
+   "label": "11-14 TONNES?",
+   "callout": "11-14 TONNES?",
+   "keyword": "tonnes",
+   "source": "talent standards of roughly 26-34 kg"
+  },
+  {
+   "text": "Not proven: where Ophir was. The Bible never says.",
+   "say": "Not proven: where OH-fur was. The Bible never says.",
+   "shot": "PRESENTER",
+   "action": "shrug",
+   "backdrop": "sea",
+   "callout": "NOT PROVEN",
+   "keyword": "proven",
+   "source": "1 Kings 9-10; archaeology"
+  },
+  {
+   "text": "Guess one: southern Arabia, around Yemen.",
+   "shot": "MAP",
+   "focus": [
+    17.0,
+    45.0
+   ],
+   "zoom": "wide",
+   "pins": [
+    "ezion",
+    "arabia"
+   ],
+   "callout": "ARABIA?",
+   "keyword": "Arabia",
+   "reveal": "1/3",
+   "source": "proposed identification"
+  },
+  {
+   "text": "Guess two: India's western coast, a far longer voyage.",
+   "shot": "TEXT",
+   "kind": "glow_word",
+   "display": "INDIA?",
+   "callout": "INDIA?",
+   "keyword": "India",
+   "reveal": "2/3",
+   "source": "proposed identification"
+  },
+  {
+   "text": "Guess three: East Africa, far down the coast.",
+   "shot": "MAP",
+   "focus": [
+    -10.0,
+    38.0
+   ],
+   "zoom": "wide",
+   "pins": [
+    "ezion",
+    "eastafrica"
+   ],
+   "callout": "EAST AFRICA?",
+   "keyword": "Africa",
+   "reveal": "3/3",
+   "source": "proposed identification"
+  },
+  {
+   "text": "In 1871, explorer Karl Mauch linked Great Zimbabwe to Ophir.",
+   "say": "In eighteen seventy-one, explorer Karl MOWKH linked Great Zim-BAB-way to OH-fur.",
+   "shot": "EVENT",
+   "scene": "object",
+   "object": "ruins",
+   "label": "GREAT ZIMBABWE",
+   "callout": "1871 CLAIM",
+   "keyword": "Mauch",
+   "source": "claim by Karl Mauch"
+  },
+  {
+   "text": "But Shona-speaking peoples built it, 2,000 years after Solomon. A colonial-era myth.",
+   "say": "But SHOH-na-speaking peoples built it, two thousand years after Solomon. A colonial-era myth.",
+   "shot": "PRESENTER",
+   "action": "surprised",
+   "backdrop": "desert",
+   "callout": "COLONIAL-ERA MYTH",
+   "keyword": "Shona",
+   "source": "archaeology / historiography"
+  },
+  {
+   "text": "Arabia, India, East Africa: three real guesses, one myth.",
+   "shot": "MAP",
+   "focus": [
+    8.0,
+    50.0
+   ],
+   "zoom": "wide",
+   "pins": [
+    "ezion",
+    "arabia",
+    "india",
+    "eastafrica"
+   ],
+   "callout": "3 GUESSES",
+   "keyword": "myth",
+   "source": "-"
+  },
+  {
+   "text": "420 talents, no address. Arabia or India: where did it come from?",
+   "shot": "PRESENTER",
+   "action": "point_right",
+   "backdrop": "sea",
+   "callout": "ARABIA OR INDIA?",
+   "keyword": "address",
+   "source": "-"
   }
+ ],
+ "places": {
+  "ezion": [
+   29.53,
+   35.0,
+   "Ezion-geber",
+   "ship",
+   "solid"
+  ],
+  "arabia": [
+   15.4,
+   44.2,
+   "Yemen / S. Arabia",
+   "dot",
+   "dashed"
+  ],
+  "india": [
+   19.0,
+   72.8,
+   "W. India",
+   "dot",
+   "dashed"
+  ],
+  "eastafrica": [
+   -4.0,
+   39.7,
+   "East Africa",
+   "dot",
+   "dashed"
+  ]
+ },
+ "youtube": {
+  "title": "420 Talents of Gold, and No Address 🗺️ #shorts",
+  "description": "Solomon's ships brought 420 talents from Ophir, and the Bible never says where it was. Arabia, India or East Africa?\nThe location of Ophir is not proven; the Great Zimbabwe link is a colonial-era myth.\n#Ophir #KingSolomon #BibleHistory #MythUnearthed"
+ }
 }
