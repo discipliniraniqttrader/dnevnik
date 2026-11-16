@@ -11,3 +11,7 @@ assets/terrain_*.png
 assets/*_base.png
 */ezra/
 noah/voice/
+topics/*/cache/
+topics/*/out/
+*/voice/
+__pycache__/
