@@ -1,0 +1,89 @@
+{
+  "title": "How Big Was Noah's Ark, Really?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Noah's Ark was not a cute little boat.",
+      "keyword": "not",
+      "scene": "A small cartoon toy boat bobs, gets crossed out, then a colossal ark hull silhouette rises over the horizon at dusk.",
+      "source": "-"
+    },
+    {
+      "text": "Genesis gives exact numbers: three hundred by fifty by thirty cubits.",
+      "keyword": "exact",
+      "scene": "Ark hull silhouette in side view; dimension lines draw on: 300, 50, 30 cubits.",
+      "source": "Genesis 6:15"
+    },
+    {
+      "text": "A cubit is one forearm, elbow to fingertip. About forty-five centimetres.",
+      "keyword": "forearm",
+      "scene": "Close-up silhouette of a forearm with a ruler from elbow to fingertip, label 45 cm.",
+      "source": "standard cubit estimate (~44-46 cm)"
+    },
+    {
+      "text": "That makes the Ark about one hundred and thirty-seven metres long.",
+      "keyword": "137",
+      "scene": "Camera pulls back along the full hull; a counter ticks up to 137 m.",
+      "source": "300 x 0.457 m"
+    },
+    {
+      "text": "Stand at one end of a football field. Now add half another.",
+      "keyword": "football",
+      "scene": "Viewer participation: a lone person silhouette at the end of a lit football field; the ark silhouette slides over it, 1.5 fields long.",
+      "source": "~91 m field"
+    },
+    {
+      "text": "Three decks, one door in the side, an opening near the top.",
+      "keyword": "Three",
+      "scene": "Cutaway of the hull: three decks light up one by one, a door glows in the side, light at the roof opening.",
+      "source": "Genesis 6:16"
+    },
+    {
+      "text": "And it's six times longer than it is wide.",
+      "keyword": "six",
+      "scene": "Top-down outline of the hull with a 6:1 ratio graphic.",
+      "source": "Genesis 6:15"
+    },
+    {
+      "text": "Many modern cargo ships use similar proportions for stability in waves.",
+      "keyword": "stability",
+      "scene": "Ark silhouette and a modern cargo ship silhouette side by side on stormy waves, both riding steady.",
+      "source": "naval architecture (length-to-beam ~6:1)"
+    },
+    {
+      "text": "Next to the Titanic, it's about half the length.",
+      "keyword": "Titanic",
+      "scene": "Titanic silhouette (269 m) slides in beside the ark for scale.",
+      "source": "Titanic length 269 m"
+    },
+    {
+      "text": "But here's the problem: wooden ships that long bend and leak.",
+      "keyword": "leak",
+      "scene": "Long wooden hull flexing in heavy waves, water spraying in through seams, rain.",
+      "source": "naval history"
+    },
+    {
+      "text": "The longest wooden ships of the early 1900s needed pumps running constantly.",
+      "keyword": "pumps",
+      "scene": "Silhouette of a big wooden schooner in a storm, pumps gushing water over the side.",
+      "source": "e.g. schooner Wyoming (1909)"
+    },
+    {
+      "text": "Not proven: no trace of the Ark has ever been found.",
+      "keyword": "never",
+      "scene": "Empty mountain ridge silhouettes under clouds and a slow searchlight beam.",
+      "source": "archaeology"
+    },
+    {
+      "text": "So, not a cute little boat. Possible, or impossible?",
+      "keyword": "Possible",
+      "scene": "Back to the colossal ark silhouette at dusk with rain, two choice tags: POSSIBLE / IMPOSSIBLE.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "How Big Was Noah's Ark, Really? 🛶 #shorts",
+    "description": "Genesis 6:15 gives the Ark's size in cubits. Here's what that means in metres, football fields and Titanics.\nNo trace of the Ark has been found; this is the size the text describes.\n#NoahsArk #Bible #Genesis #BibleHistory"
+  }
+}

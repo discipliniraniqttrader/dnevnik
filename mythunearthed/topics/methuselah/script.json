@@ -1,0 +1,89 @@
+{
+  "title": "Did Methuselah really live 969 years?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Nobody lives 969 years. So what happened?",
+      "keyword": "969",
+      "scene": "Painted ancient patriarch with white beard at sunrise, camera drifting. Overlay: counter 969.",
+      "source": "Genesis 5:27"
+    },
+    {
+      "text": "The oldest verified person, Jeanne Calment, died at one hundred twenty-two.",
+      "keyword": "oldest",
+      "scene": "Elderly woman's hands holding a cane in warm light. Overlay: counter 122.",
+      "source": "Jeanne Calment, 1875-1997"
+    },
+    {
+      "text": "Methuselah's age is almost eight times that.",
+      "keyword": "times",
+      "scene": "Two tall bars growing side by side. Overlay: ratio badge 8x.",
+      "source": "969 / 122"
+    },
+    {
+      "text": "Now take your own age. Multiply it by eight.",
+      "keyword": "age",
+      "scene": "Close-up of a hand with a wristwatch. Overlay: counter x8.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "Mesopotamia has the Sumerian King List.",
+      "keyword": "Sumerian",
+      "scene": "Cuneiform tablet in lamplight. Overlay: none.",
+      "source": "Sumerian King List"
+    },
+    {
+      "text": "Its kings before the flood reign tens of thousands of years.",
+      "keyword": "tens",
+      "scene": "Row of ancient kings on thrones, fading into mist. Overlay: counter tens of thousands.",
+      "source": "Sumerian King List (e.g. 28,800 years)"
+    },
+    {
+      "text": "So the Bible's numbers look modest in comparison.",
+      "keyword": "modest",
+      "scene": "Papyrus with short columns of numbers. Overlay: compare bars.",
+      "source": "scholarly comparison"
+    },
+    {
+      "text": "Methuselah is the longest-lived person in the Bible.",
+      "keyword": "longest",
+      "scene": "Aged patriarch seated by a tent fire at night. Overlay: counter 969.",
+      "source": "Genesis 5:27"
+    },
+    {
+      "text": "One theory: the numbers are symbolic, not literal.",
+      "keyword": "symbolic",
+      "scene": "Scribe etching sacred numerals on clay. Overlay: none.",
+      "source": "scholarly theory"
+    },
+    {
+      "text": "Another: ancient scribes used base sixty, and the scaling changed.",
+      "keyword": "sixty",
+      "scene": "Clay tablet with wedge numerals. Overlay: counter base 60.",
+      "source": "sexagesimal theory"
+    },
+    {
+      "text": "By the genealogy, he dies in the very year of the flood.",
+      "keyword": "flood",
+      "scene": "Dark storm clouds over a patriarch's tent at dusk. Overlay: sum 187+182+600 = 969.",
+      "source": "Genesis 5-7 (Masoretic chronology)"
+    },
+    {
+      "text": "Not proven: nobody knows how to read these ages.",
+      "keyword": "knows",
+      "scene": "Open book with blank pages. Overlay: question mark badge.",
+      "source": "scholarly debate"
+    },
+    {
+      "text": "So 969 years: literal, or symbolic?",
+      "keyword": "literal",
+      "scene": "Patriarch silhouette under a vast sky, slow push. Overlay: choice tags A literal / B symbolic.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "Did Methuselah Really Live 969 Years? #shorts",
+    "description": "Genesis 5:27 says Methuselah lived 969 years. Where did that number come from?\nScholars debate how to read it; none of the theories is proven.\n#Methuselah #Genesis #Bible #BibleHistory"
+  }
+}

@@ -1,4 +1,4 @@
-"""Narration: Chatterbox per beat (cached) -> atempo 1.11 -> trim/normalise -> timeline. Word timing for captions."""
+"""Narration: Chatterbox per beat (cached) -> atempo 1.20 -> trim/normalise -> timeline. Word timing for captions."""
 import hashlib, json, os, re, subprocess, sys
 from pathlib import Path
 import numpy as np, soundfile as sf
@@ -6,10 +6,11 @@ from scipy.signal import resample_poly
 from .common import ROOT
 
 SR = 24000
-GAP = 0.08          # pause between sentences (QUALITY 2a: 0.06-0.10)
-LEAD = 0.30
-PRE_END_HOLD = 0.2  # slightly longer breath before the closing question
-END_HOLD = 2.0      # tail on the end card
+GAP = 0.04          # pause between sentences (QUALITY 2a: 0.06-0.10)
+LEAD = 0.12
+PRE_END_HOLD = 0.10  # slightly longer breath before the closing question
+END_HOLD = 2.0      # tail on the end card (hard cap 3.0 s after the last word)
+END_CAP = 3.0
 VENV_PY = ROOT / "voice/venv/bin/python"
 PROMPT = ROOT / "out/voice_am_michael.wav"
 
@@ -27,7 +28,7 @@ def generate(topic_dir, beats, cfg):
         env = dict(os.environ, HF_HUB_DISABLE_XET="1")
         r = subprocess.run([str(VENV_PY), str(Path(__file__).parent / "tts_worker.py"), str(jf)], env=env)
         if r.returncode: raise RuntimeError("chatterbox failed")
-    tempo = float(vcfg.get("tempo", 1.11))
+    tempo = float(vcfg.get("tempo", 1.20))
     for b in beats:
         raw = vd / f"beat{b['i']:02d}.wav"; out = sd / f"beat{b['i']:02d}.wav"
         if out.exists() or not raw.exists(): continue
@@ -37,16 +38,16 @@ def generate(topic_dir, beats, cfg):
 def _trim(a, sr):
     hop = int(sr * 0.01)
     e = np.sqrt(np.convolve(a ** 2, np.ones(hop) / hop, mode="same"))
-    thr = max(np.percentile(e, 98) * 0.035, 1e-4)
+    thr = max(np.percentile(e, 98) * 0.06, 1e-4)
     idx = np.nonzero(e > thr)[0]
     if len(idx) == 0: return a
-    return a[max(0, idx[0] - int(0.03 * sr)): min(len(a), idx[-1] + int(0.05 * sr))]
+    return a[max(0, idx[0] - int(0.015 * sr)): min(len(a), idx[-1] + int(0.025 * sr))]
 
 
 def narrate(topic_dir, beats, cache_dir):
     """returns voice(np.float32 @24k), beat timeline [{t0,speech,t1}], total seconds"""
     sd = Path(topic_dir) / "voice" / "stretch"
-    key = hashlib.sha1(("|".join(f"{b['i']}:{(sd / f'beat{b['i']:02d}.wav').stat().st_size}" for b in beats) + f"{GAP}{LEAD}{END_HOLD}").encode()).hexdigest()[:12]
+    key = hashlib.sha1(("|".join(f"{b['i']}:{(sd / f'beat{b['i']:02d}.wav').stat().st_size}" for b in beats) + f"{GAP}{LEAD}{END_HOLD}{PRE_END_HOLD}trim2").encode()).hexdigest()[:12]
     cache = Path(cache_dir) / f"narration_{key}.npz"
     if cache.exists():
         z = np.load(cache, allow_pickle=True)
@@ -68,7 +69,7 @@ def narrate(topic_dir, beats, cache_dir):
     tl, t = [], LEAD
     for i, a in enumerate(out):
         dur = len(a) / SR
-        hold = (PRE_END_HOLD if i == len(out) - 2 else GAP) if i < len(out) - 1 else END_HOLD
+        hold = (PRE_END_HOLD if i == len(out) - 2 else GAP) if i < len(out) - 1 else min(END_HOLD, END_CAP)
         tl.append({"t0": t, "speech": dur, "t1": t + dur + hold}); t += dur + hold
     voice = np.zeros(int(t * SR) + SR, np.float32)
     for b, a in zip(tl, out):

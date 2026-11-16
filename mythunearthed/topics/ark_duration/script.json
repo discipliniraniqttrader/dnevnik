@@ -1,0 +1,83 @@
+{
+  "title": "How long was Noah on the Ark?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Noah was not on the Ark forty days.",
+      "keyword": "not",
+      "scene": "Painted colossal ark at dusk in heavy rain with a crossed-out 40. Overlay: crossed-out 40.",
+      "source": "Genesis 7:12"
+    },
+    {
+      "text": "Forty days is only how long it rained.",
+      "keyword": "rained",
+      "scene": "Torrential rain over the ark and dark hills. Overlay: counter 40 days.",
+      "source": "Genesis 7:12"
+    },
+    {
+      "text": "Genesis 7:11 dates the flood: second month, seventeenth day.",
+      "keyword": "dates",
+      "scene": "Calendar-like stone tablet carved with day marks. Overlay: date badge month 2 day 17.",
+      "source": "Genesis 7:11"
+    },
+    {
+      "text": "The waters stayed on the earth one hundred fifty days.",
+      "keyword": "waters",
+      "scene": "Endless flat water under a pink sunset with the ark afloat. Overlay: counter 150 days.",
+      "source": "Genesis 7:24"
+    },
+    {
+      "text": "Then the ark rested, and the waters slowly fell.",
+      "keyword": "rested",
+      "scene": "Ark on a mountain ridge as water recedes. Overlay: none.",
+      "source": "Genesis 8:3-4"
+    },
+    {
+      "text": "Noah sent a raven, which flew back and forth.",
+      "keyword": "raven",
+      "scene": "Black raven flying off the ark at dawn. Overlay: counter 1.",
+      "source": "Genesis 8:7"
+    },
+    {
+      "text": "He sent a dove three times; the third did not return.",
+      "keyword": "dove",
+      "scene": "White dove carrying an olive leaf at sunrise. Overlay: counter 3.",
+      "source": "Genesis 8:8-12"
+    },
+    {
+      "text": "Genesis 8:14 says the earth was dry: second month, twenty-seventh day.",
+      "keyword": "dry",
+      "scene": "Cracked dry mud around the ark at morning. Overlay: date badge month 2 day 27.",
+      "source": "Genesis 8:14"
+    },
+    {
+      "text": "That is about a year and ten days inside.",
+      "keyword": "year",
+      "scene": "Ark at sunrise, long shadow, camera drifting. Overlay: counter 1 year 10 days.",
+      "source": "Genesis 7:11 to 8:14"
+    },
+    {
+      "text": "Try staying home one weekend. Now do it for a year.",
+      "keyword": "home",
+      "scene": "Person at a window looking out at rain. Overlay: counter 365 days.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "Not proven: scholars debate whether the flood was global or local.",
+      "keyword": "debate",
+      "scene": "Mountain ridge in mist at sunrise. Overlay: question mark badge.",
+      "source": "scholarly debate"
+    },
+    {
+      "text": "So not forty days. A year, or forty days?",
+      "keyword": "year",
+      "scene": "Ark in the golden sunset sea, slow push. Overlay: choice tags A forty days / B a year.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "How Long Was Noah on the Ark? #shorts",
+    "description": "Everyone says forty days. The text says about a year and ten days.\nWhether the flood was global or local is debated; we only read the dates.\n#NoahsArk #Genesis #Bible #BibleHistory"
+  }
+}

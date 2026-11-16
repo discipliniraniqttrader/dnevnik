@@ -1,1 +1,1 @@
-rendered 2570 frames in 304.8s (0.119 s/frame)
+rendered 2276 frames in 271.3s (0.119 s/frame)

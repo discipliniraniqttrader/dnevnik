@@ -1,0 +1,83 @@
+{
+  "title": "Whose name is hidden in 666?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Whose name is hidden in 666?",
+      "keyword": "hidden",
+      "scene": "Painted dark Roman emperor silhouette with a glowing numeral shape behind him at dusk, slow camera push. Overlay: counter 666.",
+      "source": "Revelation 13:18"
+    },
+    {
+      "text": "Revelation says it is the number of a man.",
+      "keyword": "man",
+      "scene": "Ancient scribe writing on a scroll by lamplight on Patmos. Overlay: counter 666.",
+      "source": "Revelation 13:18"
+    },
+    {
+      "text": "In Hebrew and Greek, every letter is also a number.",
+      "keyword": "letter",
+      "scene": "Row of carved Hebrew letters on a stone tablet, torchlight. Overlay: letter values appearing under each glyph.",
+      "source": "gematria"
+    },
+    {
+      "text": "Try it: add the letters of a name.",
+      "keyword": "Try",
+      "scene": "Hand tracing letters on wet clay with a reed stylus. Overlay: running sum counter.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "Nero Caesar, written in Hebrew letters, adds up to 666.",
+      "keyword": "Nero",
+      "scene": "Marble bust of Emperor Nero in torchlight. Overlay: sum 50+200+6+50+100+60+200 = 666.",
+      "source": "Nrwn Qsr in Hebrew"
+    },
+    {
+      "text": "Nero tormented Christians in Rome around the year sixty-four.",
+      "keyword": "tormented",
+      "scene": "Burning Rome skyline at night, silhouettes of the crowd. Overlay: date badge about AD 64.",
+      "source": "Tacitus, Annals 15"
+    },
+    {
+      "text": "Here is a clue: some early manuscripts read 616.",
+      "keyword": "616",
+      "scene": "Fragment of papyrus held in gloved hand under a museum lamp. Overlay: counter changing 666 to 616.",
+      "source": "Papyrus 115; other early manuscripts"
+    },
+    {
+      "text": "Drop the final letter, the Latin spelling Nero, and the total is 616.",
+      "keyword": "Latin",
+      "scene": "Chisel carving the Latin word NERO into stone, dust in light. Overlay: sum 666 minus 50 = 616.",
+      "source": "Neron vs Nero spelling"
+    },
+    {
+      "text": "Two numbers, one emperor: that fits.",
+      "keyword": "fits",
+      "scene": "Two coins stamped with the same emperor's face, side by side in warm light. Overlay: compare 666 / 616.",
+      "source": "scholarly reading"
+    },
+    {
+      "text": "Not proven: this is the leading view, not a certainty.",
+      "keyword": "leading",
+      "scene": "Hazy dusk silhouette of a Roman ruler behind a veil of smoke. Overlay: question mark badge.",
+      "source": "scholarly debate"
+    },
+    {
+      "text": "Others suggest different names, but Nero fits best.",
+      "keyword": "best",
+      "scene": "Procession of ancient rulers as silhouettes at sunset, camera drifting. Overlay: ratio badge Nero 1 of several.",
+      "source": "other proposals debated"
+    },
+    {
+      "text": "So whose name hides in 666? Nero, or someone else?",
+      "keyword": "someone",
+      "scene": "Emperor silhouette at dusk with sparks drifting up. Overlay: choice tags A Nero / B someone else.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "Whose Name Is Hidden in 666? #shorts",
+    "description": "Revelation 13:18 says 666 is the number of a man. Scholars think they know who.\nThis is the leading view, not a proven fact.\n#666 #Revelation #Bible #BibleHistory"
+  }
+}

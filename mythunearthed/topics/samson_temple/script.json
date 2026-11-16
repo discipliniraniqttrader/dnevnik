@@ -1,0 +1,83 @@
+{
+  "title": "Could Samson really bring down a temple?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Could one man really topple a temple?",
+      "keyword": "topple",
+      "scene": "Painted blinded giant between two huge wooden pillars in a Philistine temple, dusk light. Overlay: none.",
+      "source": "Judges 16:26-30"
+    },
+    {
+      "text": "Judges says three thousand people sat on the roof.",
+      "keyword": "roof",
+      "scene": "Crowd packed on a flat temple roof at sunset. Overlay: counter 3,000.",
+      "source": "Judges 16:27"
+    },
+    {
+      "text": "Samson, blind and chained, stands between two central pillars.",
+      "keyword": "pillars",
+      "scene": "Chained man feeling two pillars with his hands. Overlay: none.",
+      "source": "Judges 16:26"
+    },
+    {
+      "text": "Stretch your arms wide. That is about the gap.",
+      "keyword": "Stretch",
+      "scene": "Close-up of outstretched arms between two pillars. Overlay: scale bar about 2 m.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "At Tell Qasile, archaeologist Amihai Mazar found a Philistine temple.",
+      "keyword": "Qasile",
+      "scene": "Archaeologists brushing stone ruins in morning light. Overlay: none.",
+      "source": "Tell Qasile, Amihai Mazar excavations"
+    },
+    {
+      "text": "Its roof rested on two central wooden pillars.",
+      "keyword": "wooden",
+      "scene": "Reconstruction of temple interior with two timber columns. Overlay: none.",
+      "source": "Tell Qasile Philistine temple"
+    },
+    {
+      "text": "They stood on stone bases about two metres apart.",
+      "keyword": "bases",
+      "scene": "Two round stone bases in dusty ground. Overlay: scale bar 2 m.",
+      "source": "Tell Qasile (approx)"
+    },
+    {
+      "text": "Push those apart, and the roof beams could drop.",
+      "keyword": "drop",
+      "scene": "Roof beams cracking, dust falling, wide shot. Overlay: none.",
+      "source": "architectural reading"
+    },
+    {
+      "text": "The people on top fall with it.",
+      "keyword": "fall",
+      "scene": "Crowd tumbling in a cloud of dust at sunset. Overlay: counter 3,000.",
+      "source": "Judges 16:30"
+    },
+    {
+      "text": "Not proven: that site is not Gaza, so it only shows the design.",
+      "keyword": "Gaza",
+      "scene": "Map-less painted coastline of ancient Philistia at dusk. Overlay: question mark badge.",
+      "source": "scholarly caveat"
+    },
+    {
+      "text": "The design is real; the story is the question.",
+      "keyword": "real",
+      "scene": "Temple pillars at dawn, camera pulling back. Overlay: none.",
+      "source": "-"
+    },
+    {
+      "text": "So could Samson topple a temple? Legend, or memory?",
+      "keyword": "Legend",
+      "scene": "Silhouette between two pillars, backlit by sunset. Overlay: choice tags A legend / B memory.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "Could Samson Really Topple a Temple? #shorts",
+    "description": "Judges 16 says Samson pushed two pillars and a temple fell. Archaeologists have found Philistine temples built exactly this way.\nThat does not prove the story.\n#Samson #Bible #Philistines #BibleHistory"
+  }
+}

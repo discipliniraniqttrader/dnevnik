@@ -206,7 +206,7 @@ def shatter_scene(lt, t, t_quote, t_word, t_shatter, t_peaks_end, word="MOUNTAIN
     for k in range(26):
         y = r.uniform(200, 1500); L = r.uniform(120, 360); sp = r.uniform(120, 380); x = (r.uniform(0, W + 400) + t * sp) % (W + 500) - 250
         od.line([(x, y), (x + L, y)], fill=(210, 226, 240, int(r.uniform(18, 50))), width=2)
-    img = Image.fromarray(np.clip(bg, 0, 255).astype(np.uint8)); img.paste(ov.convert("RGB"), (0, 0), ov.split()[3])
+    img = Image.fromarray(np.clip(motif(bg, t, (170, 200, 230), .28, 9), 0, 255).astype(np.uint8)); img.paste(ov.convert("RGB"), (0, 0), ov.split()[3])
     base_y = 1300
     if peaks and lt >= t_shatter - 0.05:
         for i, p in enumerate(sorted(_peaks(), key=lambda p: abs(p["x"] - 540), reverse=True)):
@@ -227,11 +227,13 @@ def shatter_scene(lt, t, t_quote, t_word, t_shatter, t_peaks_end, word="MOUNTAIN
         qa = ease((lt - t_quote) / .35) * (1 - ease((lt - t_shatter - .1) / .3))
         if qa > 0:
             f = F("sans-black.ttf", 60)
-            d.text((540, 600), context.upper()[:30], font=f, fill=(232, 170, 40, int(255 * qa)), anchor="mm", stroke_width=5, stroke_fill=(10, 8, 6, int(255 * qa)))
+            d.text((540, 430), context.upper()[:30], font=f, fill=(232, 170, 40, int(255 * qa)), anchor="mm", stroke_width=5, stroke_fill=(10, 8, 6, int(255 * qa)))
     size = 150
     while size > 60 and F("sans-black.ttf", size).getlength(word) > 940: size -= 6
     (tw, th), shards = _shards(word, size)
-    cx, cy = 540, 830
+    cx, cy = 540, 600
+    if lt < t_word:
+        d.text((cx, cy), word, font=F("sans-black.ttf", size), fill=(250, 244, 226, 90), anchor="mm", stroke_width=8, stroke_fill=(8, 10, 16, 90))
     if lt >= t_word and lt < t_shatter:
         s = 1.0 + 1.6 * (1 - out_back((lt - t_word) / .28, 1.6)) * 0.55
         wob = 1 + .015 * math.sin(t * 40) * ease((lt - t_shatter + .5) / .5)
@@ -286,23 +288,46 @@ def shatter_scene(lt, t, t_quote, t_word, t_shatter, t_peaks_end, word="MOUNTAIN
     return np.asarray(img.convert("RGB"))
 
 
+
+# ======================================================================== shared motif for TEXT scenes (never a near-empty frame)
+@lru_cache(None)
+def _contours():
+    f = fbm(H // 2, W // 2, [96, 48, 24], [1.0, .5, .25], 11)
+    q = (f * 14) % 1.0
+    line = np.clip(1 - np.minimum(q, 1 - q) / .035, 0, 1)
+    line = cv2.resize(line.astype(np.float32), (W, H), interpolation=cv2.INTER_LINEAR)
+    return cv2.GaussianBlur(line, (0, 0), 1.2) * (.35 + .65 * radial(540, 760, 1300, .8))
+
+
+def motif(img, t, col=(210, 170, 90), amt=.30, seed=5):
+    """faint drifting terrain contour lines + slow particles over an RGB float image"""
+    sh = int(t * 6) % H
+    c = np.roll(_contours(), sh, axis=0)
+    out = img + c[..., None] * np.array(col, np.float32) * amt
+    r = np.random.default_rng(seed); p = np.zeros((H, W, 3), np.uint8)
+    for i in range(90):
+        x = (r.uniform(0, W) + t * r.uniform(-14, 14)) % W; y = (r.uniform(0, H) - t * r.uniform(12, 40)) % H
+        al = (.4 + .6 * math.sin(t * 1.4 + i) ** 2) * .85
+        cv2.circle(p, (int(x), int(y)), int(r.uniform(1, 3.4)), tuple(int(v * al) for v in col), -1, cv2.LINE_AA)
+    return out + p * .7
+
 # ======================================================================== al-Judi glow
 def glow_scene(lt, dur, t, word, t_text, t_dissolve):
     """dark glowing word scene; particles lift off at t_dissolve and the glow dims."""
     yy = vgrad([(0, (6, 14, 18)), (900, (14, 40, 44)), (H, (6, 14, 20))])
-    k = ease((lt - t_text) / .8)
+    k = max(.5, ease((lt - t_text) / .8))
     dis = ease((lt - t_dissolve) / 1.1)
-    yy += radial(540, 860, 760, 1.8)[..., None] * np.array([90, 64, 18], np.float32) * k * (1 - .45 * dis)
-    ang = np.arctan2(*(np.mgrid[0:H, 0:W].astype(np.float32) - np.array([860, 540], np.float32)[:, None, None]))
-    rays = (np.sin(ang * 18 + t * .25) * .5 + .5) ** 3 * radial(540, 860, 900, 1.3) * .35 * k
+    yy += radial(540, 640, 760, 1.8)[..., None] * np.array([90, 64, 18], np.float32) * k * (1 - .45 * dis)
+    ang = np.arctan2(*(np.mgrid[0:H, 0:W].astype(np.float32) - np.array([640, 540], np.float32)[:, None, None]))
+    rays = (np.sin(ang * 18 + t * .25) * .5 + .5) ** 3 * radial(540, 640, 900, 1.3) * .35 * k
     yy += rays[..., None] * np.array([120, 92, 30], np.float32)
-    base = np.clip(yy, 0, 255)
+    base = np.clip(motif(yy, t, amt=.35), 0, 255)
     txt = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(txt)
     size = 250
     while size > 80 and F("serif-bold.ttf", size).getlength(word) > 920: size -= 8
     s = 0.92 + .08 * ease((lt - t_text) / 1.2) + .16 * dis
     f = F("serif-bold.ttf", int(size * s))
-    d.text((540, 860), word, font=f, fill=(255, 226, 150, 255), anchor="mm", stroke_width=3, stroke_fill=(120, 70, 10, 255))
+    d.text((540, 600), word, font=f, fill=(255, 226, 150, 255), anchor="mm", stroke_width=3, stroke_fill=(120, 70, 10, 255))
     a = np.asarray(txt).astype(np.float32)
     fade = k * (1 - dis * .85)
     glowl = cv2.GaussianBlur(a, (0, 0), 28) * np.array([1, .9, .6, 1.4], np.float32)
@@ -318,7 +343,7 @@ def glow_scene(lt, dur, t, word, t_text, t_dissolve):
         r = np.random.default_rng(8)
         pimg = Image.fromarray(np.zeros((H, W, 3), np.uint8)); pd = ImageDraw.Draw(pimg)
         for i in range(160):
-            px = 540 + r.normal(0, 260); py = 860 + r.normal(0, 70)
+            px = 540 + r.normal(0, 260); py = 640 + r.normal(0, 70)
             sp = r.uniform(30, 120); ph = r.uniform(0, 6.28)
             up = (lt - t_dissolve) if lt > t_dissolve else 0
             x = px + math.sin(t * 1.5 + ph) * 14 + up * r.uniform(-90, 90); y = py - ((t * sp * .25) % 160) - up * sp * 1.3

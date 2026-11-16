@@ -240,10 +240,10 @@ def build(S, voice, BT, TOTAL, region):
         kws.append(dict(beat=i + 1, t=k_["kt"] if k_ else None, word=" ".join(w for w, f in zip(k_["words"], k_["kw"]) if f) if k_ else None))
     # ---------------- wow moves: every 3rd shot (not the end card)
     def numeric_kw(bi):
-        w = kws[bi - 1]["word"] or ""
-        m = re.search(r"\d[\d,\.]*", w)
-        if m: return m.group(0).rstrip(".,")
-        n_ = words_to_int(w)
+        # giant number only when the beat's keyword IS the number (nothing else in it)
+        w = (kws[bi - 1]["word"] or "").strip().strip(".,'\"!?")
+        if re.fullmatch(r"\d[\d,\.]*", w): return w.rstrip(".,")
+        n_ = words_to_int(w) if w and not re.search(r"\d", w) else None
         return f"{n_:,}" if n_ else None
     for j, s_ in enumerate(shots):
         s_["wow"] = None
@@ -255,7 +255,7 @@ def build(S, voice, BT, TOTAL, region):
                          dict(lat=F_[0], lon=F_[1], vis=v_ * .8, tilt=.86, yaw=-5, tx=tx, ty=ty))
             s_["arc"] = .12; s_["wow"] = "fly"
         elif s_["kind"] == "event" and bt_["scene_name"] == "object": s_["wow"] = "spot"
-        elif s_["kind"] in ("event", "text") and numeric_kw(s_["beat"]) and not (s_["kind"] == "text" and bt_["kind"] == "big_number") \
+        elif s_["kind"] in ("event", "text") and numeric_kw(s_["beat"]) and not bt_.get("callout") and not bt_.get("label") and not bt_.get("display") and not (s_["kind"] == "text" and bt_["kind"] == "big_number") \
                 and not (s_["kind"] == "event" and bt_["scene_name"] in ("counter", "icon_grid")):
             s_["wow"] = "number"; s_["giant"] = numeric_kw(s_["beat"])
         else: s_["wow"] = "push"

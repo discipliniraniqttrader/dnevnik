@@ -1,0 +1,147 @@
+[script] 0.0s
+[voice_tts] 0.0s
+[narration] 0.0s
+[plan] 0.0s
+[ezra_cached] 0.0s
+[audio] 1.8s
+  chunk 1/26  21s
+  chunk 2/26  26s
+  chunk 3/26  41s
+  chunk 4/26  70s
+  chunk 5/26  70s
+  chunk 6/26  70s
+  chunk 7/26  77s
+  chunk 8/26  87s
+  chunk 9/26  101s
+  chunk 10/26  133s
+  chunk 11/26  142s
+  chunk 12/26  211s
+  chunk 13/26  295s
+  chunk 14/26  419s
+  chunk 15/26  419s
+  chunk 16/26  419s
+  chunk 17/26  419s
+  chunk 18/26  419s
+  chunk 19/26  419s
+  chunk 20/26  419s
+  chunk 21/26  419s
+  chunk 22/26  419s
+  chunk 23/26  419s
+  chunk 24/26  419s
+  chunk 25/26  419s
+  chunk 26/26  419s
+[frames] 418.9s
+[mux] 1.7s
+[encode_9mb] 122.4s
+[sheet] 10.8s
+{
+  "topic": "noah",
+  "title": "The Bible Never Says 'Mount Ararat'",
+  "duration_s": 62.83,
+  "narration_s": 62.81,
+  "shot_count": 35,
+  "avg_shot_s": 1.79,
+  "shots_outside_1p2_2p0": [
+    2.17,
+    2.12
+  ],
+  "wow_shots": 11,
+  "keywords": [
+    {
+      "beat": 1,
+      "t": 1.7859422348484846,
+      "word": "ARARAT.'"
+    },
+    {
+      "beat": 2,
+      "t": 5.981287280701754,
+      "word": "STRANGEST"
+    },
+    {
+      "beat": 3,
+      "t": 8.483916666666667,
+      "word": "5,137"
+    },
+    {
+      "beat": 4,
+      "t": 16.7341938172043,
+      "word": "1959"
+    },
+    {
+      "beat": 5,
+      "t": 20.590786066308247,
+      "word": "GEOLOGISTS"
+    },
+    {
+      "beat": 6,
+      "t": 27.68103397711016,
+      "word": "QURAN"
+    },
+    {
+      "beat": 7,
+      "t": 31.10653721682848,
+      "word": "PLURAL"
+    },
+    {
+      "beat": 8,
+      "t": 37.76470180722892,
+      "word": "GUDRUN"
+    },
+    {
+      "beat": 9,
+      "t": 44.73230512820513,
+      "word": "NIMUSH"
+    },
+    {
+      "beat": 10,
+      "t": 47.43927412280702,
+      "word": "PROVEN"
+    },
+    {
+      "beat": 11,
+      "t": 53.32791714015152,
+      "word": "PLURAL"
+    },
+    {
+      "beat": 12,
+      "t": 57.14400757575758,
+      "word": "ARARAT.'"
+    }
+  ],
+  "min_text_px": 44.0,
+  "chunks": 26,
+  "chunks_reused": 0,
+  "improvements": [],
+  "max_brightness_jump": 10.77,
+  "max_jump_at_s": 35.3,
+  "words": 125,
+  "ezra_share": 0.543,
+  "say_beats": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    12
+  ],
+  "beats": 12,
+  "region": "auto_32p5_43_38p5_49",
+  "mp4_bytes": 151104260,
+  "mp4_9mb_bytes": 9231244,
+  "warnings": [
+    "DURATION 62.8s outside 40-50s"
+  ],
+  "stage_seconds": {
+    "script": 0.0,
+    "voice_tts": 0.0,
+    "narration": 0.0,
+    "plan": 0.0,
+    "ezra_cached": 0.0,
+    "audio": 1.8,
+    "frames": 418.9,
+    "mux": 1.7,
+    "encode_9mb": 122.4,
+    "sheet": 10.8,
+    "total": 555.8
+  }
+}

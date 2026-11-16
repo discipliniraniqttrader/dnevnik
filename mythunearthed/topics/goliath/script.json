@@ -1,0 +1,83 @@
+{
+  "title": "How tall was Goliath, really?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Goliath was not nine feet tall.",
+      "keyword": "not",
+      "scene": "Painted giant Philistine warrior in bronze armour silhouetted against a stormy valley sunset. Overlay: crossed-out '2.9 m' counter.",
+      "source": "-"
+    },
+    {
+      "text": "Or was he? The manuscripts disagree.",
+      "keyword": "disagree",
+      "scene": "Two ancient scroll fragments side by side in warm lamplight, camera drifting between them. Overlay: split-screen compare, 2.9 m vs 2.0 m.",
+      "source": "1 Samuel 17:4"
+    },
+    {
+      "text": "Our standard Hebrew text says six cubits and a span.",
+      "keyword": "six",
+      "scene": "Close-up of a scribe's hand copying Hebrew on parchment by oil lamp. Overlay: counter 6.5 cubits.",
+      "source": "1 Samuel 17:4 (Masoretic)"
+    },
+    {
+      "text": "That is about two point nine metres.",
+      "keyword": "nine",
+      "scene": "Giant warrior silhouette beside a cypress tree at dusk, camera rising. Overlay: scale bar rising to 2.9 m.",
+      "source": "6.5 cubits x ~45 cm"
+    },
+    {
+      "text": "But the Dead Sea Scrolls say four cubits and a span.",
+      "keyword": "four",
+      "scene": "Clay jar and scroll in a Qumran cave lit by a single torch. Overlay: counter 4.5 cubits.",
+      "source": "4QSam-a (Dead Sea Scroll)"
+    },
+    {
+      "text": "Josephus and many Greek manuscripts agree.",
+      "keyword": "agree",
+      "scene": "Ancient historian writing at a desk, painted in warm candlelight. Overlay: ratio badge 4.5 cubits.",
+      "source": "Josephus; Septuagint (LXX) manuscripts"
+    },
+    {
+      "text": "That is about two metres. Look at your door.",
+      "keyword": "door",
+      "scene": "Warrior standing in a plain wooden doorway, head almost touching the lintel, warm interior light. Overlay: scale bar 2.0 m.",
+      "source": "4.5 cubits x ~45 cm"
+    },
+    {
+      "text": "Still a giant, when most men stood about one point six metres.",
+      "keyword": "giant",
+      "scene": "Tall warrior beside average Israelite soldiers in a valley at sunset. Overlay: side-by-side compare 2.0 m vs 1.6 m.",
+      "source": "average ancient male height ~1.6-1.7 m"
+    },
+    {
+      "text": "His armour weighed five thousand shekels, about fifty-seven kilograms.",
+      "keyword": "armour",
+      "scene": "Heavy bronze scale armour on a wooden stand, torchlight glinting. Overlay: weight counter 57 kg.",
+      "source": "1 Samuel 17:5; 5,000 shekels x ~11.4 g"
+    },
+    {
+      "text": "The spearhead alone: six hundred shekels, about seven kilograms.",
+      "keyword": "spearhead",
+      "scene": "Iron spearhead resting on a rock in low sunlight. Overlay: weight counter 7 kg.",
+      "source": "1 Samuel 17:7; 600 shekels x ~11.4 g"
+    },
+    {
+      "text": "Not proven: scribes may have changed the number, and no one knows which is original.",
+      "keyword": "proven",
+      "scene": "Quill hovering over two different numerals on parchment, soft candlelight. Overlay: question mark between 2.9 m and 2.0 m.",
+      "source": "textual criticism; debated"
+    },
+    {
+      "text": "So Goliath was not nine feet tall. Two metres, or nearly three?",
+      "keyword": "three",
+      "scene": "Giant silhouette at sunset, camera pushing slowly forward. Overlay: choice tags A 2.0 m / B 2.9 m.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "How Tall Was Goliath, Really? #shorts",
+    "description": "Goliath is often shown as nearly three metres tall, but the oldest manuscripts disagree. Here is what 1 Samuel 17 and the Dead Sea Scrolls say.\nThe original height is debated; neither number is proven.\n#Goliath #Bible #DeadSeaScrolls #BibleHistory"
+  }
+}

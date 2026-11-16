@@ -1,0 +1,55 @@
+[script] 0.0s
+[voice_tts] 0.0s
+[narration] 0.0s
+[audio] 2.2s
+  chunk 1/18  57s
+  chunk 2/18  67s
+  chunk 3/18  70s
+  chunk 4/18  70s
+  chunk 5/18  126s
+  chunk 6/18  136s
+  chunk 7/18  140s
+  chunk 8/18  147s
+  chunk 9/18  195s
+  chunk 10/18  205s
+  chunk 11/18  208s
+  chunk 12/18  218s
+  chunk 13/18  264s
+  chunk 14/18  275s
+  chunk 15/18  289s
+  chunk 16/18  289s
+  chunk 17/18  322s
+  chunk 18/18  322s
+[frames] 321.7s
+[mux] 1.0s
+[encode_9mb] 112.8s
+[sheet] 10.5s
+{
+  "topic": "ark_size",
+  "title": "How Big Was Noah's Ark, Really?",
+  "style": "silhouette",
+  "duration_s": 42.83,
+  "narration_s": 42.81,
+  "shot_count": 13,
+  "avg_shot_s": 3.29,
+  "min_caption_px": 76.0,
+  "chunks": 18,
+  "chunks_reused": 0,
+  "max_brightness_jump": 3.69,
+  "max_jump_at_s": 34.7,
+  "words": 137,
+  "mp4_bytes": 160209042,
+  "mp4_9mb_bytes": 9271280,
+  "warnings": [],
+  "stage_seconds": {
+    "script": 0.0,
+    "voice_tts": 0.0,
+    "narration": 0.0,
+    "audio": 2.2,
+    "frames": 321.7,
+    "mux": 1.0,
+    "encode_9mb": 112.8,
+    "sheet": 10.5,
+    "total": 448.3
+  }
+}

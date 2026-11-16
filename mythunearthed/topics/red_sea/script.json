@@ -1,0 +1,83 @@
+{
+  "title": "How did 2 million people cross in one night?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Could two million people cross overnight?",
+      "keyword": "two",
+      "scene": "Painted huge crowd of silhouettes streaming across a seabed between towering water walls at night. Overlay: counter 2,000,000.",
+      "source": "Exodus 12:37"
+    },
+    {
+      "text": "Exodus counts six hundred thousand men on foot.",
+      "keyword": "men",
+      "scene": "Long line of travellers with bundles in a desert at dusk. Overlay: counter 600,000.",
+      "source": "Exodus 12:37"
+    },
+    {
+      "text": "Add women and children, and the traditional estimate is about two million.",
+      "keyword": "women",
+      "scene": "Families walking with sheep and carts at golden hour. Overlay: counter about 2,000,000.",
+      "source": "scholarly estimate"
+    },
+    {
+      "text": "Fill a stadium of eighty thousand. Do it twenty-five times.",
+      "keyword": "stadium",
+      "scene": "Packed stadium at night seen from above, camera rising. Overlay: counter x25.",
+      "source": "2,000,000 / 80,000"
+    },
+    {
+      "text": "Ten abreast, the column stretches about two hundred kilometres.",
+      "keyword": "column",
+      "scene": "Endless column of silhouettes marching on a narrow causeway toward the horizon. Overlay: scale bar 200 km.",
+      "source": "2,000,000 / 10 x ~1 m (rough)"
+    },
+    {
+      "text": "At walking pace that takes two days, not one night.",
+      "keyword": "night",
+      "scene": "Moonlit shoreline, a few travellers glancing back, camera drifting. Overlay: timer counting past 48 hours.",
+      "source": "~4 km/h walking"
+    },
+    {
+      "text": "A thousand abreast would need a front one kilometre wide.",
+      "keyword": "front",
+      "scene": "Wide shallow strait with a vast crowd spread across it. Overlay: scale bar 1 km.",
+      "source": "1,000 x ~1 m"
+    },
+    {
+      "text": "So some scholars read 'elef' as clans, not thousands.",
+      "keyword": "clans",
+      "scene": "Tribal families gathered around tents at dusk. Overlay: label compare 600 clans vs 600,000.",
+      "source": "Hebrew elef; scholarly proposal"
+    },
+    {
+      "text": "That could mean a few thousand people, which changes everything.",
+      "keyword": "few",
+      "scene": "Small band of travellers silhouetted at the water's edge. Overlay: counter shrinking to a few thousand.",
+      "source": "scholarly proposal, debated"
+    },
+    {
+      "text": "And Yam Suph means 'Sea of Reeds', not necessarily the Red Sea.",
+      "keyword": "Reeds",
+      "scene": "Papyrus reeds along a marshy shallow lake at sunrise. Overlay: compare map pin shift, no text in image.",
+      "source": "Yam Suph, Exodus 14-15"
+    },
+    {
+      "text": "Not proven: where they crossed is still unknown.",
+      "keyword": "unknown",
+      "scene": "Empty shoreline in grey dawn with footprints fading. Overlay: question mark badge.",
+      "source": "scholarly debate"
+    },
+    {
+      "text": "So was it two million or a small band?",
+      "keyword": "small",
+      "scene": "Silhouettes crossing between walls of water at night. Overlay: choice tags A two million / B small band.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "How Did 2 Million Cross the Red Sea? #shorts",
+    "description": "Exodus 12:37 counts 600,000 men on foot. How would that many cross in one night? We run the numbers.\nThe size of the crowd and the sea itself are debated, not proven.\n#Exodus #RedSea #Bible #BibleHistory"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "title": "'Seven times hotter' explained",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Seven times hotter? That is not a number.",
+      "keyword": "number",
+      "scene": "Painted roaring Babylonian brick kiln at night, orange glow, camera pushing in. Overlay: crossed-out x7.",
+      "source": "Daniel 3:19"
+    },
+    {
+      "text": "King Nebuchadnezzar orders the furnace heated seven times.",
+      "keyword": "seven",
+      "scene": "King pointing at a glowing furnace in the courtyard at dusk. Overlay: counter x7.",
+      "source": "Daniel 3:19"
+    },
+    {
+      "text": "Babylonian kilns fired bricks at about nine hundred to a thousand degrees.",
+      "keyword": "bricks",
+      "scene": "Workers stacking baked bricks beside a glowing kiln. Overlay: temperature counter 900-1000 C.",
+      "source": "brick kiln temperatures ~900-1000 C"
+    },
+    {
+      "text": "Your home oven tops out around two hundred fifty.",
+      "keyword": "oven",
+      "scene": "Close-up of a home oven glowing orange. Overlay: temperature counter 250 C.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "Seven times nine hundred is six thousand three hundred degrees.",
+      "keyword": "six",
+      "scene": "Fire column rising from a pit, sparks against a dark sky. Overlay: counter 6,300 C.",
+      "source": "7 x 900 C"
+    },
+    {
+      "text": "The Sun's surface is only about fifty-five hundred.",
+      "keyword": "Sun",
+      "scene": "Setting sun behind the kiln smoke. Overlay: compare 6,300 C vs 5,500 C.",
+      "source": "solar photosphere ~5,500 C"
+    },
+    {
+      "text": "So 'seven times' is an idiom for the maximum.",
+      "keyword": "idiom",
+      "scene": "Scribe ticking seven marks on clay. Overlay: ratio badge 7 = full.",
+      "source": "biblical idiom of completeness"
+    },
+    {
+      "text": "The strongest soldiers bound three men and threw them in.",
+      "keyword": "bound",
+      "scene": "Three bound men beside the furnace, soldiers heaving ropes. Overlay: counter 3.",
+      "source": "Daniel 3:20"
+    },
+    {
+      "text": "The flames killed the soldiers at the opening.",
+      "keyword": "opening",
+      "scene": "Soldiers collapsing at a fiery furnace mouth, heat haze. Overlay: none.",
+      "source": "Daniel 3:22"
+    },
+    {
+      "text": "Then the king saw four men walking in the fire, unharmed.",
+      "keyword": "door",
+      "scene": "Kiln cross-section with a top hatch glowing. Overlay: none.",
+      "source": "Daniel 3:24-25"
+    },
+    {
+      "text": "Not proven: no Babylonian record mentions the event.",
+      "keyword": "record",
+      "scene": "Cuneiform tablet in dim light with a flickering shadow. Overlay: question mark badge.",
+      "source": "extra-biblical record absent"
+    },
+    {
+      "text": "So 'seven times hotter': literal, or idiom?",
+      "keyword": "literal",
+      "scene": "Furnace glow with three silhouettes standing inside, slow push. Overlay: choice tags A literal / B idiom.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "Seven Times Hotter? The Furnace of Daniel 3 #shorts",
+    "description": "Daniel 3 says the furnace was heated seven times hotter. What does the text, and a real Babylonian kiln, tell us?\nNo Babylonian record of this event has been found.\n#Daniel #Bible #Babylon #BibleHistory"
+  }
+}

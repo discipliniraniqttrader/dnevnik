@@ -239,7 +239,7 @@ class Renderer:
 
     def giant(self, img, txt, lt):
         f = lt * FPS
-        if f < 0: return
+        if f < 0: return img
         size = 330
         while big_font(txt, size).getlength(txt) > 940 and size > 120: size -= 10
         self.mt = min(self.mt, size)

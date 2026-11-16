@@ -1,0 +1,379 @@
+{
+ "negative": "text, letters, numbers, watermark, logo, signature, blurry, deformed, bad hands, extra fingers, modern buildings, cartoon, daylight, blue sky, white background, bright, ship in sky, floating ship, duplicate ship, reflection in clouds",
+ "seed": 4100,
+ "size": [
+  768,
+  1344
+ ],
+ "steps": 3,
+ "beats": [
+  {
+   "prompt": "enormous long low rectangular wooden barge, flat roof, side view, extremely long horizontal hull, hull fills the whole width, seen close from the water, tiny toy boat floating in the foreground",
+   "neg": "tower, pagoda, tall, multi-storey, building, castle, sails, masts",
+   "cam": {
+    "type": "pan",
+    "f0": 0.15,
+    "f1": 0.55
+   },
+   "ov": [
+    {
+     "type": "callout",
+     "target": [
+      231,
+      1604
+     ],
+     "boxoff": [
+      360,
+      -170
+     ],
+     "label": "CUTE LITTLE BOAT?",
+     "t0": 0.5
+    }
+   ],
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   }
+  },
+  {
+   "prompt": "enormous long low rectangular wooden barge, flat roof, side view, extremely long horizontal hull, hull fills the whole width, seen close from the water",
+   "neg": "tower, pagoda, tall, multi-storey, building, castle, sails, masts",
+   "ov": [
+    {
+     "type": "dim",
+     "a": [
+      333,
+      1590
+     ],
+     "b": [
+      764,
+      1590
+     ],
+     "off": [
+      0,
+      80
+     ],
+     "label": "300 CUBITS",
+     "t0": 0.5,
+     "d": 1.0
+    },
+    {
+     "type": "callout",
+     "target": [
+      735,
+      1140
+     ],
+     "boxoff": [
+      -60,
+      -250
+     ],
+     "label": "30 CUBITS HIGH",
+     "t0": 1.7
+    }
+   ],
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "cam": {
+    "type": "pan",
+    "f0": 0.0,
+    "f1": 1.0
+   }
+  },
+  {
+   "prompt": "human forearm and open hand raised vertically, elbow at bottom, fingertips up, centered, close-up silhouette",
+   "neg": "two arms, extra fingers, face",
+   "use": "b03_a246d71bbf21",
+   "ov": [
+    {
+     "type": "callout",
+     "target": [
+      486,
+      310
+     ],
+     "boxoff": [
+      380,
+      -10
+     ],
+     "label": "FINGERTIP",
+     "t0": 0.5
+    },
+    {
+     "type": "badge",
+     "text": "1 CUBIT = 45 CM",
+     "size": 78,
+     "pos": [
+      540,
+      1130
+     ],
+     "t0": 1.4
+    }
+   ]
+  },
+  {
+   "prompt": "enormous long low rectangular wooden barge, flat roof, side view, extremely long horizontal hull, hull fills the whole width, seen close from the water, lit by the low golden sun",
+   "neg": "tower, pagoda, tall, multi-storey, building, castle, sails, masts",
+   "ov": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 137,
+     "unit": " m",
+     "size": 230,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.3,
+     "d": 2.0,
+     "sub": "HULL LENGTH"
+    }
+   ],
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "cam": {
+    "type": "pan",
+    "f0": 1.0,
+    "f1": 0.0
+   }
+  },
+  {
+   "prompt": "lone person standing small on a football field with white lines and goalposts, bright floodlights, warm dusk glow, field stretching away",
+   "neg": "green grass, dark, murky, crowd, text",
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "ov": [
+    {
+     "type": "badge",
+     "text": "1.5 x FIELD",
+     "size": 100,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.6,
+     "sub": "137 m vs 91 m"
+    }
+   ],
+   "tone": 0.7,
+   "cam": {
+    "type": "pan",
+    "f0": 0.0,
+    "f1": 0.6
+   }
+  },
+  {
+   "prompt": "long wooden barge hull cutaway showing three stacked decks inside lit with warm golden lantern light, side view, extremely long horizontal hull",
+   "neg": "tower, pagoda, tall, building, castle, sails, masts, people",
+   "ov": [
+    {
+     "type": "callout",
+     "target": [
+      650,
+      536
+     ],
+     "boxoff": [
+      -440,
+      -40
+     ],
+     "label": "DECK 3",
+     "t0": 0.4
+    },
+    {
+     "type": "callout",
+     "target": [
+      720,
+      996
+     ],
+     "boxoff": [
+      -500,
+      -40
+     ],
+     "label": "DECK 2",
+     "t0": 1.0
+    },
+    {
+     "type": "callout",
+     "target": [
+      730,
+      1330
+     ],
+     "boxoff": [
+      -510,
+      -40
+     ],
+     "label": "DECK 1",
+     "t0": 1.6
+    }
+   ],
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "cam": {
+    "type": "pan",
+    "f0": 0.2,
+    "f1": 0.8
+   }
+  },
+  {
+   "prompt": "top-down aerial view of one long wooden barge hull filling the image vertically, floating on water glowing orange with the sunset reflection, bright",
+   "neg": "dark, black, sails, masts, people, small",
+   "ov": [
+    {
+     "type": "badge",
+     "text": "6 : 1",
+     "size": 170,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.5,
+     "sub": "LENGTH TO WIDTH"
+    }
+   ]
+  },
+  {
+   "prompt": "long low rectangular wooden ark barge and a modern container cargo ship side by side on stormy waves, both fill the image width, side view",
+   "neg": "tower, pagoda, castle, sails, masts, small boats",
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "ov": [
+    {
+     "type": "badge",
+     "text": "~ 6 : 1",
+     "size": 130,
+     "pos": [
+      540,
+      560
+     ],
+     "t0": 0.6,
+     "sub": "SAME SHAPE TODAY"
+    }
+   ],
+   "cam": {
+    "type": "pan",
+    "f0": 0.0,
+    "f1": 0.7
+   }
+  },
+  {
+   "prompt": "huge four-funnel ocean liner beside a wooden ark barge half its length, side view, calm sea, both on the water",
+   "neg": "tower, pagoda, castle, sails, masts, small boats",
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "ov": [
+    {
+     "type": "bars",
+     "x": 90,
+     "y": 1160,
+     "scale": 3.3,
+     "gap": 140,
+     "t0": 0.4,
+     "items": [
+      {
+       "label": "TITANIC 269 m",
+       "v": 269,
+       "col": [
+        230,
+        90,
+        60
+       ]
+      },
+      {
+       "label": "ARK 137 m",
+       "v": 137
+      }
+     ]
+    }
+   ],
+   "cam": {
+    "type": "pan",
+    "f0": 0.9,
+    "f1": 0.1
+   }
+  },
+  {
+   "prompt": "wooden ship hull flexing in huge storm waves, seawater spraying through the planks, heavy rain, side view, close",
+   "neg": "daylight, crowd, wreck",
+   "use": "b10_c18fd090486e"
+  },
+  {
+   "prompt": "big wooden multi-masted schooner in a storm, water gushing from pumps over the side, huge waves, side view",
+   "use": "b11_47722b8e14b5",
+   "ov": [
+    {
+     "type": "badge",
+     "text": "WYOMING 1909",
+     "size": 70,
+     "pos": [
+      540,
+      520
+     ],
+     "t0": 0.6,
+     "sub": "PUMPS RAN CONSTANTLY"
+    }
+   ]
+  },
+  {
+   "prompt": "layered dark mountain ridges against orange sky, bright white searchlight beam cone of light in the sky, no ship",
+   "neg": "ship, boat, people, sea, buildings",
+   "ov": [
+    {
+     "type": "badge",
+     "text": "NOT PROVEN",
+     "size": 110,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.6,
+     "sub": "NO TRACE FOUND"
+    }
+   ],
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "cam": {
+    "type": "pan",
+    "f0": 0.1,
+    "f1": 0.9
+   }
+  },
+  {
+   "prompt": "enormous long low rectangular wooden barge, flat roof, side view, extremely long horizontal hull, hull fills the whole width, seen close from the water, stormy sea, rain, waves",
+   "neg": "tower, pagoda, tall, multi-storey, building, castle, sails, masts",
+   "cam": {
+    "type": "pan",
+    "f0": 1.0,
+    "f1": 0.35
+   },
+   "ov": [
+    {
+     "type": "tags",
+     "labels": [
+      "POSSIBLE",
+      "IMPOSSIBLE"
+     ],
+     "y": 640,
+     "t0": 1.2
+    }
+   ],
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   }
+  }
+ ],
+ "style": "cinematic matte painting, dramatic dusk, deep orange sky, black silhouettes, golden rim light, god rays, light rain, painterly, highly detailed"
+}

@@ -1,0 +1,83 @@
+{
+  "title": "What were 30 pieces of silver worth?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Was thirty pieces of silver cheap?",
+      "keyword": "cheap",
+      "scene": "Painted close-up of thirty silver coins spilling from a leather pouch onto a stone table in torchlight. Overlay: counter 30.",
+      "source": "Matthew 26:15"
+    },
+    {
+      "text": "Matthew says Judas took thirty pieces of silver.",
+      "keyword": "thirty",
+      "scene": "Hooded man's hand receiving a pouch in a dim Jerusalem courtyard at night. Overlay: counter 30 coins.",
+      "source": "Matthew 26:15"
+    },
+    {
+      "text": "Probably Tyrian shekels, heavy coins of nearly pure silver.",
+      "keyword": "Tyrian",
+      "scene": "Macro of a single ancient silver coin with a worn eagle, lit from the side. Overlay: weight badge about 14 g.",
+      "source": "Tyrian shekel ~14 g silver (likely, debated)"
+    },
+    {
+      "text": "Thirty of them weigh about four hundred twenty grams.",
+      "keyword": "grams",
+      "scene": "Pile of silver coins on an old brass balance scale. Overlay: weight counter 420 g.",
+      "source": "30 x ~14 g"
+    },
+    {
+      "text": "A labourer earned one denarius a day. Thirty shekels is about four months of pay.",
+      "keyword": "months",
+      "scene": "Labourer hauling stones in a sunlit field. Overlay: calendar bar filling to 4 months.",
+      "source": "1 denarius/day (Matthew 20:2); shekel ~4 denarii"
+    },
+    {
+      "text": "Take your own monthly pay. Multiply it by four.",
+      "keyword": "pay",
+      "scene": "Close-up of a worker's cracked hands counting coins at dusk. Overlay: counter x4.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "Judas sold a friend for four months of work.",
+      "keyword": "friend",
+      "scene": "Man walking away from a lamplit house into the night clutching a pouch. Overlay: calendar bar 4 months.",
+      "source": "Matthew 26:15"
+    },
+    {
+      "text": "Exodus 21:32 sets the same price for a slave gored by an ox.",
+      "keyword": "slave",
+      "scene": "Ox in a field at golden hour, farmer standing behind it. Overlay: counter 30 shekels.",
+      "source": "Exodus 21:32"
+    },
+    {
+      "text": "Zechariah 11:12 calls it a lordly price, with heavy irony.",
+      "keyword": "irony",
+      "scene": "Prophet holding silver coins in an open palm in harsh sunset light. Overlay: counter 30 shekels.",
+      "source": "Zechariah 11:12-13"
+    },
+    {
+      "text": "The money bought a potter's field.",
+      "keyword": "field",
+      "scene": "Dusty clay field with a potter's kiln at dusk, camera drifting forward. Overlay: coin counter dropping to 0.",
+      "source": "Matthew 27:7"
+    },
+    {
+      "text": "Not proven: Matthew never names the coin.",
+      "keyword": "coin",
+      "scene": "Single silver coin on dark stone beside a question-shaped shadow, soft light. Overlay: question mark badge.",
+      "source": "Matthew 26:15 says only 'silver pieces'"
+    },
+    {
+      "text": "So was thirty pieces cheap? Insult, or real money?",
+      "keyword": "cheap",
+      "scene": "Thirty coins glinting in a pouch at dusk, slow push in. Overlay: choice tags A insult / B real money.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "What Were 30 Pieces of Silver Worth? #shorts",
+    "description": "Judas was paid thirty pieces of silver. What was that really worth? We check Exodus, Zechariah and Matthew.\nThe exact coin is not proven; the Tyrian shekel is only the likely candidate.\n#Judas #Bible #Matthew #BibleHistory"
+  }
+}

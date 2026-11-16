@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#000}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { makeSky, V } from './dio/kit.js';
+import { REG } from './dio/world.js';
+const W = 1080, H = 1920;
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H); renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene(); const sky = makeSky(); scene.add(sky);
+const hemi = new THREE.HemisphereLight(0xffffff, 0x888888, 1); scene.add(hemi);
+const key = new THREE.DirectionalLight(0xffffff, 1); key.castShadow = true; key.shadow.bias = -0.0004; key.shadow.normalBias = 0.06; scene.add(key, key.target);
+const rim = new THREE.DirectionalLight(0xffffff, 1); scene.add(rim, rim.target);
+const fog = new THREE.Fog(0xffffff, 100, 1000); scene.fog = fog;
+const cam = new THREE.PerspectiveCamera(40, W / H, 0.03, 4000);
+window.__cam = cam; const PI = Math.PI; let P, SC = [], curMap = 0;
+
+function applyEnv(e, camPos) {
+  const u = sky.userData.u, s = e.sky;
+  u.top.value.set(s.top); u.mid.value.set(s.mid); u.hor.value.set(s.hor); u.below.value.set(s.below); u.sunCol.value.set(s.sunCol); u.glowK.value = s.glowK; u.glowP.value = s.glowP; u.sunSize.value = s.sunSize; u.sunDir.value.set(...e.sunDir).normalize();
+  fog.color.set(e.fog.color); fog.near = e.fog.near; fog.far = e.fog.far;
+  hemi.color.set(e.hemi.sky); hemi.groundColor.set(e.hemi.ground); hemi.intensity = e.hemi.k * PI * 0.5;
+  const k = e.key, t = new THREE.Vector3(...k.target), d = new THREE.Vector3(...k.dir).normalize();
+  key.color.set(k.color); key.intensity = k.k * PI * 0.5; key.position.copy(t).addScaledVector(d, k.far * 0.6); key.target.position.copy(t);
+  const sc = key.shadow.camera; sc.left = -k.ext; sc.right = k.ext; sc.top = k.ext; sc.bottom = -k.ext; sc.near = 1; sc.far = k.far * 1.4; sc.updateProjectionMatrix();
+  if (key.shadow.mapSize.x !== (k.map || 2048)) { key.shadow.mapSize.set(k.map || 2048, k.map || 2048); if (key.shadow.map) { key.shadow.map.dispose(); key.shadow.map = null; } }
+  rim.color.set(e.rim.color); rim.intensity = e.rim.k * PI * 0.45; rim.position.copy(t).addScaledVector(new THREE.Vector3(...e.rim.dir).normalize(), 200); rim.target.position.copy(t);
+}
+
+window.setup = async (plan) => {
+  P = plan; await import('./dio/scenes_' + plan.topic + '.js'); SC = plan.scenes.map(() => null);
+  window.__sc = SC; return Math.round(plan.total * plan.fps);
+};
+function locate(t) { const S = P.scenes; let i = 0; for (let k = 0; k < S.length; k++) if (t >= S[k].t0) i = k; return i; }
+function getScene(i) {
+  if (!SC[i]) { const d = P.scenes[i], b = REG[d.name]; if (!b) throw new Error('unknown scene ' + d.name); const s = b(); s.group.visible = false; scene.add(s.group); SC[i] = s; }
+  return SC[i];
+}
+window.renderFrame = (f, withImg = true) => {
+  const t = f / P.fps; const i = (P.forceScene ?? null) !== null ? P.forceScene : locate(t); const s = getScene(i); const d = P.scenes[i], b0 = d.t0, dur = d.t1 - d.t0; const lt = t - b0, u = lt / dur;
+  const B = []; for (let k = d.b0; k <= d.b1; k++) B.push(P.bounds[k] - b0);
+  SC.forEach((x, j) => { if (x) x.group.visible = j === i; });
+  const c = s.cam(lt, u, dur, B, t); window.__camPos = c.p;
+  cam.fov = c.fov || 40; cam.updateProjectionMatrix(); cam.position.set(...c.p); const r = c.roll || 0; cam.up.set(Math.sin(r), Math.cos(r), 0); cam.lookAt(...c.l); cam.updateMatrixWorld(true);
+  sky.position.copy(cam.position);
+  applyEnv(s.env, c.p);
+  s.update(lt, u, dur, t, B); s.group.updateMatrixWorld(true);
+  renderer.render(scene, cam);
+  const A = {}; const v = new THREE.Vector3();
+  for (const [name, fn] of Object.entries(s.anchors)) { const w = fn(); v.copy(w).project(cam); A[name] = { p: [(v.x * 0.5 + 0.5) * W, (1 - (v.y * 0.5 + 0.5)) * H], w: [w.x, w.y, w.z], z: v.z }; }
+  const out = { scene: i, anchors: A, view: cam.matrixWorldInverse.elements.slice(), proj: cam.projectionMatrix.elements.slice() };
+  if (withImg) out.img = renderer.domElement.toDataURL('image/jpeg', 0.95);
+  return out;
+};
+window.READY = true;
+</script></body></html>

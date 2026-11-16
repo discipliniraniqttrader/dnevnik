@@ -1,0 +1,49 @@
+// num666: stage with vignettes: emperor + glowing 666, scribe, hebrew tiles + hand + Nero bust, burning Rome, papyrus 616, chisel NERO, two coins, smoke veil, rulers, final.
+import { THREE, V, clamp, mat, glow, woodMat, Sph, Box, Cyl, Cap, Cone, between, shade, rnd, lerp, GRAD, poseArms } from './kit.js';
+import { makePill, makeHand } from './props.js';
+import { REG, reg, ease, easeO, easeOB, at, fixed, camRig, env, pillFront, popIn } from './world.js';
+import { person, walkCycle } from './folk.js';
+import { scroll, lamp, table } from './things.js';
+import { fire } from './things4.js';
+import { makeCrowd, dustPuffs } from './things2.js';
+import { bust, letterTile, emperorCoin, glowText, romeSkyline, smokeVeil } from './things5.js';
+import { stageEnv, buildStage } from './stageworld.js';
+
+const HEBR = ['נ', 'ר', 'ו', 'ן', 'ק', 'ס', 'ר']; const VAL = [50, 200, 6, 50, 100, 60, 200];
+function nero(o = {}) { return person({ h: 1.85, shirt: o.col ?? 0x4a1a5a, robe: o.col ?? 0x4a1a5a, sash: 0xf2c23c, wreath: true, hair: 0x2a1a10, skin: o.skin }); }
+reg('n666_stage', () => {
+  const g = new THREE.Group(); const L = 120; const e = stageEnv(L, -4, { k: 2.0 }); const st = buildStage(g, L, -4);
+  const em = nero({ col: 0x1e1226, skin: 0x7a5a48 }); em.position.set(0, 0, 0.5); g.add(em); const num = glowText('666', 7, 3.2); num.position.set(0, 3.6, -3.2); g.add(num);
+  const tb = table(2.4, 1.3, 0.9); tb.position.set(10, 0, 0.5); g.add(tb); const sc = scroll(1.6, 1.0, { seed: 3, lines: 7 }); sc.rotation.set(-Math.PI / 2, 0, 0); sc.position.set(10, 0.97, 0.5); g.add(sc); const lm = lamp(2.2); lm.position.set(11, 0.95, 0.2); g.add(lm); const scr = person({ h: 1.75, shirt: 0xd8b070, robe: 0xd8b070, beard: 0x6a5a40, hair: 0x6a5a40, cloth: 0xe8e0d0 }); scr.position.set(10, 0, -1.4); g.add(scr);
+  const tt = table(8.0, 2.4, 0.9); tt.position.set(22, 0, 0.2); g.add(tt); const tiles = HEBR.map((ch, i) => { const t = letterTile(ch, { value: VAL[i] }); t.position.set(22 - 2.85 + i * 0.95, 0.95, 0.4); t.scale.setScalar(0.85); g.add(t); return t; });
+  const hand = makeHand({ scale: 6.5 }); hand.rotation.y = Math.PI / 2; g.add(hand); const bs = bust(1.15); bs.position.set(22, 0, -2.6); g.add(bs); const sumG = glowText('666', 3.2, 1.6); sumG.position.set(22, 6.2, -2.3); g.add(sumG);
+  const rome = romeSkyline(5, 7); rome.position.set(36, 0, -3.8); g.add(rome); const watchers = makeCrowd(36, 4, [0x1a1210, 0x2a1a14, 0x3a2418]); g.add(watchers); const cp = []; { const R = rnd(7); for (let i = 0; i < 36; i++) cp.push([29 + R() * 14, 0, -0.5 + R() * 3.6, R() * 6]); } cp.forEach((c, i) => watchers.userData.set(i, c[0], 0, c[2], c[3], 0.9 + (i % 3) * 0.1)); watchers.userData.done();
+  const sm = dustPuffs(14, 0x3a3230); sm.position.set(36, 0, -3.8); g.add(sm);
+  const pap = scroll(2.2, 1.5, { paper: '#d8c490', big: '666', bigCol: '#6a2a1a', seed: 9, lines: 4, bigSize: 0.4 }); pap.position.set(48, 2.0, 0.2); pap.rotation.set(-0.15, 0, 0); g.add(pap); const stand = Box(2.6, 0.2, 1.0, mat(0x6a4020), 0.04); stand.position.set(48, 0.9, 0.5); g.add(stand); const lm2 = lamp(2.6); lm2.position.set(46.2, 0.85, 1.4); g.add(lm2); const tbp = table(3.2, 1.3, 0.9); tbp.position.set(48, 0, 0.4); g.add(tbp);
+  const stone = Box(3.4, 1.3, 1.5, mat(0x8a8478), 0.1); stone.position.set(58, 0.65, 0.5); g.add(stone); const carved = glowText('NERO', 3.0, 0.9, '#4a443c'); carved.position.set(58, 0.7, 1.28); g.add(carved); const chisel = new THREE.Group(); const cb = Cyl(0.04, 0.04, 0.6, mat(0xc8d0d8), 8); cb.position.y = 0.3; chisel.add(cb); const ct = Cone(0.04, 0.14, mat(0xc8d0d8), 8); ct.rotation.x = Math.PI; ct.position.y = -0.04; chisel.add(ct); chisel.position.set(57, 1.0, 1.4); chisel.rotation.set(0.6, 0, 0); g.add(chisel); const mal = new THREE.Group(); const mh = Cyl(0.03, 0.03, 0.5, mat(0x6a4020), 8); mh.position.y = 0.25; mal.add(mh); const mhd = Box(0.28, 0.14, 0.14, mat(0x5a5a62), 0.03); mhd.position.y = 0.56; mal.add(mhd); mal.position.set(57.1, 1.7, 1.5); g.add(mal); const dp = dustPuffs(10, 0xcfc8b8); dp.position.set(56.4, 0.7, 1.4); g.add(dp);
+  const c6 = emperorCoin(1.0, 'gold'), c1 = emperorCoin(1.0, 'silver'); for (const [c, x] of [[c6, 68.6], [c1, 71.8]]) { c.rotation.order = 'YXZ'; c.rotation.x = Math.PI / 2; c.position.set(x, 1.7, 0.4); g.add(c); const sp = Cyl(0.2, 0.3, 1.2, mat(0x7a6a58), 12); sp.position.set(x, 0.6, 0.4); g.add(sp); } const t666 = glowText('666', 1.8, 0.8), t616 = glowText('616', 1.8, 0.8, '#cfd8e8'); t666.position.set(68.6, 3.2, 0.4); t616.position.set(71.8, 3.2, 0.4); g.add(t666, t616);
+  const em2 = nero({ col: 0x120a18, skin: 0x3a2820 }); em2.position.set(82, 0, 0.2); g.add(em2); const veil = smokeVeil(3, 12, 5); veil.position.set(82, 0, 1.6); g.add(veil);
+  const rulers = [0, 1, 2, 3, 4].map(i => { const p = person({ h: 1.8, shirt: [0x6a2a8a, 0x2a6ad0, 0x2a8a5a, 0xc8402a, 0xe0a030][i], robe: [0x6a2a8a, 0x2a6ad0, 0x2a8a5a, 0xc8402a, 0xe0a030][i], crown: i % 2 === 0, wreath: i % 2 === 1, helmet: i === 4 ? 0xc0c8d0 : undefined, crest: 0xc0392b, hair: 0x2a1a10, beard: i === 2 ? 0x3a2a18 : undefined }); p.position.set(91 + i * 2.2, 0, 0.6 - (i === 0 ? 1.0 : 0)); p.rotation.y = -0.15; g.add(p); return p; });
+  const gl = Sph(1.4, new THREE.MeshBasicMaterial({ color: 0xffe08a, transparent: true, opacity: 0.35, depthWrite: false, fog: false }), 1, 1.7, 0.8, 14); gl.userData.noShadow = true; g.add(gl);
+  const em3 = nero({ col: 0x120a18, skin: 0x3a2820 }); em3.position.set(106, 0, 0.4); g.add(em3); const sp3 = fire(2.2, 1.6, 7, 21); sp3.position.set(106, 0, -2.6); g.add(sp3); const p1 = makePill('NERO', 0xc8382e, 9, 3.2), p2 = makePill('SOMEONE ELSE', 0x2f9a56, 15, 3.2); g.add(p1, p2);
+  shade(g);
+  return { group: g, env: e,
+    cam: camRig([[0, [-0.8, 2.2, 8.2], [0.2, 2.4, 0], 42], [[0, 0.9], [-0.3, 2.3, 7.8], [0.1, 2.5, 0], 42], [[1, 0.3], [9.4, 2.4, 6.2], [10, 1.4, 0.3], 38], [[1, 0.9], [9.8, 2.4, 5.8], [10, 1.4, 0.3], 38], [[2, 0.3], [22, 3.0, 15], [22, 1.4, 0.3], 44], [[2, 0.9], [22.3, 3.0, 14.6], [22, 1.4, 0.3], 44], [[3, 0.3], [21.6, 3.8, 13.6], [22, 2.0, 0.3], 44], [[3, 0.9], [22.2, 3.8, 13.4], [22, 2.0, 0.3], 44], [[4, 0.3], [22, 4.2, 17.5], [22, 3.0, -1.5], 46], [[4, 0.9], [22, 4.2, 17], [22, 3.0, -1.5], 46],
+      [[5, 0.3], [36, 3.5, 20], [36, 3.4, -3], 48], [[5, 0.9], [37, 3.5, 19.4], [36.5, 3.4, -3], 48], [[6, 0.3], [47.5, 2.8, 9.4], [48, 2.0, 0.3], 40], [[6, 0.9], [48.0, 2.8, 9.0], [48, 2.0, 0.3], 40], [[7, 0.3], [58, 2.6, 11], [58, 1.2, 0.8], 40], [[7, 0.9], [58.4, 2.6, 10.6], [58, 1.2, 0.8], 40], [[8, 0.3], [70.2, 2.8, 13.5], [70.2, 2.2, 0.4], 42], [[8, 0.9], [70.0, 2.8, 13.1], [70.2, 2.2, 0.4], 42], [[9, 0.3], [82, 2.6, 10], [82, 2.0, 0.6], 42], [[9, 0.9], [82.4, 2.6, 9.6], [82, 2.0, 0.6], 42],
+      [[10, 0.3], [92, 2.6, 10.6], [93, 1.8, 0.4], 44], [[10, 0.9], [95, 2.6, 10.6], [96, 1.8, 0.4], 44], [[11, 0.2], [106, 2.6, 11], [106, 2.2, 0.2], 44], [[11, 1.0], [106, 2.8, 10], [106, 2.2, 0.2], 44]]),
+    update(lt, u, dur, t, B) {
+      st.tick(t); lm.userData.update(t); lm2.userData.update(t); num.scale.setScalar(1 + 0.03 * Math.sin(t * 2.2)); popIn(num, lt, 0.2, 1, 0.8);
+      poseArms(scr, [-0.9 + 0.12 * Math.sin(t * 7), 0.1, 0.4], [-0.5, 0.1, 0.3]); sc.visible = true;
+      tiles.forEach((tl, i) => { popIn(tl, lt, B[2] + 0.2 + i * 0.25, 0.85, 0.4); tl.userData.val.scale.setScalar(Math.max(0.0001, easeOB((lt - B[3] - 0.5 - i * 0.5) / 0.35))); });
+      const hi = clamp((lt - B[3] - 0.4) / 0.5, 0, 6.99); const hx = 22 - 2.85 + Math.min(6, Math.max(0, (lt - B[3] - 0.5) / 0.5)) * 0.95; hand.position.set(hx - 0.2, 2.6 + 0.22 * Math.abs(Math.sin((lt - B[3]) * 6)), 0.7); hand.visible = lt > B[3] - 0.2 && lt < B[4] + 0.5; hand.userData.curl(0.15 + 0.2 * Math.abs(Math.sin((lt - B[3]) * 6)));
+      popIn(bs, lt, B[4] + 0.1, 1.15, 0.7); sumG.visible = lt > B[4] + 1.3; sumG.scale.setScalar(Math.max(0.0001, easeOB((lt - B[4] - 1.3) / 0.5)));
+      rome.visible = lt > B[5] - 0.4; rome.scale.setScalar(Math.max(0.0001, easeOB((lt - B[5] + 0.3) / 0.8))); rome.userData.fires.forEach((f, i) => f.userData.update(t + i, ease((lt - B[5] - 0.2 - i * 0.2) / 0.6))); sm.userData.update((lt - B[5]) % 3 / 3, [0, 4, 0], 16, 8, 2.5); watchers.visible = lt > B[5] - 0.6;
+      pap.rotation.z = 0.02 * Math.sin(t * 1.2); popIn(pap, lt, B[6] - 0.3, 1, 0.6); popIn(stand, lt, B[6] - 0.3, 1, 0.6); popIn(tbp, lt, B[6] - 0.3, 1, 0.6);
+      const ch = ease((lt - B[7] - 0.3) / 1.4); carved.visible = lt > B[7] + 0.3; carved.scale.set(Math.max(0.0001, ch), 1, 1); mal.rotation.z = Math.PI / 2 - 0.1 + 0.5 * Math.abs(Math.sin(t * 8)); mal.position.y = 1.55 + 0.1 * Math.abs(Math.sin(t * 8)); dp.userData.update(((t * 1.5) % 1), [56.4 + ch * 2.4, 0.9, 1.5], 0.6, 0.8, 0.25);
+      c6.rotation.y = t * 0.6; c1.rotation.y = -t * 0.6; popIn(c6, lt, B[8] + 0.1, 1, 0.6); popIn(c1, lt, B[8] + 0.5, 1, 0.6); t666.visible = lt > B[8] + 0.8; t616.visible = lt > B[8] + 1.1;
+      veil.userData.update(t, ease((lt - B[9] + 0.2) / 1.0));
+      rulers.forEach((r, i) => { popIn(r, lt, B[10] + 0.2 + i * 0.35, 1, 0.5); r.position.y = 0.02 * Math.sin(t * 2 + i); }); gl.position.set(91, 1.6, 0.4); gl.material.opacity = 0.2 + 0.12 * Math.sin(t * 3); gl.visible = lt > B[10] + 0.6;
+      sp3.userData.update(t, 0.8); const pop = (t0) => easeOB((lt - t0) / 0.5); pillFront(p1, 0, 3.7, 0.2 * pop(B[11] + 1.0), 0.02 * Math.sin(t * 1.3), 14); pillFront(p2, 0, 2.1, 0.2 * pop(B[11] + 1.6), -0.02 * Math.sin(t * 1.1), 14);
+    },
+    anchors: { numA: () => V(0, 5.6, -3.2), scrA: () => V(10, 2.6, 0.5), tileRow: () => V(22, 2.4, 0.4), sumA: () => V(22, 6.6, -2.3), bustA: () => V(22, 4.5, -2.6), rome: () => V(36, 7, -3.8), papA: () => V(48, 3.4, 0.3), stoneA: () => V(58, 2.0, 0.6), coinA: () => V(70.2, 4.0, 0.4), veilA: () => V(82, 4.4, 0.6), rulA: () => V(95, 3.2, 0.5), nA: () => V(106, 3.6, 0.4) } };
+});

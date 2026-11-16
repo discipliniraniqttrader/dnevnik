@@ -1,0 +1,138 @@
+{
+ "auto": true,
+ "style": "cinematic matte painting, dramatic dusk, deep orange sky, black silhouettes, golden rim light, god rays, light rain, painterly, highly detailed",
+ "negative": "text, letters, numbers, watermark, logo, signature, blurry, deformed, bad hands, extra fingers, modern buildings, cartoon, daylight, blue sky, white background, ship in sky, floating ship, duplicate ship, reflection in clouds, dark, murky",
+ "seed": 6208,
+ "size": [
+  768,
+  1344
+ ],
+ "wide_size": [
+  1344,
+  768
+ ],
+ "steps": 3,
+ "beats": [
+  {
+   "prompt": "Painted giant Philistine warrior in bronze armour silhouetted against a stormy valley sunset crossed-out '2",
+   "neg": ""
+  },
+  {
+   "prompt": "Two ancient scroll fragments side by side in warm lamplight split-screen compare m vs m",
+   "neg": "",
+   "wide": {
+    "fit": 0.52,
+    "center": 0.56
+   },
+   "cam": {
+    "type": "pan",
+    "f0": 0.0,
+    "f1": 1.0
+   }
+  },
+  {
+   "prompt": "Close-up of a scribe's hand copying Hebrew on parchment by oil lamp cubits",
+   "neg": "",
+   "ov": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 6.5,
+     "unit": " cubits",
+     "size": 230,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.3,
+     "d": 2.0,
+     "sub": ""
+    }
+   ]
+  },
+  {
+   "prompt": "Giant warrior silhouette beside a cypress tree at dusk scale bar rising to m",
+   "neg": ""
+  },
+  {
+   "prompt": "Clay jar and scroll in a Qumran cave lit by a single torch cubits",
+   "neg": "",
+   "ov": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 4.5,
+     "unit": " cubits",
+     "size": 230,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.3,
+     "d": 2.0,
+     "sub": ""
+    }
+   ]
+  },
+  {
+   "prompt": "Ancient historian writing at a desk painted in warm candlelight cubits",
+   "neg": ""
+  },
+  {
+   "prompt": "Warrior standing in a plain wooden doorway head almost touching the lintel warm interior light scale bar m",
+   "neg": ""
+  },
+  {
+   "prompt": "Tall warrior beside average Israelite soldiers in a valley at sunset side-by-side compare m vs m",
+   "neg": ""
+  },
+  {
+   "prompt": "Heavy bronze scale armour on a wooden stand torchlight glinting",
+   "neg": "",
+   "ov": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 57,
+     "unit": " kg",
+     "size": 230,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.3,
+     "d": 2.0,
+     "sub": ""
+    }
+   ]
+  },
+  {
+   "prompt": "Iron spearhead resting on a rock in low sunlight",
+   "neg": "",
+   "ov": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 7,
+     "unit": " kg",
+     "size": 230,
+     "pos": [
+      540,
+      640
+     ],
+     "t0": 0.3,
+     "d": 2.0,
+     "sub": ""
+    }
+   ]
+  },
+  {
+   "prompt": "Quill hovering over two different numerals on parchment soft candlelight question mark between m and m",
+   "neg": ""
+  },
+  {
+   "prompt": "Giant silhouette at sunset m / B m",
+   "neg": ""
+  }
+ ]
+}

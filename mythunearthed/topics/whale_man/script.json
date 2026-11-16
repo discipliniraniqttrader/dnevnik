@@ -1,0 +1,83 @@
+{
+  "title": "Could a man survive inside a whale?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Jonah was never swallowed by a whale.",
+      "keyword": "never",
+      "scene": "Painted giant sea creature rising under a small boat in a stormy sunset sea. Overlay: crossed-out WHALE tag.",
+      "source": "Jonah 1:17"
+    },
+    {
+      "text": "The Hebrew says dag gadol: a great fish.",
+      "keyword": "fish",
+      "scene": "Huge shadow of a fish beneath turbulent waves. Overlay: none.",
+      "source": "Jonah 1:17 (dag gadol)"
+    },
+    {
+      "text": "Try holding your breath for thirty seconds.",
+      "keyword": "breath",
+      "scene": "Close-up of a person's face, cheeks puffed, soft light. Overlay: timer 30 s.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "Most people struggle past one minute.",
+      "keyword": "minute",
+      "scene": "Same person gasping, timer ticking. Overlay: timer 60 s.",
+      "source": "typical breath-hold"
+    },
+    {
+      "text": "Inside a stomach, there is almost no oxygen.",
+      "keyword": "oxygen",
+      "scene": "Dark cavernous stomach interior with dim glow. Overlay: gauge oxygen low.",
+      "source": "physiology"
+    },
+    {
+      "text": "And whale stomach acid starts digesting flesh fast.",
+      "keyword": "acid",
+      "scene": "Bubbling green liquid in a dark chamber. Overlay: none.",
+      "source": "sperm whale digestion"
+    },
+    {
+      "text": "In 1891, a story said sailor James Bartley survived a sperm whale.",
+      "keyword": "1891",
+      "scene": "Whaling ship near a sperm whale at dawn in the South Atlantic. Overlay: date badge 1891.",
+      "source": "Bartley story (Star of the East)"
+    },
+    {
+      "text": "He was supposedly cut out alive after three days.",
+      "keyword": "three",
+      "scene": "Dim stomach interior with a human silhouette, soft light. Overlay: counter 3 days.",
+      "source": "Bartley story"
+    },
+    {
+      "text": "The ship's records and its captain's wife deny it.",
+      "keyword": "records",
+      "scene": "Open logbook on a ship's table, lamplight. Overlay: none.",
+      "source": "investigations of Bartley story"
+    },
+    {
+      "text": "Not proven: Jonah is a miracle or parable, and science cannot test it.",
+      "keyword": "miracle",
+      "scene": "Stormy sea with a lone figure on a beach after the storm. Overlay: question mark badge.",
+      "source": "scholarly debate"
+    },
+    {
+      "text": "Jesus speaks of a large sea creature, not a whale.",
+      "keyword": "creature",
+      "scene": "Open scroll beside shore, sunset. Overlay: none.",
+      "source": "Matthew 12:40 (ketos)"
+    },
+    {
+      "text": "So could a man survive inside a whale? Parable, or miracle?",
+      "keyword": "survive",
+      "scene": "Giant fish shadow over a boat at dusk, slow push. Overlay: choice tags A parable / B miracle.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "Could a Man Survive Inside a Whale? #shorts",
+    "description": "Jonah 1:17 says a great fish swallowed Jonah. Could anyone survive that, and what about the sailor James Bartley?\nWhether the story is literal, a parable or a miracle cannot be tested.\n#Jonah #Bible #Whale #BibleHistory"
+  }
+}

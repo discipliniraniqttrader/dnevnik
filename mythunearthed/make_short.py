@@ -19,6 +19,19 @@ def main():
     if not args or args[0].startswith("-"): print(__doc__); sys.exit(1)
     topic = Path(args[0]).resolve()
     opt = lambda k: args[args.index(k) + 1] if k in args else None
+    try:
+        _style = json.load(open(topic / "script.json")).get("style")
+    except Exception:
+        _style = None
+    if _style == "silhouette":                      # one dusk world, black silhouettes, no presenter (shortkit/silhouette.py)
+        from shortkit import silhouette
+        return silhouette.run(topic, args)
+    if _style == "diorama":                         # three.js toon 3D diorama (shortkit/diorama.py)
+        from shortkit import diorama
+        return diorama.run(topic, args)
+    if _style == "painted":                         # one locked SDXL-Turbo illustrated world, 2.5D depth camera, drawn overlays (shortkit/painted.py)
+        from shortkit import painted
+        return painted.run(topic, args)
     import numpy as np, soundfile as sf
     from shortkit import script as SC, terrain, voice as VO, plan as PL, ezra as EZ, sfx, compose, encode
     from shortkit.common import FPS

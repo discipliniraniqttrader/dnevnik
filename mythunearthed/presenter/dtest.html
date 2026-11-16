@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script></head><body style="margin:0">
+<script type="module">
+import * as THREE from 'three';
+const W=+new URLSearchParams(location.search).get('w')||720,H=Math.round(W*16/9);
+const r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(W,H);r.shadowMap.enabled=true;r.shadowMap.type=THREE.PCFSoftShadowMap;document.body.appendChild(r.domElement);
+const s=new THREE.Scene();s.background=new THREE.Color(0xe8a050);
+const g=new Uint8Array([140,190,225,255]);const gm=new THREE.DataTexture(g,4,1,THREE.RedFormat);gm.needsUpdate=true;
+const M=c=>new THREE.MeshToonMaterial({color:c,gradientMap:gm});
+const l=new THREE.DirectionalLight(0xfff0d0,2.5);l.position.set(30,50,20);l.castShadow=true;l.shadow.mapSize.set(2048,2048);Object.assign(l.shadow.camera,{left:-60,right:60,top:60,bottom:-60,near:1,far:200});s.add(l);s.add(new THREE.HemisphereLight(0xffe0c0,0x806040,1.5));
+const w=new THREE.Mesh(new THREE.PlaneGeometry(600,600,70,70).rotateX(-Math.PI/2),new THREE.MeshToonMaterial({color:0x2a6aa0,gradientMap:gm,flatShading:true}));w.receiveShadow=true;s.add(w);
+for(let i=0;i<60;i++){const m=new THREE.Mesh(new THREE.SphereGeometry(2,32,20),M(0xffffff*Math.random()));m.position.set(Math.random()*60-30,2,Math.random()*60-30);m.castShadow=m.receiveShadow=true;s.add(m);}
+const c=new THREE.PerspectiveCamera(40,W/H,.1,1000);c.position.set(0,15,60);c.lookAt(0,3,0);
+window.go=()=>{const t=performance.now();r.render(s,c);const u=r.domElement.toDataURL('image/jpeg',0.95);return performance.now()-t};
+window.READY=true;
+</script></body></html>

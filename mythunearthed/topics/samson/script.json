@@ -1,178 +1,28 @@
 {
- "title": "Samson's Gate: 60 km Uphill?",
- "author": "QUILL",
- "notes": "Gaza-Hebron straight-line ~60 km, Hebron ~900 m higher. 'Facing Hebron' nuance is the single not-proven line (beat 6).",
- "beats": [
-  {
-   "text": "Samson carried a gate sixty kilometres uphill?",
-   "shot": "PRESENTER",
-   "action": "surprised",
-   "backdrop": "city",
-   "callout": "60 KM UPHILL?",
-   "keyword": "sixty",
-   "source": "Judges 16:3; straight-line distance"
-  },
-  {
-   "text": "At midnight, in Gaza. But the gate isn't the strangest part.",
-   "shot": "TEXT",
-   "kind": "big_number",
-   "display": "~60 KM",
-   "callout": "MIDNIGHT",
-   "keyword": "strangest",
-   "source": "Judges 16:3"
-  },
-  {
-   "text": "Judges 16: Samson lifts the doors of Gaza's gate, posts and bar.",
-   "shot": "MAP",
-   "focus": [
-    31.5,
-    34.47
-   ],
-   "zoom": "mid",
-   "pins": [
-    "gaza"
-   ],
-   "callout": "GAZA GATE",
-   "keyword": "Gaza",
-   "source": "Judges 16:1-3"
-  },
-  {
-   "text": "Bar and all, he carries it off on his shoulders.",
-   "shot": "PRESENTER",
-   "action": "point_right",
-   "backdrop": "city",
-   "callout": "BAR AND ALL",
-   "keyword": "shoulders",
-   "source": "Judges 16:3"
-  },
-  {
-   "text": "Destination: the hill facing Hebron, about 60 kilometres away and 900 metres uphill.",
-   "say": "Destination: the hill facing HEB-ron, about sixty kilometres away and nine hundred metres uphill.",
-   "shot": "MAP",
-   "focus": [
-    31.52,
-    34.8
-   ],
-   "zoom": "wide",
-   "pins": [
-    "gaza",
-    "hebron"
-   ],
-   "callout": "~900 M UP",
-   "keyword": "Hebron",
-   "source": "Judges 16:3; straight-line distance; geography"
-  },
-  {
-   "text": "Not proven: the exact hill. The Hebrew can mean 'facing' Hebron, not at it.",
-   "say": "Not proven: the exact hill. The Hebrew can mean 'facing' HEB-ron, not at it.",
-   "shot": "PRESENTER",
-   "action": "shrug",
-   "backdrop": "mountain",
-   "callout": "NOT PROVEN",
-   "keyword": "proven",
-   "source": "Judges 16:3 (Hebrew phrase)"
-  },
-  {
-   "text": "But he ends up blinded, grinding grain in a Gaza prison.",
-   "shot": "MAP",
-   "focus": [
-    31.5,
-    34.47
-   ],
-   "zoom": "close",
-   "pins": [
-    "gaza"
-   ],
-   "callout": "BLINDED",
-   "keyword": "blinded",
-   "source": "Judges 16:21"
-  },
-  {
-   "text": "Philistines gather in Dagon's temple, with about 3,000 on the roof.",
-   "say": "FILL-iss-teens gather in DAY-gon's temple, with about three thousand on the roof.",
-   "shot": "EVENT",
-   "scene": "crowd",
-   "label": "~3,000 ON THE ROOF",
-   "callout": "~3,000 ON THE ROOF",
-   "keyword": "3,000",
-   "source": "Judges 16:23-27"
-  },
-  {
-   "text": "Samson pushes the two middle pillars, and the building comes down.",
-   "shot": "TEXT",
-   "kind": "word_shatter",
-   "display": "PILLARS",
-   "callout": "TWO PILLARS",
-   "keyword": "pillars",
-   "source": "Judges 16:29-30"
-  },
-  {
-   "text": "Zorah to Gaza is nearly 60 kilometres. His world is small; his legend is big.",
-   "say": "ZOR-ah to Gaza is nearly sixty kilometres. His world is small; his legend is big.",
-   "shot": "MAP",
-   "focus": [
-    31.6,
-    34.7
-   ],
-   "zoom": "wide",
-   "pins": [
-    "zorah",
-    "gaza",
-    "hebron"
-   ],
-   "callout": "SMALL WORLD",
-   "keyword": "legend",
-   "source": "straight-line distance"
-  },
-  {
-   "text": "Samson carried a gate sixty kilometres uphill? Legend, or memory?",
-   "shot": "PRESENTER",
-   "action": "point_left",
-   "backdrop": "city",
-   "callout": "LEGEND OR MEMORY?",
-   "keyword": "sixty",
-   "source": "-"
+  "title": "The Haircut That Killed 3,000",
+  "style": "silhouette",
+  "format": "story",
+  "approved_by": "HELM",
+  "beats": [
+    {"text": "He killed a thousand men. A haircut ended him.", "keyword": "haircut", "scene": "Giant silhouette of a long-haired strongman standing on a hill of fallen soldiers at dusk; cut to scissors snapping shut.", "source": "Judges 15:15; 16:19"},
+    {"text": "Samson had one rule: never cut your hair.", "keyword": "never", "scene": "Close profile silhouette, long hair flowing in wind, rim light.", "source": "Judges 13:5"},
+    {"text": "He tore a lion apart with his bare hands.", "keyword": "lion", "scene": "Silhouette of a man wrestling a roaring lion, dust in the sunset.", "source": "Judges 14:6"},
+    {"text": "Then he fell in love with Delilah.", "keyword": "Delilah", "scene": "Two silhouettes by a window, warm lamp light, rain outside.", "source": "Judges 16:4"},
+    {"text": "Five rulers offered her eleven hundred silver coins each.", "keyword": "silver", "scene": "Shadowy robed figures pour coins onto a table; coins glint.", "source": "Judges 16:5"},
+    {"text": "Three times she asked his secret. Three times he lied.", "keyword": "lied", "scene": "Counter 1, 2, 3 beside Samson snapping bowstrings, then new ropes, then breaking free of a loom.", "source": "Judges 16:6-14"},
+    {"text": "So she asked every day, until he was sick of living.", "keyword": "every", "scene": "Days flip by: sun, moon, sun; Samson's silhouette slumps lower each time.", "source": "Judges 16:16"},
+    {"text": "And he told her the truth.", "keyword": "truth", "scene": "Slow push in on the two silhouettes, his head bowed.", "source": "Judges 16:17"},
+    {"text": "He fell asleep on her knees. A man shaved seven locks.", "keyword": "seven", "scene": "Samson asleep with head on her lap; a figure creeps in with a blade; locks of hair fall.", "source": "Judges 16:19"},
+    {"text": "They gouged out his eyes and chained him to a millstone.", "keyword": "millstone", "scene": "Blind Samson in chains pushing a heavy grinding wheel in a dark prison, one shaft of light.", "source": "Judges 16:21"},
+    {"text": "But in that prison, his hair began to grow.", "keyword": "grow", "scene": "Close silhouette of his head; hair slowly lengthens in the light shaft.", "source": "Judges 16:22"},
+    {"text": "Three thousand people packed a temple roof to mock him.", "keyword": "thousand", "scene": "Huge temple silhouette, crowd on the roof, Samson small between two pillars.", "source": "Judges 16:27"},
+    {"text": "He felt for the two middle pillars, and pushed.", "keyword": "pushed", "scene": "Samson's arms spread between two pillars, straining; cracks run up the stone.", "source": "Judges 16:29"},
+    {"text": "He killed more in his death than in his life.", "keyword": "more", "scene": "The temple collapses in slow motion into dust against the sunset.", "source": "Judges 16:30"},
+    {"text": "Archaeologists did find Philistine temples held up by two central pillars.", "keyword": "pillars", "scene": "Excavated stone pillar bases in the ground, searchlight beam; label: Tell Qasile.", "source": "Tell Qasile excavations (Mazar); does not prove the story"},
+    {"text": "So what ended Samson: the haircut, or Delilah?", "keyword": "Delilah", "scene": "Back to the strongman silhouette; two choice tags: HAIRCUT / DELILAH.", "source": "-"}
+  ],
+  "youtube": {
+    "title": "The Haircut That Killed 3,000 Philistines #shorts",
+    "description": "Samson and Delilah, Judges 13-16, told in under a minute.\nTwo-pillar Philistine temples are real (Tell Qasile); that does not prove the story itself.\n#Samson #Delilah #Bible #BibleStories"
   }
- ],
- "places": {
-  "gaza": [
-   31.5,
-   34.47,
-   "Gaza",
-   "temple",
-   "solid"
-  ],
-  "hebron": [
-   31.53,
-   35.1,
-   "Hebron",
-   "walls",
-   "solid"
-  ],
-  "zorah": [
-   31.78,
-   34.98,
-   "Zorah",
-   "dot",
-   "dashed"
-  ],
-  "timnah": [
-   31.78,
-   34.91,
-   "Timnah",
-   "dot",
-   "dashed"
-  ],
-  "ashkelon": [
-   31.66,
-   34.55,
-   "Ashkelon",
-   "walls",
-   "solid"
-  ]
- },
- "youtube": {
-  "title": "Samson's Gate: 60 km Uphill? 🗺️ #shorts",
-  "description": "From Gaza's gate to the hill facing Hebron: roughly 60 km straight-line, and about 900 metres uphill. Legend or memory?\nThe exact hill is not proven; the Hebrew can mean 'facing' Hebron.\n#Samson #Judges #BibleHistory #MythUnearthed"
- }
 }

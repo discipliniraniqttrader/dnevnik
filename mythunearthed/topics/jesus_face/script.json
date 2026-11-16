@@ -1,0 +1,83 @@
+{
+  "title": "What did Jesus actually look like?",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Jesus did not look like your painting.",
+      "keyword": "painting",
+      "scene": "Painted portrait hall of pale European Jesus images fading into a dark-skinned Galilean carpenter at sunset. Overlay: crossed-out frame.",
+      "source": "-"
+    },
+    {
+      "text": "The Gospels never describe his face.",
+      "keyword": "never",
+      "scene": "Open scroll of the Gospels in lamplight with a blank space. Overlay: none.",
+      "source": "Gospels (no physical description)"
+    },
+    {
+      "text": "So in 2001, forensic expert Richard Neave rebuilt one.",
+      "keyword": "Neave",
+      "scene": "Forensic artist sculpting clay over a skull in a lab. Overlay: date badge 2001.",
+      "source": "BBC / Richard Neave, 2001"
+    },
+    {
+      "text": "He used a first-century skull from the region.",
+      "keyword": "skull",
+      "scene": "Ancient skull on a lab table, warm lamplight. Overlay: date badge 1st century.",
+      "source": "Neave reconstruction (skull origin hedged)"
+    },
+    {
+      "text": "The face is broad, with dark skin, dark eyes and short hair.",
+      "keyword": "broad",
+      "scene": "Clay reconstruction of a weathered Semitic face in side light. Overlay: none.",
+      "source": "Neave reconstruction, 2001"
+    },
+    {
+      "text": "Paul even writes that long hair is shameful for a man.",
+      "keyword": "hair",
+      "scene": "Man at a village well with short dark hair, dusk. Overlay: quote marker only.",
+      "source": "1 Corinthians 11:14"
+    },
+    {
+      "text": "He likely stood about one point five five metres, around fifty kilograms.",
+      "keyword": "metres",
+      "scene": "Galilean man standing in a doorway at sunrise. Overlay: scale bar 1.66 m, weight badge 50 kg.",
+      "source": "Joe Zias estimate for 1st-century Judean men"
+    },
+    {
+      "text": "Compare yourself: probably taller, and heavier.",
+      "keyword": "yourself",
+      "scene": "Silhouette of a modern person next to a first-century man at dusk. Overlay: side-by-side height compare.",
+      "source": "viewer participation"
+    },
+    {
+      "text": "Why no description? The Gospels care about words, not looks.",
+      "keyword": "words",
+      "scene": "Disciples listening to a preacher on a hillside at sunset. Overlay: none.",
+      "source": "Gospel focus; debated"
+    },
+    {
+      "text": "Not proven: this is an average face, not his face.",
+      "keyword": "average",
+      "scene": "Rows of clay faces in a workshop, one lit. Overlay: question mark badge.",
+      "source": "scientific caveat"
+    },
+    {
+      "text": "The real answer: a working man of Galilee.",
+      "keyword": "Galilee",
+      "scene": "Carpenter planing wood in a sunlit workshop. Overlay: none.",
+      "source": "Mark 6:3"
+    },
+    {
+      "text": "So what did Jesus look like: your painting, or an ordinary Galilean?",
+      "keyword": "ordinary",
+      "scene": "Painted close-up of a calm weathered face at sunset, slow push in. Overlay: choice tags A painting / B ordinary.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "What Did Jesus Actually Look Like? #shorts",
+    "description": "The Gospels never describe Jesus's face. A 2001 forensic reconstruction suggests a very different look from paintings.\nIt is an educated guess, not his actual face.\n#Jesus #Bible #BibleHistory #History"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Solomon's 666 talents of gold",
+  "style": "diorama",
+  "approved_by": "HELM",
+  "beats": [
+    {
+      "text": "Solomon earned twenty tonnes of gold yearly?",
+      "keyword": "twenty",
+      "scene": "Painted golden throne room of Solomon in warm torchlight, camera sliding forward. Overlay: counter 20 tonnes.",
+      "source": "1 Kings 10:14"
+    },
+    {
+      "text": "The Bible says it plainly: six hundred sixty-six talents.",
+      "keyword": "talents",
+      "scene": "Servants carrying heavy golden vessels up temple steps at dusk. Overlay: counter 666 talents.",
+      "source": "1 Kings 10:14"
+    },
+    {
+      "text": "One talent is about thirty to thirty-four kilograms.",
+      "keyword": "talent",
+      "scene": "Large stone weight beside a balance scale in lamplight. Overlay: weight badge 30-34 kg.",
+      "source": "ancient talent ~30-34 kg (estimate)"
+    },
+    {
+      "text": "Do the maths: roughly twenty to twenty-three tonnes.",
+      "keyword": "maths",
+      "scene": "Mountain of gold bars in a treasury, torchlight glinting. Overlay: counter 20-23 t.",
+      "source": "666 x 30-34 kg"
+    },
+    {
+      "text": "A gold bar weighs about twelve kilograms. Picture lifting one.",
+      "keyword": "bar",
+      "scene": "Pair of hands straining to lift a single gold bar. Overlay: weight badge 12 kg.",
+      "source": "standard 400 oz bar ~12.4 kg"
+    },
+    {
+      "text": "Solomon's year equals about sixteen hundred of those bars.",
+      "keyword": "sixteen",
+      "scene": "Rows of gold bars stacked in a vault, camera panning over them. Overlay: counter about 1,600 bars.",
+      "source": "20 t / 12.4 kg"
+    },
+    {
+      "text": "At today's gold price, that is well over a billion dollars.",
+      "keyword": "world",
+      "scene": "Modern open-pit gold mine at sunset with a single haul truck. Overlay: compare bar 20 t vs 3,600 t.",
+      "source": "20 t gold at modern prices"
+    },
+    {
+      "text": "Every single year.",
+      "keyword": "fraction",
+      "scene": "Golden caravan of camels crossing a desert ridge at sunset. Overlay: ratio badge about 0.6 percent.",
+      "source": "1 Kings 10:14"
+    },
+    {
+      "text": "It came from trade, tribute and taxes, not only from mines.",
+      "keyword": "tribute",
+      "scene": "Trade caravan unloading sacks at a city gate. Overlay: three counters trade / tribute / tax.",
+      "source": "1 Kings 10:15"
+    },
+    {
+      "text": "Not proven: scholars debate whether the number is literal.",
+      "keyword": "literal",
+      "scene": "Scribe weighing a wax tablet in his hand, evening light. Overlay: question mark badge.",
+      "source": "scholarly debate"
+    },
+    {
+      "text": "And the number has a famous echo: 666.",
+      "keyword": "echo",
+      "scene": "Gold coin glinting in shadow with Solomon's throne behind. Overlay: counter 666.",
+      "source": "1 Kings 10:14; Revelation 13:18"
+    },
+    {
+      "text": "So was Solomon's gold literal or royal exaggeration?",
+      "keyword": "exaggeration",
+      "scene": "Solomon's throne in golden light, camera slow push. Overlay: choice tags A literal / B exaggeration.",
+      "source": "-"
+    }
+  ],
+  "youtube": {
+    "title": "Solomon's 666 Talents of Gold Explained #shorts",
+    "description": "1 Kings 10:14 says Solomon received 666 talents of gold in one year. How much is that in tonnes?\nScholars debate whether the number is literal or exaggerated.\n#Solomon #Bible #Gold #BibleHistory"
+  }
+}
